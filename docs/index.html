@@ -17,44 +17,57 @@
   </style>
 </head>
 <body class="rtl text-gray-900">
-  <!-- هيدر -->
-  <header class="bg-white shadow sticky top-0 z-30">
-    <div class="container mx-auto flex justify-between items-center py-4 px-4 md:px-0">
+  <!-- هيدر وبانر مدمج -->
+  <section class="relative min-h-[90vh] flex flex-col justify-between bg-cover bg-center" style="background-image: url('./banner/1.jpg');">
+    <!-- شريط التنقل -->
+    <nav class="absolute top-0 left-0 w-full z-30 flex items-center justify-between px-4 md:px-12 py-4 bg-white/40 backdrop-blur-md shadow-sm">
       <div class="flex items-center gap-2">
-        <img src="./logo.png" alt="Oud Store" class="w-10 h-10">
+        <img src="./logo.png" alt="Oud Store" class="w-10 h-10 rounded-lg shadow">
       </div>
-      <nav class="hidden md:flex gap-6 text-lg font-medium">
-        <a href="#" class="hover:text-amber-700 transition">الرئيسية</a>
-        <a href="#products" class="hover:text-amber-700 transition">منتجاتنا</a>
-        <a href="#offers" class="hover:text-amber-700 transition">العروض</a>
-        <a href="#contact" class="hover:text-amber-700 transition">تواصل معنا</a>
-      </nav>
-      <button class="md:hidden text-2xl" id="menuBtn">☰</button>
-    </div>
-    <div class="md:hidden hidden px-4 pb-4" id="mobileMenu">
-      <a href="#" class="block py-2">الرئيسية</a>
-      <a href="#products" class="block py-2">منتجاتنا</a>
-      <a href="#offers" class="block py-2">العروض</a>
-      <a href="#contact" class="block py-2">تواصل معنا</a>
-    </div>
-  </header>
-
-  <!-- بنر متحرك -->
-  <section class="relative overflow-hidden">
-    <div class="w-full h-[320px] md:h-[480px] flex items-center justify-center bg-gradient-to-l from-amber-100 to-amber-300">
-      <div class="absolute inset-0 w-full h-full" id="heroSlider">
-        <!-- Slides will be injected by JS -->
+      <ul class="hidden md:flex gap-8 text-base font-medium text-gray-900">
+        <li><a href="#" class="hover:text-amber-700 transition">الرئيسية</a></li>
+        <li><a href="#" class="hover:text-amber-700 transition">منتجاتنا</a></li>
+        <li><a href="#" class="hover:text-amber-700 transition">العروض</a></li>
+        <li><a href="#" class="hover:text-amber-700 transition">تواصل معنا</a></li>
+      </ul>
+      <div class="flex gap-2 items-center">
+        <a href="#" class="hidden md:inline text-gray-900 hover:text-amber-700 font-medium transition">Log in</a>
+        <a href="#" class="bg-white text-gray-900 font-bold rounded-full px-5 py-2 shadow hover:bg-amber-700 hover:text-white transition flex items-center gap-1">Sign Up <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        <button class="md:hidden text-2xl px-2" id="menuBtn">☰</button>
       </div>
-      <div class="relative z-10 text-center">
-        <h1 class="text-3xl md:text-5xl font-bold mb-4 text-amber-900 drop-shadow">اكتشف أفخم العطور الأصلية</h1>
-        <p class="text-lg md:text-2xl text-amber-800 mb-6">تسوق تشكيلتنا المختارة من العطور الرجالية والنسائية الفاخرة</p>
-        <a href="#products" class="bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-full text-lg shadow transition">تسوق الآن</a>
+    </nav>
+    <!-- قائمة الجوال -->
+    <div class="md:hidden fixed top-0 right-0 w-64 h-full bg-white/90 shadow-lg z-40 hidden flex-col p-6 gap-4 text-gray-900" id="mobileMenu">
+      <button class="text-2xl mb-4 self-end" id="closeMenuBtn">×</button>
+      <a href="#" class="block py-2">Furniture</a>
+      <a href="#" class="block py-2">Mattresses</a>
+      <a href="#" class="block py-2">Home Decor</a>
+      <a href="#" class="block py-2">Collections</a>
+      <a href="#" class="block py-2">Log in</a>
+      <a href="#" class="block py-2 bg-amber-700 text-white rounded-full text-center">Sign Up</a>
+    </div>
+    <!-- محتوى البانر -->
+    <div class="flex-1 flex flex-col justify-center items-center text-center px-4 md:px-0 mt-24 md:mt-32">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-4">Elevate Your Space with<br class="hidden md:block"> Timeless Furniture</h1>
+      <p class="text-lg md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow">Crafted for comfort. Designed for life. Discover premium furniture that brings style and soul to every corner of your home.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" class="bg-black hover:bg-amber-700 text-white font-bold px-8 py-3 rounded-full text-lg shadow flex items-center gap-2 justify-center transition">Shop Now <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
       </div>
     </div>
-    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" id="sliderDots"></div>
+    
+    <script>
+      // قائمة الجوال
+      document.getElementById('menuBtn').onclick = () => {
+        document.getElementById('mobileMenu').classList.remove('hidden');
+      };
+      document.getElementById('closeMenuBtn').onclick = () => {
+        document.getElementById('mobileMenu').classList.add('hidden');
+      };
+    </script>
   </section>
 
-  
+  <!-- نهاية الهيدر والبانر الجديد -->
+  <!-- حذف الهيدر والبانر القديمين هنا -->
 
   <!-- قسم فئات المتجر -->
   <section class="s-block s-block--square-links square-links-1 py-12 bg-white">
