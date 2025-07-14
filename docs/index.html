@@ -349,6 +349,127 @@
     </div>
   </section>
 
+
+  <!-- قسم منتج عليه خصم -->
+<section class="s-block s-block--single-product relative my-8 py-8 bg-[#f9f7f4] rounded-2xl shadow-lg overflow-hidden">
+  <div class="container mx-auto flex flex-col md:flex-row gap-8 items-stretch">
+    <!-- صور المنتج -->
+    <div class="w-full md:w-1/3 flex flex-col items-center justify-center relative">
+      <span class="promotion-badge absolute top-3 right-3 z-10 px-3 py-1 bg-white/80 border border-amber-600 text-amber-700 text-xs md:text-sm rounded-md animate-pulse">خصم 40%</span>
+      <div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden shadow-md">
+        <img src="./perfumes/1.jpg" alt="عطر فاخر" class="w-full h-full object-cover" id="mainProductImg">
+        <!-- مصغرات -->
+        <div class="flex gap-2 justify-center mt-3 absolute bottom-2 left-1/2 -translate-x-1/2">
+          <img src="./perfumes/1.jpg" alt="عطر1" class="w-12 h-12 object-cover rounded border-2 border-amber-700 cursor-pointer thumb-img" onclick="changeProductImg('./perfumes/1.jpg')">
+          <img src="./perfumes/2.jpg" alt="عطر2" class="w-12 h-12 object-cover rounded border-2 border-transparent cursor-pointer thumb-img" onclick="changeProductImg('./perfumes/2.jpg')">
+          <img src="./perfumes/3.jpg" alt="عطر3" class="w-12 h-12 object-cover rounded border-2 border-transparent cursor-pointer thumb-img" onclick="changeProductImg('./perfumes/3.jpg')">
+        </div>
+      </div>
+    </div>
+    <!-- تفاصيل المنتج -->
+    <div class="flex-1 flex flex-col gap-4 justify-between p-4">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-amber-900 mb-2">عطر الأمسيات الفاخر</h2>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-yellow-400 text-lg">★★★★★</span>
+          <span class="text-gray-500 text-sm">(12 تقييم)</span>
+        </div>
+        <div class="flex gap-3 mb-2">
+          <small class="text-amber-700 text-xs md:text-sm animate-pulse">خصم 40%</small>
+          <small class="flex gap-1 items-center text-xs md:text-sm rounded-md text-green-600"><svg class="w-4 h-4 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>المنتج متوفر</small>
+        </div>
+        <p class="text-gray-700 leading-7 mb-4">عطر فاخر برائحة شرقية تدوم طويلاً، مناسب لجميع الأوقات ويمنحك حضوراً مميزاً. متوفر بعدة أحجام وألوان.</p>
+      </div>
+      <!-- خيارات المنتج -->
+      <form class="flex flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <label class="font-bold text-sm text-amber-900">اختر اللون:</label>
+          <div class="flex gap-2">
+            <button type="button" class="w-8 h-8 rounded-full border-2 border-amber-700 bg-[#e0e0e0] focus:ring-2 focus:ring-amber-700" aria-label="رمادي" onclick="changeProductImg('./perfumes/1.jpg')"></button>
+            <button type="button" class="w-8 h-8 rounded-full border-2 border-transparent bg-[#bfa17c] focus:ring-2 focus:ring-amber-700" aria-label="ذهبي" onclick="changeProductImg('./perfumes/2.jpg')"></button>
+            <button type="button" class="w-8 h-8 rounded-full border-2 border-transparent bg-[#fff] focus:ring-2 focus:ring-amber-700" aria-label="أبيض" onclick="changeProductImg('./perfumes/3.jpg')"></button>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="font-bold text-sm text-amber-900">اختر الحجم:</label>
+          <select class="rounded border px-3 py-2 focus:ring-2 focus:ring-amber-700">
+            <option>100 مل</option>
+            <option>200 مل</option>
+            <option>50 مل</option>
+          </select>
+        </div>
+        <!-- السعر -->
+        <div class="flex items-center gap-4 mt-2">
+          <span class="text-2xl font-bold text-amber-900">129 ر.س</span>
+          <span class="line-through text-gray-400 text-lg">215 ر.س</span>
+          <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-xs font-bold animate-pulse">وفر 86 ر.س</span>
+        </div>
+        <!-- الكمية وزر السلة -->
+        <div class="flex flex-col sm:flex-row gap-3 items-center mt-2">
+          <div class="flex items-center border rounded overflow-hidden">
+            <button type="button" class="w-8 h-8 flex items-center justify-center text-lg font-bold text-amber-900" onclick="changeQty(-1)">-</button>
+            <input type="number" min="1" value="1" class="w-12 h-8 text-center border-x outline-none" id="productQty">
+            <button type="button" class="w-8 h-8 flex items-center justify-center text-lg font-bold text-amber-900" onclick="changeQty(1)">+</button>
+          </div>
+          <button type="submit" class="flex-1 bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-6 rounded transition text-lg">إضافة للسلة</button>
+        </div>
+      </form>
+      <!-- طرق الدفع -->
+      <div class="flex flex-wrap gap-2 mt-4 items-center">
+        <img src="https://cdn.salla.network/images/payment/mada_mini.png?v=2.0.5" alt="mada" class="h-6">
+        <img src="https://cdn.salla.network/images/payment/credit_card_mini.png?v=2.0.5" alt="credit_card" class="h-6">
+        <img src="https://cdn.salla.network/images/payment/stc_pay_mini.png?v=2.0.5" alt="stc_pay" class="h-6">
+        <img src="https://cdn.salla.network/images/payment/apple_pay_mini.png?v=2.0.5" alt="apple_pay" class="h-6">
+        <img src="https://cdn.salla.network/images/payment/tabby_installment_mini.png?v=2.0.5" alt="tabby_installment" class="h-6">
+        <img src="https://cdn.salla.network/images/payment/tamara_installment_mini.png?v=2.0.5" alt="tamara_installment" class="h-6">
+        <img src="https://cdn.salla.network/images/payment/madfu_installment_mini.png?v=2.0.5" alt="madfu_installment" class="h-6">
+        <img src="https://cdn.salla.network/images/payment/cod_mini.png?v=2.0.5" alt="cod" class="h-6">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- قسم ثلاث بنرات رئيسية -->
+<section class="s-block s-block--main-carousel w-full bg-no-repeat bg-fixed bg-cover relative my-8 py-4">
+  <div class="container mx-auto relative z-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-4">
+      <!-- البنر الكبير (سلايدر يدوي بسيط) -->
+      <div class="lg:row-span-2 sm:col-span-2 relative overflow-hidden rounded-xl shadow-md">
+        <div id="mainBannerSlider" class="relative w-full h-full min-h-[340px] flex items-center justify-center bg-cover bg-center transition-all duration-700" style="background-image: url('./banner/1.jpg');">
+          <div class="absolute inset-0 bg-black/30 z-0 rounded-xl"></div>
+          <div class="relative z-10 flex flex-col items-center justify-center text-center w-full h-full p-6 md:p-12">
+            <strong class="text-sm font-normal mb-3 text-white">خصم إضافي بنسبة 15٪</strong>
+            <h3 class="text-2xl md:text-3xl font-bold leading-tight text-white mb-6">ديكور جديد لمساحات المعيشة الخاصة بك</h3>
+            <a href="#" class="btn btn--white mt-2 bg-white text-gray-900 font-bold rounded-full px-6 py-2 shadow hover:bg-amber-700 hover:text-white transition">اكتشف المزيد</a>
+          </div>
+          <!-- أزرار السلايدر -->
+          <button onclick="changeBannerSlide(-1)" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-white text-gray-900 rounded-full p-2 shadow z-20"><svg class="w-6 h-6 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+          <button onclick="changeBannerSlide(1)" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-white text-gray-900 rounded-full p-2 shadow z-20"><svg class="w-6 h-6 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+          <!-- نقاط السلايدر -->
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+            <button class="w-3 h-3 rounded-full bg-amber-700" id="bannerDot0" onclick="goToBannerSlide(0)"></button>
+            <button class="w-3 h-3 rounded-full bg-amber-300" id="bannerDot1" onclick="goToBannerSlide(1)"></button>
+          </div>
+        </div>
+      </div>
+      <!-- البنر الجانبي 1 -->
+      <a href="#" class="side-slide flex flex-col justify-center bg-gray-700 relative p-0 bg-cover transition-opacity hover:opacity-95 h-80 lg:h-auto rounded-xl overflow-hidden shadow-md" style="background-image: url('./banner/2.jpg');">
+        <span class="sr-only">بنر جانبي 1</span>
+      </a>
+      <!-- البنر الجانبي 2 -->
+      <a href="#" class="side-slide flex flex-col justify-center bg-gray-700 relative p-0 bg-cover transition-opacity hover:opacity-95 h-80 lg:h-auto rounded-xl overflow-hidden shadow-md" style="background-image: url('./categories/1.jpg');">
+        <span class="sr-only">بنر جانبي 2</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
   <!-- تواصل وفوتر -->
   <footer class="bg-black text-white pt-12 pb-4 mt-16 rtl" id="contact">
     <div class="container mx-auto px-4">
@@ -417,6 +538,70 @@
     </div>
   </footer>
 
+
+
+  <script>
+    // سلايدر البنر الرئيسي (يدوي)
+    const bannerImages = [
+      './banner/1.jpg',
+      './banner/3.jpg'
+    ];
+    const bannerTitles = [
+      'ديكور جديد لمساحات المعيشة الخاصة بك',
+      'تسوق تشكيلتنا الجديدة من الأزياء العصرية'
+    ];
+    const bannerSubtitles = [
+      'خصم إضافي بنسبة 15٪',
+      'خصم خاص لفترة محدودة'
+    ];
+    const bannerBtns = [
+      'اكتشف المزيد',
+      'تسوق الآن'
+    ];
+    let bannerCurrent = 0;
+    function renderBannerSlider() {
+      const slider = document.getElementById('mainBannerSlider');
+      slider.style.backgroundImage = `url('${bannerImages[bannerCurrent]}')`;
+      slider.querySelector('strong').textContent = bannerSubtitles[bannerCurrent];
+      slider.querySelector('h3').textContent = bannerTitles[bannerCurrent];
+      slider.querySelector('a').textContent = bannerBtns[bannerCurrent];
+      document.getElementById('bannerDot0').className = 'w-3 h-3 rounded-full ' + (bannerCurrent === 0 ? 'bg-amber-700' : 'bg-amber-300');
+      document.getElementById('bannerDot1').className = 'w-3 h-3 rounded-full ' + (bannerCurrent === 1 ? 'bg-amber-700' : 'bg-amber-300');
+    }
+    function changeBannerSlide(dir) {
+      bannerCurrent = (bannerCurrent + dir + bannerImages.length) % bannerImages.length;
+      renderBannerSlider();
+    }
+    function goToBannerSlide(i) {
+      bannerCurrent = i;
+      renderBannerSlider();
+    }
+    setInterval(() => {
+      bannerCurrent = (bannerCurrent + 1) % bannerImages.length;
+      renderBannerSlider();
+    }, 7000);
+    renderBannerSlider();
+    </script>
+
+    
+
+  <script>
+    // تغيير صورة المنتج عند الضغط على المصغرات أو الألوان
+    function changeProductImg(src) {
+      document.getElementById('mainProductImg').src = src;
+      document.querySelectorAll('.thumb-img').forEach(img => {
+        img.classList.remove('border-amber-700');
+        if(img.src.includes(src)) img.classList.add('border-amber-700');
+      });
+    }
+    // تغيير الكمية
+    function changeQty(val) {
+      const qtyInput = document.getElementById('productQty');
+      let qty = parseInt(qtyInput.value) || 1;
+      qty = Math.max(1, qty + val);
+      qtyInput.value = qty;
+    }
+    </script>
 
   <!-- جافاسكريبت للتأثيرات والسلايدر -->
   <script>
