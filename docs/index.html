@@ -10,13 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Cairo', sans-serif; background: #f9fafb; }
+    body { font-family: 'Cairo', sans-serif; }
     .rtl { direction: rtl; }
     .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(.4,0,.2,1); }
     .fade-in.visible { opacity: 1; transform: none; }
   </style>
 </head>
-<body class="rtl bg-gray-50 text-gray-900">
+<body class="rtl text-gray-900">
   <!-- هيدر -->
   <header class="bg-white shadow sticky top-0 z-30">
     <div class="container mx-auto flex justify-between items-center py-4 px-4 md:px-0">
@@ -69,7 +69,7 @@
         <li class="text-center group">
           <a href="#" class="block">
             <div class="overflow-hidden rounded-xl shadow">
-              <img class="aspect-[14/13] w-full object-cover group-hover:scale-110 transition duration-300" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="هدايا عطور رجالية" loading="lazy">
+              <img class="aspect-[14/13] w-full object-cover group-hover:scale-110 transition duration-300" src="./categories/1.jpg" alt="هدايا عطور رجالية" loading="lazy">
             </div>
             <h3 class="mt-4 text-base font-semibold leading-7 tracking-tight text-amber-900">هدايا رجالية</h3>
           </a>
@@ -77,7 +77,7 @@
         <li class="text-center group">
           <a href="#" class="block">
             <div class="overflow-hidden rounded-xl shadow">
-              <img class="aspect-[14/13] w-full object-cover group-hover:scale-110 transition duration-300" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80" alt="هدايا عطور نسائية" loading="lazy">
+              <img class="aspect-[14/13] w-full object-cover group-hover:scale-110 transition duration-300" src="./categories/2.jpg" alt="هدايا عطور نسائية" loading="lazy">
             </div>
             <h3 class="mt-4 text-base font-semibold leading-7 tracking-tight text-amber-900">هدايا نسائية</h3>
           </a>
@@ -85,7 +85,7 @@
         <li class="text-center group">
           <a href="#" class="block">
             <div class="overflow-hidden rounded-xl shadow">
-              <img class="aspect-[14/13] w-full object-cover group-hover:scale-110 transition duration-300" src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80" alt="مجموعات فاخرة" loading="lazy">
+              <img class="aspect-[14/13] w-full object-cover group-hover:scale-110 transition duration-300" src="./categories/3.jpg" alt="مجموعات فاخرة" loading="lazy">
             </div>
             <h3 class="mt-4 text-base font-semibold leading-7 tracking-tight text-amber-900">مجموعات فاخرة</h3>
           </a>
@@ -93,7 +93,7 @@
         <li class="text-center group">
           <a href="#" class="block">
             <div class="overflow-hidden rounded-xl shadow">
-              <img class="aspect-[14/13] w-full object-cover group-hover:scale-110 transition duration-300" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="عطور للجنسين" loading="lazy">
+              <img class="aspect-[14/13] w-full object-cover group-hover:scale-110 transition duration-300" src="categories/4.jpg" alt="عطور للجنسين" loading="lazy">
             </div>
             <h3 class="mt-4 text-base font-semibold leading-7 tracking-tight text-amber-900">عطور للجنسين</h3>
           </a>
@@ -101,7 +101,7 @@
         <li class="text-center group">
           <a href="#" class="block">
             <div class="overflow-hidden rounded-xl shadow">
-              <img class="aspect-[14/13] w-full object-cover group-hover:scale-110 transition duration-300" src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="مجموعات هدايا" loading="lazy">
+              <img class="aspect-[14/13] w-full object-cover group-hover:scale-110 transition duration-300" src="./categories/5.jpg" alt="مجموعات هدايا" loading="lazy">
             </div>
             <h3 class="mt-4 text-base font-semibold leading-7 tracking-tight text-amber-900">مجموعات هدايا</h3>
           </a>
@@ -111,44 +111,7 @@
   </section>
 
   
-
-  <!-- المنتجات -->
-  <section id="products" class="container mx-auto py-10 px-4">
-    <h2 class="text-2xl md:text-3xl font-bold text-center text-amber-900 mb-8">منتجاتنا المميزة</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 fade-in">
-      <!-- كروت المنتجات (سيتم تكرارها) -->
-      <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition group">
-        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="عطر 1" class="w-32 h-32 rounded-xl object-cover mb-4 group-hover:rotate-2 transition">
-        <h3 class="text-lg font-bold text-amber-800 mb-2">عطر ملكي</h3>
-        <p class="text-gray-600 mb-2 text-center">رائحة شرقية فاخرة تدوم طويلاً</p>
-        <span class="text-amber-700 font-bold text-xl mb-2">299 ر.س</span>
-        <button class="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-full transition">أضف للسلة</button>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition group">
-        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="عطر 2" class="w-32 h-32 rounded-xl object-cover mb-4 group-hover:rotate-2 transition">
-        <h3 class="text-lg font-bold text-amber-800 mb-2">عطر زهري</h3>
-        <p class="text-gray-600 mb-2 text-center">مزيج من الزهور الفاخرة والفاكهة</p>
-        <span class="text-amber-700 font-bold text-xl mb-2">249 ر.س</span>
-        <button class="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-full transition">أضف للسلة</button>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition group">
-        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="عطر 3" class="w-32 h-32 rounded-xl object-cover mb-4 group-hover:rotate-2 transition">
-        <h3 class="text-lg font-bold text-amber-800 mb-2">عطر فخم</h3>
-        <p class="text-gray-600 mb-2 text-center">عطر يناسب جميع الأوقات والمناسبات</p>
-        <span class="text-amber-700 font-bold text-xl mb-2">199 ر.س</span>
-        <button class="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-full transition">أضف للسلة</button>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition group">
-        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="عطر 4" class="w-32 h-32 rounded-xl object-cover mb-4 group-hover:rotate-2 transition">
-        <h3 class="text-lg font-bold text-amber-800 mb-2">عطر حصري</h3>
-        <p class="text-gray-600 mb-2 text-center">إصدار محدود من العطور الشرقية</p>
-        <span class="text-amber-700 font-bold text-xl mb-2">399 ر.س</span>
-        <button class="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-full transition">أضف للسلة</button>
-      </div>
-      <!-- يمكنك تكرار الكروت أو توليدها ديناميكياً لاحقاً -->
-    </div>
-  </section>
-
+  
   <!-- قسم الأكثر مبيعاً -->
    <center>
   <section class="s-block container py-12">
@@ -158,11 +121,11 @@
         <span class="block w-24 h-1 bg-amber-200 rounded mx-auto mt-4"></span>
       </div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
       <!-- كرت منتج (كرر مع التعديلات) -->
-      <div class="relative bg-white rounded-2xl shadow-lg flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
-        <div class="relative w-full flex justify-center items-center min-h-[180px]">
-          <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="اروقيت بينك" class="h-44 w-32 object-cover rounded-xl group-hover:scale-105 transition duration-300 shadow-sm">
+      <div class="relative bg-white rounded-2xl flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
+        <div class="relative w-full flex justify-center items-center h-48 mb-4 overflow-hidden rounded-xl">
+          <img src="./perfumes/1.jpg" alt="اروقيت بينك" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
           <div class="absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded z-10">الأكثر مبيعاً</div>
         </div>
         <div class="flex gap-2 mt-3 mb-2">
@@ -182,9 +145,9 @@
         </div>
       </div>
       <!-- منتج 2 -->
-      <div class="relative bg-white rounded-2xl shadow-lg flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
-        <div class="relative w-full flex justify-center items-center min-h-[180px]">
-          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="مسك الغيم" class="h-44 w-32 object-cover rounded-xl group-hover:scale-105 transition duration-300 shadow-sm">
+      <div class="relative bg-white rounded-2xl flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
+        <div class="relative w-full flex justify-center items-center h-48 mb-4 overflow-hidden rounded-xl">
+          <img src="./perfumes/2.jpg" alt="مسك الغيم" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
           <div class="absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded z-10">الأكثر مبيعاً</div>
         </div>
         <div class="flex gap-2 mt-3 mb-2">
@@ -204,9 +167,9 @@
         </div>
       </div>
       <!-- منتج 3 -->
-      <div class="relative bg-white rounded-2xl shadow-lg flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
-        <div class="relative w-full flex justify-center items-center min-h-[180px]">
-          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="ليالي باريس" class="h-44 w-32 object-cover rounded-xl group-hover:scale-105 transition duration-300 shadow-sm">
+      <div class="relative bg-white rounded-2xl flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
+        <div class="relative w-full flex justify-center items-center h-48 mb-4 overflow-hidden rounded-xl">
+          <img src="./perfumes/3.jpg" alt="ليالي باريس" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
         </div>
         <div class="flex gap-2 mt-3 mb-2">
           <button class="w-9 h-9 flex items-center justify-center rounded-full border hover:bg-amber-50 transition" title="عرض سريع"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' /><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z' /></svg></button>
@@ -225,9 +188,9 @@
         </div>
       </div>
       <!-- منتج 4 -->
-      <div class="relative bg-white rounded-2xl shadow-lg flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
-        <div class="relative w-full flex justify-center items-center min-h-[180px]">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="سحر الشرق" class="h-44 w-32 object-cover rounded-xl group-hover:scale-105 transition duration-300 shadow-sm">
+      <div class="relative bg-white rounded-2xl flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
+        <div class="relative w-full flex justify-center items-center h-48 mb-4 overflow-hidden rounded-xl">
+          <img src="./perfumes/4.jpg" alt="سحر الشرق" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
           <div class="absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded z-10">الأكثر مبيعاً</div>
         </div>
         <div class="flex gap-2 mt-3 mb-2">
@@ -247,9 +210,9 @@
         </div>
       </div>
       <!-- منتج 5 (نفدت الكمية) -->
-      <div class="relative bg-white rounded-2xl shadow-lg flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4 opacity-60">
-        <div class="relative w-full flex justify-center items-center min-h-[180px]">
-          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="قريس اريك" class="h-44 w-32 object-cover rounded-xl group-hover:scale-105 transition duration-300 shadow-sm">
+      <div class="relative bg-white rounded-2xl flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4 opacity-60">
+        <div class="relative w-full flex justify-center items-center h-48 mb-4 overflow-hidden rounded-xl">
+          <img src="./perfumes/5.jpg" alt="قريس اريك" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
           <div class="absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded z-10">الأكثر مبيعاً</div>
           <div class="absolute top-2 left-2 bg-red-100 text-red-500 text-xs px-2 py-1 rounded z-10">نفدت الكمية</div>
         </div>
@@ -270,9 +233,9 @@
         </div>
       </div>
       <!-- منتج 6 -->
-      <div class="relative bg-white rounded-2xl shadow-lg flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
-        <div class="relative w-full flex justify-center items-center min-h-[180px]">
-          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="فرانكل ايمجنيشن" class="h-44 w-32 object-cover rounded-xl group-hover:scale-105 transition duration-300 shadow-sm">
+      <div class="relative bg-white rounded-2xl flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
+        <div class="relative w-full flex justify-center items-center h-48 mb-4 overflow-hidden rounded-xl">
+          <img src="./perfumes/6.jpg" alt="فرانكل ايمجنيشن" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
         </div>
         <div class="flex gap-2 mt-3 mb-2">
           <button class="w-9 h-9 flex items-center justify-center rounded-full border hover:bg-amber-50 transition" title="عرض سريع"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' /><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z' /></svg></button>
@@ -291,9 +254,9 @@
         </div>
       </div>
       <!-- منتج 7 -->
-      <div class="relative bg-white rounded-2xl shadow-lg flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
-        <div class="relative w-full flex justify-center items-center min-h-[180px]">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80" alt="فرانكل افنتوس" class="h-44 w-32 object-cover rounded-xl group-hover:scale-105 transition duration-300 shadow-sm">
+      <div class="relative bg-white rounded-2xl flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
+        <div class="relative w-full flex justify-center items-center h-48 mb-4 overflow-hidden rounded-xl">
+          <img src="./perfumes/7.jpg" alt="فرانكل افنتوس" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
         </div>
         <div class="flex gap-2 mt-3 mb-2">
           <button class="w-9 h-9 flex items-center justify-center rounded-full border hover:bg-amber-50 transition" title="عرض سريع"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' /><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z' /></svg></button>
@@ -312,9 +275,9 @@
         </div>
       </div>
       <!-- منتج 8 -->
-      <div class="relative bg-white rounded-2xl shadow-lg flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
-        <div class="relative w-full flex justify-center items-center min-h-[180px]">
-          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="وايلد كولت" class="h-44 w-32 object-cover rounded-xl group-hover:scale-105 transition duration-300 shadow-sm">
+      <div class="relative bg-white rounded-2xl flex flex-col items-center group hover:shadow-2xl transition h-full min-h-[420px] p-4">
+        <div class="relative w-full flex justify-center items-center h-48 mb-4 overflow-hidden rounded-xl">
+          <img src="./perfumes/8.jpg" alt="وايلد كولت" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
         </div>
         <div class="flex gap-2 mt-3 mb-2">
           <button class="w-9 h-9 flex items-center justify-center rounded-full border hover:bg-amber-50 transition" title="عرض سريع"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' /><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z' /></svg></button>
