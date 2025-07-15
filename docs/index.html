@@ -52,7 +52,6 @@
       <h1 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-4">Elevate Your Space with<br class="hidden md:block"> Timeless Furniture</h1>
       <p class="text-lg md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow">Crafted for comfort. Designed for life. Discover premium furniture that brings style and soul to every corner of your home.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#" class="bg-black hover:bg-amber-700 text-white font-bold px-8 py-3 rounded-full text-lg shadow flex items-center gap-2 justify-center transition btn-main">Shop Now <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
       </div>
     </div>
     
@@ -989,6 +988,33 @@
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
   </script>
+
+  <!-- Bottom Navigation Bar (Mobile & Tablet Only) -->
+  <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 shadow-2xl border-t border-amber-100 lg:hidden flex justify-around items-center h-16 backdrop-blur-lg">
+    <a href="#" class="flex flex-col items-center justify-center group text-amber-700 font-bold relative">
+      <span class="absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-10 bg-amber-100 rounded-full blur-sm opacity-60 group-hover:scale-110 transition"></span>
+      <i class="fa-solid fa-house text-xl z-10"></i>
+      <span class="text-xs mt-1 z-10">الرئيسية</span>
+    </a>
+    <a href="#" class="flex flex-col items-center justify-center group text-gray-400 hover:text-amber-700 transition font-bold relative">
+      <i class="fa-solid fa-th-large text-xl z-10"></i>
+      <span class="text-xs mt-1 z-10">الفئات</span>
+    </a>
+    <a href="#" class="flex flex-col items-center justify-center group text-gray-400 hover:text-amber-700 transition font-bold relative">
+      <span class="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-8 bg-amber-50 rounded-full blur-sm opacity-50 group-hover:scale-110 transition"></span>
+      <i class="fa-solid fa-bag-shopping text-xl z-10"></i>
+      <span class="text-xs mt-1 z-10">السلة</span>
+    </a>
+    <a href="#" class="flex flex-col items-center justify-center group text-gray-400 hover:text-amber-700 transition font-bold relative">
+      <i class="fa-regular fa-heart text-xl z-10"></i>
+      <span class="text-xs mt-1 z-10">مفضلتي</span>
+    </a>
+    <a href="#" class="flex flex-col items-center justify-center group text-gray-400 hover:text-amber-700 transition font-bold relative">
+      <i class="fa-regular fa-user text-xl z-10"></i>
+      <span class="text-xs mt-1 z-10">حسابي</span>
+    </a>
+  </nav>
+  <!-- /Bottom Navigation Bar -->
 
 </body>
 </html>
