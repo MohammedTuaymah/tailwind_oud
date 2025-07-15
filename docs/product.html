@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عود الأمسيات | متجر عطور عصري</title>
+  <link href="./style.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body { font-family: 'tajawal', sans-serif; }
+    .rtl { direction: rtl; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(.4,0,.2,1); }
+    .fade-in.visible { opacity: 1; transform: none; }
+    .product-badge { background: linear-gradient(90deg, #b45309, #fbbf24, #92400e); color: #fff; }
+    .review-star { color: #fbbf24; }
+  </style>
+</head>
+<body class="rtl text-gray-900 bg-amber-50 min-h-screen">
+  <!-- هيدر بسيط -->
+  <nav class="bg-white/80 backdrop-blur shadow-sm py-4 px-6 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <img src="./logo.png" alt="Oud Store" class="w-10 h-10 rounded-lg shadow">
+    </a>
+    <ul class="hidden md:flex gap-8 text-base font-medium text-amber-900">
+      <li><a href="index.html" class="hover:text-amber-700 transition">الرئيسية</a></li>
+      <li><a href="#" class="hover:text-amber-700 transition">منتجاتنا</a></li>
+      <li><a href="#" class="hover:text-amber-700 transition">العروض</a></li>
+      <li><a href="#contact" class="hover:text-amber-700 transition">تواصل معنا</a></li>
+    </ul>
+  </nav>
+
+  <!-- صفحة المنتج -->
+  <main class="container mx-auto px-4 py-10">
+    <div class="flex flex-col lg:flex-row gap-10">
+      <!-- معرض الصور -->
+      <div class="flex-1 flex flex-col gap-4 items-center">
+        <div class="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden shadow-xl bg-white flex items-center justify-center">
+          <img id="mainProductImg" src="./perfumes/1.jpg" alt="عود الأمسيات" class="w-full h-full object-cover transition-transform duration-500">
+          <span class="product-badge absolute top-3 right-3 z-10 px-4 py-1 text-xs md:text-sm rounded-full shadow-lg animate-pulse font-bold tracking-widest border-2 border-white">الأكثر مبيعاً</span>
+        </div>
+        <div class="flex gap-2 justify-center mt-2">
+          <img src="./perfumes/1.jpg" alt="عود الأمسيات 1" class="w-16 h-16 object-cover rounded border-2 border-amber-700 cursor-pointer thumb-img transition-transform duration-300 hover:scale-110" onclick="changeProductImg('./perfumes/1.jpg')">
+          <img src="./perfumes/2.jpg" alt="عود الأمسيات 2" class="w-16 h-16 object-cover rounded border-2 border-transparent cursor-pointer thumb-img transition-transform duration-300 hover:scale-110" onclick="changeProductImg('./perfumes/2.jpg')">
+          <img src="./perfumes/3.jpg" alt="عود الأمسيات 3" class="w-16 h-16 object-cover rounded border-2 border-transparent cursor-pointer thumb-img transition-transform duration-300 hover:scale-110" onclick="changeProductImg('./perfumes/3.jpg')">
+        </div>
+      </div>
+      <!-- تفاصيل المنتج -->
+      <div class="flex-1 flex flex-col gap-6">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-extrabold mb-2 text-amber-900 drop-shadow">عود الأمسيات الفاخر</h1>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-yellow-400 text-lg">★★★★★</span>
+            <span class="text-gray-500 text-sm">(12 تقييم)</span>
+            <span class="ml-2 bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-bold flex items-center gap-1"><i class="fa-solid fa-check"></i> متوفر</span>
+          </div>
+          <div class="flex gap-3 mb-2">
+            <small class="text-amber-700 text-xs md:text-sm animate-pulse font-bold">خصم 40%</small>
+            <small class="flex gap-1 items-center text-xs md:text-sm rounded-md text-green-600 bg-green-50 px-2 py-1"><i class="fa-solid fa-truck"></i> توصيل سريع</small>
+          </div>
+          <p class="text-gray-700 leading-7 mb-4">عطر فاخر برائحة شرقية تدوم طويلاً، مناسب لجميع الأوقات ويمنحك حضوراً مميزاً. متوفر بعدة أحجام وألوان.</p>
+        </div>
+        <!-- خيارات المنتج -->
+        <form class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <label class="font-bold text-sm">اختر اللون:</label>
+            <div class="flex gap-2">
+              <button type="button" class="w-8 h-8 rounded-full border-2 border-amber-700 bg-[#e0e0e0] focus:ring-2 focus:ring-amber-700 transition-transform hover:scale-110" aria-label="رمادي" onclick="changeProductImg('./perfumes/1.jpg')"></button>
+              <button type="button" class="w-8 h-8 rounded-full border-2 border-transparent bg-[#bfa17c] focus:ring-2 focus:ring-amber-700 transition-transform hover:scale-110" aria-label="ذهبي" onclick="changeProductImg('./perfumes/2.jpg')"></button>
+              <button type="button" class="w-8 h-8 rounded-full border-2 border-transparent bg-[#fff] focus:ring-2 focus:ring-amber-700 transition-transform hover:scale-110" aria-label="أبيض" onclick="changeProductImg('./perfumes/3.jpg')"></button>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="font-bold text-sm">اختر الحجم:</label>
+            <select class="rounded border px-3 py-2 focus:ring-2 focus:ring-amber-700">
+              <option>100 مل</option>
+              <option>200 مل</option>
+              <option>50 مل</option>
+            </select>
+          </div>
+          <!-- السعر -->
+          <div class="flex items-center gap-4 mt-2">
+            <span class="text-2xl font-bold">129 ر.س</span>
+            <span class="line-through text-gray-400 text-lg">215 ر.س</span>
+            <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-xs font-bold animate-pulse">وفر 86 ر.س</span>
+          </div>
+          <!-- الكمية وزر السلة -->
+          <div class="flex flex-row gap-2 items-center mt-4 w-full">
+            <div class="flex items-center bg-white rounded-full shadow-md border border-amber-100 px-1 py-1">
+              <button type="button" class="w-8 h-8 flex items-center justify-center text-lg font-bold text-amber-700 hover:bg-amber-50 rounded-full transition" onclick="changeQty(-1)">-</button>
+              <input type="number" min="1" value="1" class="w-12 h-8 text-center border-x border-amber-100 outline-none bg-transparent font-bold" id="productQty">
+              <button type="button" class="w-8 h-8 flex items-center justify-center text-lg font-bold text-amber-700 hover:bg-amber-50 rounded-full transition" onclick="changeQty(1)">+</button>
+            </div>
+            <button class="flex-1 max-w-[170px] bg-gradient-to-r from-amber-700 to-amber-500 hover:from-amber-800 hover:to-amber-600 font-bold py-2 px-4 rounded-full shadow-lg transition text-base hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-400 text-dark flex items-center justify-center gap-2 whitespace-nowrap btn-main" type="submit"> 
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-5-9V6a2 2 0 10-4 0v7"/></svg>
+              إضافة للسلة
+            </button>
+            <button type="button" id="wishlistBtn" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow focus:outline-none focus:ring-2 focus:ring-amber-400 btn-secondary" aria-label="إضافة للمفضلة" onclick="toggleWishlist(this)">
+              <i class="fa-regular fa-heart w-5 h-5"></i>
+            </button>
+            <button type="button" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow focus:outline-none focus:ring-2 focus:ring-amber-400 btn-secondary" aria-label="مشاركة المنتج" onclick="shareProduct()">
+              <i class="fa-solid fa-share-nodes w-5 h-5"></i>
+            </button>
+          </div>
+        </form>
+        <!-- مميزات مختصرة -->
+        <ul class="flex flex-wrap gap-3 mt-6 text-sm">
+          <li class="flex items-center gap-2 bg-amber-100 text-amber-900 px-3 py-1 rounded-full"><i class="fa-solid fa-certificate"></i> أصلي 100%</li>
+          <li class="flex items-center gap-2 bg-amber-100 text-amber-900 px-3 py-1 rounded-full"><i class="fa-solid fa-clock"></i> ثبات يدوم طويلاً</li>
+          <li class="flex items-center gap-2 bg-amber-100 text-amber-900 px-3 py-1 rounded-full"><i class="fa-solid fa-truck-fast"></i> توصيل سريع</li>
+          <li class="flex items-center gap-2 bg-amber-100 text-amber-900 px-3 py-1 rounded-full"><i class="fa-solid fa-gift"></i> تغليف هدايا مجاني</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- مراجعات العملاء -->
+    <section class="mt-12">
+      <h2 class="text-xl font-bold mb-4 text-amber-900">مراجعات العملاء</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl shadow p-4 flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <span class="font-bold">سارة</span>
+            <span class="text-yellow-400">★★★★★</span>
+          </div>
+          <p class="text-gray-700">عطر رائع وثباته ممتاز! أنصح به بشدة.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4 flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <span class="font-bold">محمد</span>
+            <span class="text-yellow-400">★★★★★</span>
+          </div>
+          <p class="text-gray-700">توصيل سريع وتغليف أنيق. تجربة تسوق مميزة.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4 flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <span class="font-bold">ريم</span>
+            <span class="text-yellow-400">★★★★☆</span>
+          </div>
+          <p class="text-gray-700">الرائحة جميلة لكن تمنيت لو كان هناك حجم أصغر.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4 flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <span class="font-bold">عبدالله</span>
+            <span class="text-yellow-400">★★★★★</span>
+          </div>
+          <p class="text-gray-700">أفضل عطر جربته مؤخراً. سأكرر الشراء.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- منتجات مقترحة -->
+    <section class="mt-16">
+      <h2 class="text-xl font-bold mb-6 text-amber-900">منتجات قد تعجبك</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center group hover:shadow-2xl transition">
+          <img src="./perfumes/2.jpg" alt="مسك الغيم" class="w-full h-40 object-contain mb-3 rounded-xl group-hover:scale-105 transition duration-300">
+          <div class="font-bold text-lg mb-1">مسك الغيم</div>
+          <div class="text-sm text-gray-500 mb-2">100 مل</div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-red-500 font-bold text-lg">149 ر.س</span>
+            <span class="line-through text-gray-400 text-sm">199 ر.س</span>
+          </div>
+          <button class="w-full py-2 rounded bg-black text-white font-bold hover:bg-amber-900 transition btn-main">اشترِ الآن</button>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center group hover:shadow-2xl transition">
+          <img src="./perfumes/3.jpg" alt="ليالي باريس" class="w-full h-40 object-contain mb-3 rounded-xl group-hover:scale-105 transition duration-300">
+          <div class="font-bold text-lg mb-1">ليالي باريس</div>
+          <div class="text-sm text-gray-500 mb-2">200 مل</div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-red-500 font-bold text-lg">129 ر.س</span>
+            <span class="line-through text-gray-400 text-sm">499 ر.س</span>
+          </div>
+          <button class="w-full py-2 rounded bg-black text-white font-bold hover:bg-amber-900 transition btn-main">اشترِ الآن</button>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center group hover:shadow-2xl transition">
+          <img src="./perfumes/4.jpg" alt="سحر الشرق" class="w-full h-40 object-contain mb-3 rounded-xl group-hover:scale-105 transition duration-300">
+          <div class="font-bold text-lg mb-1">سحر الشرق</div>
+          <div class="text-sm text-gray-500 mb-2">200 مل</div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-red-500 font-bold text-lg">149 ر.س</span>
+            <span class="line-through text-gray-400 text-sm">499 ر.س</span>
+          </div>
+          <button class="w-full py-2 rounded bg-black text-white font-bold hover:bg-amber-900 transition btn-main">اشترِ الآن</button>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center group hover:shadow-2xl transition">
+          <img src="./perfumes/5.jpg" alt="قريس اريك" class="w-full h-40 object-contain mb-3 rounded-xl group-hover:scale-105 transition duration-300">
+          <div class="font-bold text-lg mb-1">قريس اريك</div>
+          <div class="text-sm text-gray-500 mb-2">200 مل</div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-red-500 font-bold text-lg">129 ر.س</span>
+            <span class="line-through text-gray-400 text-sm">275 ر.س</span>
+          </div>
+          <button class="w-full py-2 rounded bg-black text-white font-bold hover:bg-amber-900 transition btn-main">اشترِ الآن</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- فوتر بسيط -->
+  <footer class="bg-black text-white pt-10 pb-4 mt-16 rtl">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2 mb-2">
+          <img src="./logo.png" alt="OudStore Logo" class="w-20 rounded-xl shadow-lg">
+          <span class="text-xs text-gray-400">متجر عطور عصري - جميع الحقوق محفوظة &copy; 2025</span>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <img src="https://cdn.salla.network/images/payment/mada_mini.png?v=2.0.5" alt="mada" class="h-6">
+          <img src="https://cdn.salla.network/images/payment/credit_card_mini.png?v=2.0.5" alt="credit_card" class="h-6">
+          <img src="https://cdn.salla.network/images/payment/stc_pay_mini.png?v=2.0.5" alt="stc_pay" class="h-6">
+          <img src="https://cdn.salla.network/images/payment/apple_pay_mini.png?v=2.0.5" alt="apple_pay" class="h-6">
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#" class="hover:text-amber-400" title="انستجرام"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-amber-400" title="تويتر"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-amber-400" title="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- سكريبتات تفاعلية -->
+  <script>
+    function toggleWishlist(btn) {
+      btn.classList.toggle('bg-amber-700');
+      btn.classList.toggle('text-white');
+      btn.classList.toggle('border-amber-700');
+      btn.classList.toggle('border-amber-200');
+    }
+    function changeProductImg(src) {
+      document.getElementById('mainProductImg').src = src;
+      document.querySelectorAll('.thumb-img').forEach(img => {
+        img.classList.remove('border-amber-700');
+        if(img.src.includes(src)) img.classList.add('border-amber-700');
+      });
+    }
+    function changeQty(val) {
+      const qtyInput = document.getElementById('productQty');
+      let qty = parseInt(qtyInput.value) || 1;
+      qty = Math.max(1, qty + val);
+      qtyInput.value = qty;
+    }
+    function shareProduct() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'عود الأمسيات الفاخر',
+          text: 'تعرف على عطر الأمسيات الفاخر من OudStore',
+          url: window.location.href
+        });
+      } else {
+        prompt('انسخ رابط المنتج:', window.location.href);
+      }
+    }
+  </script>
+</body>
+</html> 
