@@ -433,35 +433,35 @@
 
 <!-- قسم ثلاث بنرات رئيسية -->
 <section class="s-block s-block--main-carousel w-full bg-no-repeat bg-fixed bg-cover relative my-8 py-4">
-  <div class="container mx-auto relative z-10">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-4">
-      <!-- البنر الكبير (سلايدر يدوي بسيط) -->
-      <div class="lg:row-span-2 sm:col-span-2 relative overflow-hidden rounded-xl shadow-md">
-        <div id="mainBannerSlider" class="relative w-full h-full min-h-[340px] flex items-center justify-center bg-cover bg-center transition-all duration-700" style="background-image: url('./banner/1.jpg');">
+  <div class="container mx-auto relative z-10 flex flex-col items-center justify-center">
+    <div class="w-full mx-auto grid grid-cols-2 grid-rows-2 gap-2.5 lg:gap-4 items-center justify-center">
+      <!-- البنر الرئيسي -->
+      <div class="col-span-2 row-span-1 flex items-center justify-center relative overflow-hidden rounded-xl shadow-md min-h-[180px] sm:min-h-[300px] h-48 sm:h-[300px] lg:h-[340px]">
+        <div id="mainBannerSlider" class="relative w-full flex items-center justify-center bg-cover bg-center transition-all duration-700 min-h-[180px] sm:min-h-[300px] h-48 sm:h-[300px] lg:h-[340px]">
           <div class="absolute inset-0 bg-black/30 z-0 rounded-xl"></div>
-          <div class="relative z-10 flex flex-col items-center justify-center text-center w-full h-full p-6 md:p-12">
-            <strong class="text-sm font-normal mb-3 text-white">خصم إضافي بنسبة 15٪</strong>
-            <h3 class="text-2xl md:text-3xl font-bold leading-tight text-white mb-6">ديكور جديد لمساحات المعيشة الخاصة بك</h3>
-            <a href="#" class="btn btn--white mt-2 bg-white text-gray-900 font-bold rounded-full px-6 py-2 shadow hover:bg-amber-700 hover:text-white transition">اكتشف المزيد</a>
+          <div class="relative z-10 flex flex-col items-center justify-center text-center w-full h-full p-4 sm:p-6 md:p-12">
+            <strong class="text-xs sm:text-sm font-normal mb-2 sm:mb-3 text-white">خصم إضافي بنسبة 15٪</strong>
+            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold leading-tight text-white mb-3 sm:mb-6">ديكور جديد لمساحات المعيشة الخاصة بك</h3>
+            <a href="#" class="btn btn--white mt-2 bg-white text-gray-900 font-bold rounded-full px-4 sm:px-6 py-2 shadow hover:bg-amber-700 hover:text-white transition text-sm sm:text-base">اكتشف المزيد</a>
           </div>
           <!-- أزرار السلايدر -->
-          <button onclick="changeBannerSlide(-1)" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-white text-gray-900 rounded-full p-2 shadow z-20"><svg class="w-6 h-6 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
-          <button onclick="changeBannerSlide(1)" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-white text-gray-900 rounded-full p-2 shadow z-20"><svg class="w-6 h-6 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+          <button onclick="changeBannerSlide(-1)" class="absolute top-1/2 right-2 sm:right-4 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-white text-gray-900 rounded-full p-1 sm:p-2 shadow z-20"><svg class="w-5 h-5 sm:w-6 sm:h-6 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+          <button onclick="changeBannerSlide(1)" class="absolute top-1/2 left-2 sm:left-4 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-white text-gray-900 rounded-full p-1 sm:p-2 shadow z-20"><svg class="w-5 h-5 sm:w-6 sm:h-6 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
           <!-- نقاط السلايدر -->
-          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-            <button class="w-3 h-3 rounded-full bg-amber-700" id="bannerDot0" onclick="goToBannerSlide(0)"></button>
-            <button class="w-3 h-3 rounded-full bg-amber-300" id="bannerDot1" onclick="goToBannerSlide(1)"></button>
+          <div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+            <button class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-amber-700" id="bannerDot0" onclick="goToBannerSlide(0)"></button>
+            <button class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-amber-300" id="bannerDot1" onclick="goToBannerSlide(1)"></button>
           </div>
         </div>
       </div>
       <!-- البنر الجانبي 1 -->
-      <a href="#" class="side-slide flex flex-col justify-center bg-gray-700 relative p-0 bg-cover transition-opacity hover:opacity-95 h-80 lg:h-auto rounded-xl overflow-hidden shadow-md" style="background-image: url('./banner/2.jpg');">
-        <span class="sr-only">بنر جانبي 1</span>
-      </a>
+       <div class="h-full">
+      <a href="#" class="col-span-1 row-span-1 side-slide h-full flex flex-col justify-center items-center bg-gray-700 relative p-0 bg-cover transition-opacity hover:opacity-95 rounded-xl overflow-hidden shadow-md" style="background-image: url('./banner/2.jpg');">
+      </a></div>
       <!-- البنر الجانبي 2 -->
-      <a href="#" class="side-slide flex flex-col justify-center bg-gray-700 relative p-0 bg-cover transition-opacity hover:opacity-95 h-80 lg:h-auto rounded-xl overflow-hidden shadow-md" style="background-image: url('./categories/1.jpg');">
-        <span class="sr-only">بنر جانبي 2</span>
-      </a>
+      <div class="h-full">
+      <a href="#" class="col-span-1 row-span-1 side-slide h-full flex flex-col justify-center items-center bg-gray-700 relative p-0 bg-cover transition-opacity hover:opacity-95 rounded-xl overflow-hidden shadow-md" style="background-image: url('./categories/1.jpg');">
+      </a></div>
     </div>
   </div>
 </section>
@@ -518,7 +518,7 @@
       <!-- شريط سفلي -->
       <div class="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="text-xs text-gray-400">جميع الحقوق محفوظة &copy; 2025 <a href="#" class="hover:text-amber-400">OudStore</a></div>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
           <img src="https://cdn.salla.network/images/payment/mada_mini.png?v=2.0.5" alt="mada" class="h-6">
           <img src="https://cdn.salla.network/images/payment/credit_card_mini.png?v=2.0.5" alt="credit_card" class="h-6">
           <img src="https://cdn.salla.network/images/payment/stc_pay_mini.png?v=2.0.5" alt="stc_pay" class="h-6">
@@ -561,7 +561,7 @@
     let bannerCurrent = 0;
     function renderBannerSlider() {
       const slider = document.getElementById('mainBannerSlider');
-      slider.style.backgroundImage = `url('${bannerImages[bannerCurrent]}')`;
+      slider.style.backgroundImage = `url('./banner/1.jpg')`;
       slider.querySelector('strong').textContent = bannerSubtitles[bannerCurrent];
       slider.querySelector('h3').textContent = bannerTitles[bannerCurrent];
       slider.querySelector('a').textContent = bannerBtns[bannerCurrent];
