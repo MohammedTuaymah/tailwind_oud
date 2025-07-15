@@ -989,29 +989,43 @@
     window.addEventListener('load', revealOnScroll);
   </script>
 
-  <!-- Bottom Navigation Bar (Mobile & Tablet Only) -->
-  <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 shadow-2xl border-t border-amber-100 lg:hidden flex justify-around items-center h-16 backdrop-blur-lg">
-    <a href="#" class="flex flex-col items-center justify-center group text-amber-700 font-bold relative">
-      <span class="absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-10 bg-amber-100 rounded-full blur-sm opacity-60 group-hover:scale-110 transition"></span>
-      <i class="fa-solid fa-house text-xl z-10"></i>
-      <span class="text-xs mt-1 z-10">الرئيسية</span>
+  <!-- Bottom Navigation Bar (Mobile & Tablet Only, Gray Theme) -->
+  <nav class="fixed bottom-0 left-0 right-0 z-40 bg-gradient-to-t from-gray-100 via-white to-gray-50 shadow-2xl border-t border-gray-200 lg:hidden flex justify-around items-center h-20 px-2 backdrop-blur-lg" style="box-shadow: 0 -4px 24px 0 rgba(120, 120, 120, 0.08) inset;">
+    <!-- الرئيسية (نشطة) -->
+    <a href="#" class="flex flex-col items-center justify-center group font-bold relative transition-all duration-300">
+      <span class="absolute -top-3 left-1/2 -translate-x-1/2 w-14 h-14 bg-gradient-to-br from-amber-400 via-amber-200 to-amber-600 rounded-full blur-md opacity-60 group-hover:scale-110 transition-all duration-300 animate-pulse"></span>
+      <span class="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg group-hover:scale-110 transition-all duration-300 border-2 border-amber-300 animate-bounce">
+        <i class="fa-solid fa-house text-2xl text-dark-600"></i>
+      </span>
+      <span class="text-xs mt-1 z-10 drop-shadow">الرئيسية</span>
     </a>
-    <a href="#" class="flex flex-col items-center justify-center group text-gray-400 hover:text-amber-700 transition font-bold relative">
-      <i class="fa-solid fa-th-large text-xl z-10"></i>
-      <span class="text-xs mt-1 z-10">الفئات</span>
+    <!-- الفئات -->
+    <a href="#" class="flex flex-col items-center justify-center group font-bold relative transition-all duration-300">
+      <span class="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 shadow shadow-gray-200 group-hover:scale-110 group-hover:bg-gray-200 transition-all duration-300">
+        <i class="fa-solid fa-th-large text-2xl text-gray-500 group-hover:text-gray-800 transition-all duration-300 group-hover:animate-pulse"></i>
+      </span>
+      <span class="text-xs mt-1 z-10 text-gray-500 group-hover:text-gray-800 transition">الفئات</span>
     </a>
-    <a href="#" class="flex flex-col items-center justify-center group text-gray-400 hover:text-amber-700 transition font-bold relative">
-      <span class="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-8 bg-amber-50 rounded-full blur-sm opacity-50 group-hover:scale-110 transition"></span>
-      <i class="fa-solid fa-bag-shopping text-xl z-10"></i>
-      <span class="text-xs mt-1 z-10">السلة</span>
+    <!-- السلة -->
+    <a href="#" class="flex flex-col items-center justify-center group font-bold relative transition-all duration-300">
+      <span class="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 shadow shadow-gray-200 group-hover:scale-110 group-hover:bg-gray-200 transition-all duration-300">
+        <i class="fa-solid fa-bag-shopping text-2xl text-gray-500 group-hover:text-gray-800 transition-all duration-300 group-hover:animate-pulse"></i>
+      </span>
+      <span class="text-xs mt-1 z-10 text-gray-500 group-hover:text-gray-800 transition">السلة</span>
     </a>
-    <a href="#" class="flex flex-col items-center justify-center group text-gray-400 hover:text-amber-700 transition font-bold relative">
-      <i class="fa-regular fa-heart text-xl z-10"></i>
-      <span class="text-xs mt-1 z-10">مفضلتي</span>
+    <!-- المفضلة -->
+    <a href="#" class="flex flex-col items-center justify-center group font-bold relative transition-all duration-300">
+      <span class="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 shadow shadow-gray-200 group-hover:scale-110 group-hover:bg-gray-200 transition-all duration-300">
+        <i class="fa-regular fa-heart text-2xl text-gray-500 group-hover:text-gray-800 transition-all duration-300 group-hover:animate-pulse"></i>
+      </span>
+      <span class="text-xs mt-1 z-10 text-gray-500 group-hover:text-gray-800 transition">مفضلتي</span>
     </a>
-    <a href="#" class="flex flex-col items-center justify-center group text-gray-400 hover:text-amber-700 transition font-bold relative">
-      <i class="fa-regular fa-user text-xl z-10"></i>
-      <span class="text-xs mt-1 z-10">حسابي</span>
+    <!-- حسابي -->
+    <a href="#" class="flex flex-col items-center justify-center group font-bold relative transition-all duration-300">
+      <span class="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 shadow shadow-gray-200 group-hover:scale-110 group-hover:bg-gray-200 transition-all duration-300">
+        <i class="fa-regular fa-user text-2xl text-gray-500 group-hover:text-gray-800 transition-all duration-300 group-hover:animate-pulse"></i>
+      </span>
+      <span class="text-xs mt-1 z-10 text-gray-500 group-hover:text-gray-800 transition">حسابي</span>
     </a>
   </nav>
   <!-- /Bottom Navigation Bar -->
