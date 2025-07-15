@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body { font-family: 'Cairo', sans-serif; }
     .rtl { direction: rtl; }
@@ -414,9 +415,7 @@
             إضافة للسلة
           </button>
           <button type="button" id="wishlistBtn" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow focus:outline-none focus:ring-2 focus:ring-amber-400" aria-label="إضافة للمفضلة" onclick="toggleWishlist(this)">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-            </svg>
+            <i class="fa-regular fa-heart w-5 h-5"></i>
           </button>
         </div>
       </form>
@@ -539,7 +538,6 @@
     <div class="flex flex-col xl:flex-row gap-8">
       <!-- المنتج المميز -->
       <div class="flex-1 max-w-xl bg-white rounded-2xl shadow-lg p-5 flex flex-col gap-4 relative">
-        <span class="absolute top-3 right-3 bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-bold shadow">متوفر</span>
         <div class="relative aspect-[4/3] rounded-xl overflow-hidden group">
           <img src="https://cdn.salla.sa/YgPGOj/APE2GeRvQeSJUTFWYwdpLXxmLW59d2JEYZA3f2VP.jpg" alt="عطر يوفوريا" class="w-full h-full object-cover group-hover:opacity-0 transition duration-500">
           <img src="https://cdn.salla.sa/YgPGOj/iBCmfdVGPSApWsa3JePbFjO78f6ORZaMR16MDktd.jpg" alt="عطر يوفوريا" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
@@ -558,16 +556,11 @@
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-5-9V6a2 2 0 10-4 0v7"/></svg>
             إضافة للسلة
           </button>
-          <button class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="إضافة للمفضلة">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-            </svg>
+          <button class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow mb-1" title="مفضلة">
+            <i class="fa-regular fa-heart w-5 h-5"></i>
           </button>
-          <button class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="عرض سريع">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
+          <button class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="معاينة المنتج">
+            <i class="fa-regular fa-eye w-5 h-5"></i>
           </button>
         </div>
       </div>
@@ -578,7 +571,6 @@
           <div class="flex bg-white rounded-xl shadow p-3 gap-3 items-center hover:shadow-lg transition">
             <div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
               <img src="https://cdn.salla.sa/YgPGOj/FXKQoWGgwvqLcUnPR0SNmE9kNtz2U0tOUw0nUfZG.jpg" alt="ماء عطر روبرتو كافالي" class="w-full h-full object-cover">
-              <span class="absolute top-1 right-1 bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded font-bold">متوفر</span>
             </div>
             <div class="flex-1">
               <a href="#" class="block font-bold text-amber-900 text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
@@ -587,17 +579,19 @@
                 <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
-            <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="مفضلة">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-              </svg>
-            </button>
+            <div class="flex flex-col gap-1 items-center justify-center">
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow mb-0" title="مفضلة">
+                <i class="fa-regular fa-heart w-5 h-5"></i>
+              </button>
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="معاينة المنتج">
+                <i class="fa-regular fa-eye w-5 h-5"></i>
+              </button>
+            </div>
           </div>
           <!-- كارد منتج صغير -->
           <div class="flex bg-white rounded-xl shadow p-3 gap-3 items-center hover:shadow-lg transition">
             <div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
               <img src="https://cdn.salla.sa/YgPGOj/FXKQoWGgwvqLcUnPR0SNmE9kNtz2U0tOUw0nUfZG.jpg" alt="ماء عطر روبرتو كافالي" class="w-full h-full object-cover">
-              <span class="absolute top-1 right-1 bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded font-bold">متوفر</span>
             </div>
             <div class="flex-1">
               <a href="#" class="block font-bold text-amber-900 text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
@@ -606,17 +600,19 @@
                 <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
-            <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="مفضلة">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-              </svg>
-            </button>
+            <div class="flex flex-col gap-1 items-center justify-center">
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow mb-0" title="مفضلة">
+                <i class="fa-regular fa-heart w-5 h-5"></i>
+              </button>
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="معاينة المنتج">
+                <i class="fa-regular fa-eye w-5 h-5"></i>
+              </button>
+            </div>
           </div>
           <!-- كارد منتج صغير -->
           <div class="flex bg-white rounded-xl shadow p-3 gap-3 items-center hover:shadow-lg transition">
             <div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
               <img src="https://cdn.salla.sa/YgPGOj/FXKQoWGgwvqLcUnPR0SNmE9kNtz2U0tOUw0nUfZG.jpg" alt="ماء عطر روبرتو كافالي" class="w-full h-full object-cover">
-              <span class="absolute top-1 right-1 bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded font-bold">متوفر</span>
             </div>
             <div class="flex-1">
               <a href="#" class="block font-bold text-amber-900 text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
@@ -625,17 +621,19 @@
                 <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
-            <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="مفضلة">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-              </svg>
-            </button>
+            <div class="flex flex-col gap-1 items-center justify-center">
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow mb-0" title="مفضلة">
+                <i class="fa-regular fa-heart w-5 h-5"></i>
+              </button>
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="معاينة المنتج">
+                <i class="fa-regular fa-eye w-5 h-5"></i>
+              </button>
+            </div>
           </div>
           <!-- كرر الكاردات حسب الحاجة -->
           <div class="flex bg-white rounded-xl shadow p-3 gap-3 items-center hover:shadow-lg transition">
             <div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
               <img src="https://cdn.salla.sa/YgPGOj/iuVtFfM8c5WkAEzytHBh2s8ZES6P31ei6eOgOFP7.jpg" alt="رصاصي عطر Blue" class="w-full h-full object-cover">
-              <span class="absolute top-1 right-1 bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded font-bold">متوفر</span>
             </div>
             <div class="flex-1">
               <a href="#" class="block font-bold text-amber-900 text-sm mb-1 hover:underline">رصاصي عطر Blue</a>
@@ -644,11 +642,14 @@
                 <span class="line-through text-gray-400 text-xs">٥٠ ر.س</span>
               </div>
             </div>
-            <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="مفضلة">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-              </svg>
-            </button>
+            <div class="flex flex-col gap-1 items-center justify-center">
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow mb-0" title="مفضلة">
+                <i class="fa-regular fa-heart w-5 h-5"></i>
+              </button>
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="معاينة المنتج">
+                <i class="fa-regular fa-eye w-5 h-5"></i>
+              </button>
+            </div>
           </div>
           <!-- أضف المزيد من المنتجات هنا -->
         </div>
@@ -664,7 +665,6 @@
     <div class="flex flex-col xl:flex-row gap-8">
       <!-- المنتج المميز -->
       <div class="flex-1 max-w-xl bg-white rounded-2xl shadow-lg p-5 flex flex-col gap-4 relative">
-        <span class="absolute top-3 right-3 bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-bold shadow">متوفر</span>
         <div class="relative aspect-[4/3] rounded-xl overflow-hidden group">
           <img src="https://cdn.salla.sa/YgPGOj/APE2GeRvQeSJUTFWYwdpLXxmLW59d2JEYZA3f2VP.jpg" alt="عطر يوفوريا" class="w-full h-full object-cover group-hover:opacity-0 transition duration-500">
           <img src="https://cdn.salla.sa/YgPGOj/iBCmfdVGPSApWsa3JePbFjO78f6ORZaMR16MDktd.jpg" alt="عطر يوفوريا" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
@@ -683,16 +683,11 @@
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-5-9V6a2 2 0 10-4 0v7"/></svg>
             إضافة للسلة
           </button>
-          <button class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="إضافة للمفضلة">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-            </svg>
+          <button class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow mb-1" title="مفضلة">
+            <i class="fa-regular fa-heart w-5 h-5"></i>
           </button>
-          <button class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="عرض سريع">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
+          <button class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="معاينة المنتج">
+            <i class="fa-regular fa-eye w-5 h-5"></i>
           </button>
         </div>
       </div>
@@ -703,7 +698,6 @@
           <div class="flex bg-white rounded-xl shadow p-3 gap-3 items-center hover:shadow-lg transition">
             <div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
               <img src="https://cdn.salla.sa/YgPGOj/FXKQoWGgwvqLcUnPR0SNmE9kNtz2U0tOUw0nUfZG.jpg" alt="ماء عطر روبرتو كافالي" class="w-full h-full object-cover">
-              <span class="absolute top-1 right-1 bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded font-bold">متوفر</span>
             </div>
             <div class="flex-1">
               <a href="#" class="block font-bold text-amber-900 text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
@@ -712,17 +706,19 @@
                 <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
-            <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="مفضلة">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-              </svg>
-            </button>
+            <div class="flex flex-col gap-1 items-center justify-center">
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow mb-0" title="مفضلة">
+                <i class="fa-regular fa-heart w-5 h-5"></i>
+              </button>
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="معاينة المنتج">
+                <i class="fa-regular fa-eye w-5 h-5"></i>
+              </button>
+            </div>
           </div>
           <!-- كارد منتج صغير -->
           <div class="flex bg-white rounded-xl shadow p-3 gap-3 items-center hover:shadow-lg transition">
             <div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
               <img src="https://cdn.salla.sa/YgPGOj/FXKQoWGgwvqLcUnPR0SNmE9kNtz2U0tOUw0nUfZG.jpg" alt="ماء عطر روبرتو كافالي" class="w-full h-full object-cover">
-              <span class="absolute top-1 right-1 bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded font-bold">متوفر</span>
             </div>
             <div class="flex-1">
               <a href="#" class="block font-bold text-amber-900 text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
@@ -731,17 +727,19 @@
                 <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
-            <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="مفضلة">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-              </svg>
-            </button>
+            <div class="flex flex-col gap-1 items-center justify-center">
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow mb-0" title="مفضلة">
+                <i class="fa-regular fa-heart w-5 h-5"></i>
+              </button>
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="معاينة المنتج">
+                <i class="fa-regular fa-eye w-5 h-5"></i>
+              </button>
+            </div>
           </div>
           <!-- كارد منتج صغير -->
           <div class="flex bg-white rounded-xl shadow p-3 gap-3 items-center hover:shadow-lg transition">
             <div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
               <img src="https://cdn.salla.sa/YgPGOj/FXKQoWGgwvqLcUnPR0SNmE9kNtz2U0tOUw0nUfZG.jpg" alt="ماء عطر روبرتو كافالي" class="w-full h-full object-cover">
-              <span class="absolute top-1 right-1 bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded font-bold">متوفر</span>
             </div>
             <div class="flex-1">
               <a href="#" class="block font-bold text-amber-900 text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
@@ -750,17 +748,19 @@
                 <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
-            <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="مفضلة">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-              </svg>
-            </button>
+            <div class="flex flex-col gap-1 items-center justify-center">
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow mb-0" title="مفضلة">
+                <i class="fa-regular fa-heart w-5 h-5"></i>
+              </button>
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="معاينة المنتج">
+                <i class="fa-regular fa-eye w-5 h-5"></i>
+              </button>
+            </div>
           </div>
           <!-- كرر الكاردات حسب الحاجة -->
           <div class="flex bg-white rounded-xl shadow p-3 gap-3 items-center hover:shadow-lg transition">
             <div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
               <img src="https://cdn.salla.sa/YgPGOj/iuVtFfM8c5WkAEzytHBh2s8ZES6P31ei6eOgOFP7.jpg" alt="رصاصي عطر Blue" class="w-full h-full object-cover">
-              <span class="absolute top-1 right-1 bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded font-bold">متوفر</span>
             </div>
             <div class="flex-1">
               <a href="#" class="block font-bold text-amber-900 text-sm mb-1 hover:underline">رصاصي عطر Blue</a>
@@ -769,11 +769,14 @@
                 <span class="line-through text-gray-400 text-xs">٥٠ ر.س</span>
               </div>
             </div>
-            <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="مفضلة">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-              </svg>
-            </button>
+            <div class="flex flex-col gap-1 items-center justify-center">
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow mb-0" title="مفضلة">
+                <i class="fa-regular fa-heart w-5 h-5"></i>
+              </button>
+              <button class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-amber-200 bg-white text-amber-700 hover:bg-amber-700 hover:text-white transition shadow" title="معاينة المنتج">
+                <i class="fa-regular fa-eye w-5 h-5"></i>
+              </button>
+            </div>
           </div>
           <!-- أضف المزيد من المنتجات هنا -->
         </div>
