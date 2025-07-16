@@ -15,6 +15,70 @@
     .rtl { direction: rtl; }
     .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(.4,0,.2,1); }
     .fade-in.visible { opacity: 1; transform: none; }
+    /* تحسينات قسم مميزات المتجر */
+    .s-block--enhanced-features__item {
+      background: linear-gradient(135deg, #faf7f5 60%, #f3f3f3 100%);
+      box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+      transition: box-shadow 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .s-block--enhanced-features__item:hover {
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.10);
+      transform: translateY(-6px) scale(1.03);
+    }
+    .s-block--enhanced-features__item .feature-icon {
+      transition: color 0.3s, transform 0.3s;
+      color: #111;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+    .s-block--enhanced-features__item:hover .feature-icon {
+      color: #fff;
+      background: #111;
+      transform: scale(1.15) rotate(-6deg);
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,0.13);
+    }
+    .s-block--enhanced-features__item h2 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      transition: color 0.3s, font-size 0.3s;
+      color: #111;
+    }
+    .s-block--enhanced-features__item:hover h2 {
+      color: #000;
+      font-size: 1.32rem;
+      letter-spacing: 0.5px;
+    }
+    .s-block--enhanced-features__item p {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 0;
+      line-height: 1.7;
+    }
+    .s-block--enhanced-features__item:before {
+      content: '';
+      position: absolute;
+      top: -40px; left: -40px;
+      width: 80px; height: 80px;
+      background: radial-gradient(circle, #0000000d 60%, transparent 100%);
+      z-index: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      opacity: 0.7;
+    }
+    .s-block--enhanced-features__item:hover:before {
+      opacity: 1;
+    }
   </style>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -88,6 +152,49 @@
 
   <!-- نهاية الهيدر والبانر الجديد -->
   <!-- حذف الهيدر والبانر القديمين هنا -->
+
+  <!-- قسم مميزات المتجر -->
+  <section class="s-block s-block--enhanced-features container my-12 mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 xl:gap-8" data-length="3">
+      <!-- ميزة 1 -->
+      <div class="s-block--enhanced-features__item group overflow-hidden relative bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center transition hover:shadow-2xl">
+        <div class="absolute bottom-0 left-0 w-full h-px duration-300 origin-left transform scale-x-0 bg-black group-hover:scale-x-100"></div>
+        <div class="absolute bottom-0 left-0 w-px h-full duration-300 origin-bottom transform scale-y-0 bg-black group-hover:scale-y-100"></div>
+        <div class="absolute top-0 left-0 w-full h-px duration-300 origin-right transform scale-x-0 bg-black group-hover:scale-x-100"></div>
+        <div class="absolute bottom-0 right-0 w-px h-full duration-300 origin-top transform scale-y-0 bg-black group-hover:scale-y-100"></div>
+        <div class="feature-icon has-icon mb-4 text-4xl text-black">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h2 class="font-bold text-lg mb-2">وسائل الدفع الآمن</h2>
+        <p class="text-gray-600">بإمكانك الدفع بسهولة وأمان</p>
+      </div>
+      <!-- ميزة 2 -->
+      <div class="s-block--enhanced-features__item group overflow-hidden relative bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center transition hover:shadow-2xl">
+        <div class="absolute bottom-0 left-0 w-full h-px duration-300 origin-left transform scale-x-0 bg-black group-hover:scale-x-100"></div>
+        <div class="absolute bottom-0 left-0 w-px h-full duration-300 origin-bottom transform scale-y-0 bg-black group-hover:scale-y-100"></div>
+        <div class="absolute top-0 left-0 w-full h-px duration-300 origin-right transform scale-x-0 bg-black group-hover:scale-x-100"></div>
+        <div class="absolute bottom-0 right-0 w-px h-full duration-300 origin-top transform scale-y-0 bg-black group-hover:scale-y-100"></div>
+        <div class="feature-icon has-icon mb-4 text-4xl text-black">
+          <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <h2 class="font-bold text-lg mb-2">توصيل سريع</h2>
+        <p class="text-gray-600">التوصيل الفوري يضمن وصول طلبك بأسرع مما تتخيل!</p>
+      </div>
+      <!-- ميزة 3 -->
+      <div class="s-block--enhanced-features__item group overflow-hidden relative bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center transition hover:shadow-2xl">
+        <div class="absolute bottom-0 left-0 w-full h-px duration-300 origin-left transform scale-x-0 bg-black group-hover:scale-x-100"></div>
+        <div class="absolute bottom-0 left-0 w-px h-full duration-300 origin-bottom transform scale-y-0 bg-black group-hover:scale-y-100"></div>
+        <div class="absolute top-0 left-0 w-full h-px duration-300 origin-right transform scale-x-0 bg-black group-hover:scale-x-100"></div>
+        <div class="absolute bottom-0 right-0 w-px h-full duration-300 origin-top transform scale-y-0 bg-black group-hover:scale-y-100"></div>
+        <div class="feature-icon has-icon mb-4 text-4xl text-black">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h2 class="font-bold text-lg mb-2">خدمة العملاء</h2>
+        <p class="text-gray-600">نحن دائمًا هنا للإجابة على استفساراتك. خدمة العملاء متاحة على مدار الساعة لضمان راحتك التامة! ⏰</p>
+      </div>
+    </div>
+  </section>
+  <!-- /قسم مميزات المتجر -->
 
   <!-- قسم فئات المتجر -->
   <section class="s-block s-block--square-links square-links-1 py-12 bg-white">
@@ -982,8 +1089,8 @@
           </div>
           <!-- أزرار التنقل -->
           <div class="flex justify-center gap-4 mt-10">
-            <button class="testimonials-prev bg-amber-100 hover:bg-amber-300 text-amber-700 rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-amber-200 hover:scale-110 transition"><i class="fa fa-chevron-right text-xl"></i></button>
-            <button class="testimonials-next bg-amber-100 hover:bg-amber-300 text-amber-700 rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-amber-200 hover:scale-110 transition"><i class="fa fa-chevron-left text-xl"></i></button>
+            <button class="testimonials-prev rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-amber-200 hover:scale-110 transition"><i class="fa fa-chevron-right text-xl"></i></button>
+            <button class="testimonials-next rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-amber-200 hover:scale-110 transition"><i class="fa fa-chevron-left text-xl"></i></button>
           </div>
         </div>
       </div>
