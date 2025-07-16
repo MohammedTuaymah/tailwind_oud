@@ -790,11 +790,15 @@
 
 
 
-  <section class="s-block s-block--testimonials overflow-hidden relative py-16">
+  <section class="s-block s-block--testimonials overflow-hidden relative py-20">
     <div class="container mx-auto px-4">
-      <div class="home-block-title mb-8">
-        <h2 class="text-center text-2xl lg:text-3xl font-bold leading-tight">آراء العملاء</h2>
-        <span class="block w-24 h-1 bg-amber-700 rounded mx-auto mt-4"></span>
+      <div class="home-block-title mb-12">
+        <h2 class="text-center text-3xl lg:text-4xl font-extrabold leading-tight text-amber-900 drop-shadow-lg">آراء العملاء</h2>
+        <div class="flex justify-center mt-4">
+          <span class="block w-2 h-2 bg-amber-700 rounded-full mx-1 animate-pulse"></span>
+          <span class="block w-16 h-1 bg-gradient-to-r from-amber-700 via-amber-400 to-amber-700 rounded-full mx-1"></span>
+          <span class="block w-2 h-2 bg-amber-700 rounded-full mx-1 animate-pulse"></span>
+        </div>
       </div>
       <!-- Swiper -->
       <div dir="rtl">
@@ -802,17 +806,19 @@
           <div class="swiper-wrapper">
             <!-- رأي 1 -->
             <div class="swiper-slide">
-              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
-                <div class="relative text-gray-600 break-words mb-4">
-                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
-                    خدمة ممتازة وسرعة في التوصيل. أنصح الجميع بالتجربة!
-                  </p>
+              <div class="flex flex-col justify-between h-full w-full p-8 bg-white/90 rounded-3xl shadow-xl border border-amber-100 relative transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
+                <i class="fa fa-quote-right text-amber-400 text-5xl absolute -top-6 left-6 opacity-30 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                <div class="relative text-gray-700 break-words mb-4">
+                  <p class="leading-7 text-base mb-2 mt-2.5 md:mt-4 text-amber-900 font-medium">خدمة ممتازة وسرعة في التوصيل. أنصح الجميع بالتجربة!</p>
                 </div>
-                <div class="flex items-center mt-6 -mx-2">
-                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png" alt="عثمان البدري">
+                <div class="flex items-center mt-8 -mx-2">
+                  <div class="relative mx-2">
+                    <img class="object-cover rounded-full w-16 h-16 border-4 border-amber-200 shadow-lg" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png" alt="عثمان البدري">
+                    <span class="absolute -bottom-1 -left-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-white"></span>
+                  </div>
                   <div class="mx-2">
-                    <p class="text-base mb-2 text-gray-900">عثمان البدري</p>
-                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                    <p class="text-lg mb-2 font-bold text-amber-800">عثمان البدري</p>
+                    <div class="w-full comment__rating text-lg rtl:space-x-reverse space-x-1">
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
@@ -821,22 +827,23 @@
                     </div>
                   </div>
                 </div>
-                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
               </div>
             </div>
             <!-- رأي 2 -->
             <div class="swiper-slide">
-              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
-                <div class="relative text-gray-600 break-words mb-4">
-                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
-                    جودة المنتجات رائعة والتغليف أنيق جداً.
-                  </p>
+              <div class="flex flex-col justify-between h-full w-full p-8 bg-white/90 rounded-3xl shadow-xl border border-amber-100 relative transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
+                <i class="fa fa-quote-right text-amber-400 text-5xl absolute -top-6 left-6 opacity-30 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                <div class="relative text-gray-700 break-words mb-4">
+                  <p class="leading-7 text-base mb-2 mt-2.5 md:mt-4 text-amber-900 font-medium">جودة المنتجات رائعة والتغليف أنيق جداً.</p>
                 </div>
-                <div class="flex items-center mt-6 -mx-2">
-                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png" alt="ياسر العركي">
+                <div class="flex items-center mt-8 -mx-2">
+                  <div class="relative mx-2">
+                    <img class="object-cover rounded-full w-16 h-16 border-4 border-amber-200 shadow-lg" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png" alt="ياسر العركي">
+                    <span class="absolute -bottom-1 -left-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-white"></span>
+                  </div>
                   <div class="mx-2">
-                    <p class="text-base mb-2 text-gray-900">ياسر العركي</p>
-                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                    <p class="text-lg mb-2 font-bold text-amber-800">ياسر العركي</p>
+                    <div class="w-full comment__rating text-lg rtl:space-x-reverse space-x-1">
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
@@ -845,22 +852,23 @@
                     </div>
                   </div>
                 </div>
-                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
               </div>
             </div>
             <!-- رأي 3 -->
             <div class="swiper-slide">
-              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
-                <div class="relative text-gray-600 break-words mb-4">
-                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
-                    تجربة تسوق رائعة وسأكررها بالتأكيد.
-                  </p>
+              <div class="flex flex-col justify-between h-full w-full p-8 bg-white/90 rounded-3xl shadow-xl border border-amber-100 relative transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
+                <i class="fa fa-quote-right text-amber-400 text-5xl absolute -top-6 left-6 opacity-30 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                <div class="relative text-gray-700 break-words mb-4">
+                  <p class="leading-7 text-base mb-2 mt-2.5 md:mt-4 text-amber-900 font-medium">تجربة تسوق رائعة وسأكررها بالتأكيد.</p>
                 </div>
-                <div class="flex items-center mt-6 -mx-2">
-                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                <div class="flex items-center mt-8 -mx-2">
+                  <div class="relative mx-2">
+                    <img class="object-cover rounded-full w-16 h-16 border-4 border-amber-200 shadow-lg" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                    <span class="absolute -bottom-1 -left-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-white"></span>
+                  </div>
                   <div class="mx-2">
-                    <p class="text-base mb-2 text-gray-900">wahedh qrwashi</p>
-                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                    <p class="text-lg mb-2 font-bold text-amber-800">wahedh qrwashi</p>
+                    <div class="w-full comment__rating text-lg rtl:space-x-reverse space-x-1">
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
@@ -869,22 +877,23 @@
                     </div>
                   </div>
                 </div>
-                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
               </div>
             </div>
-            <!-- رأي 3 -->
+            <!-- رأي 4 -->
             <div class="swiper-slide">
-              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
-                <div class="relative text-gray-600 break-words mb-4">
-                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
-                    تجربة تسوق رائعة وسأكررها بالتأكيد.
-                  </p>
+              <div class="flex flex-col justify-between h-full w-full p-8 bg-white/90 rounded-3xl shadow-xl border border-amber-100 relative transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
+                <i class="fa fa-quote-right text-amber-400 text-5xl absolute -top-6 left-6 opacity-30 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                <div class="relative text-gray-700 break-words mb-4">
+                  <p class="leading-7 text-base mb-2 mt-2.5 md:mt-4 text-amber-900 font-medium">توصيل سريع جداً والتعامل راقي. شكراً لكم!</p>
                 </div>
-                <div class="flex items-center mt-6 -mx-2">
-                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                <div class="flex items-center mt-8 -mx-2">
+                  <div class="relative mx-2">
+                    <img class="object-cover rounded-full w-16 h-16 border-4 border-amber-200 shadow-lg" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png" alt="سامي الحربي">
+                    <span class="absolute -bottom-1 -left-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-white"></span>
+                  </div>
                   <div class="mx-2">
-                    <p class="text-base mb-2 text-gray-900">wahedh qrwashi</p>
-                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                    <p class="text-lg mb-2 font-bold text-amber-800">سامي الحربي</p>
+                    <div class="w-full comment__rating text-lg rtl:space-x-reverse space-x-1">
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
@@ -893,22 +902,23 @@
                     </div>
                   </div>
                 </div>
-                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
               </div>
             </div>
-            <!-- رأي 3 -->
+            <!-- رأي 5 -->
             <div class="swiper-slide">
-              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
-                <div class="relative text-gray-600 break-words mb-4">
-                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
-                    تجربة تسوق رائعة وسأكررها بالتأكيد.
-                  </p>
+              <div class="flex flex-col justify-between h-full w-full p-8 bg-white/90 rounded-3xl shadow-xl border border-amber-100 relative transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
+                <i class="fa fa-quote-right text-amber-400 text-5xl absolute -top-6 left-6 opacity-30 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                <div class="relative text-gray-700 break-words mb-4">
+                  <p class="leading-7 text-base mb-2 mt-2.5 md:mt-4 text-amber-900 font-medium">العطر ثابت ورائحته فخمة جداً. تجربة رائعة!</p>
                 </div>
-                <div class="flex items-center mt-6 -mx-2">
-                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                <div class="flex items-center mt-8 -mx-2">
+                  <div class="relative mx-2">
+                    <img class="object-cover rounded-full w-16 h-16 border-4 border-amber-200 shadow-lg" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="نورة العتيبي">
+                    <span class="absolute -bottom-1 -left-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-white"></span>
+                  </div>
                   <div class="mx-2">
-                    <p class="text-base mb-2 text-gray-900">wahedh qrwashi</p>
-                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                    <p class="text-lg mb-2 font-bold text-amber-800">نورة العتيبي</p>
+                    <div class="w-full comment__rating text-lg rtl:space-x-reverse space-x-1">
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
@@ -917,22 +927,23 @@
                     </div>
                   </div>
                 </div>
-                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
               </div>
             </div>
-            <!-- رأي 3 -->
+            <!-- رأي 6 -->
             <div class="swiper-slide">
-              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
-                <div class="relative text-gray-600 break-words mb-4">
-                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
-                    تجربة تسوق رائعة وسأكررها بالتأكيد.
-                  </p>
+              <div class="flex flex-col justify-between h-full w-full p-8 bg-white/90 rounded-3xl shadow-xl border border-amber-100 relative transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
+                <i class="fa fa-quote-right text-amber-400 text-5xl absolute -top-6 left-6 opacity-30 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                <div class="relative text-gray-700 break-words mb-4">
+                  <p class="leading-7 text-base mb-2 mt-2.5 md:mt-4 text-amber-900 font-medium">أول مرة أطلب ولن تكون الأخيرة. شكراً على الاهتمام بالتفاصيل.</p>
                 </div>
-                <div class="flex items-center mt-6 -mx-2">
-                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                <div class="flex items-center mt-8 -mx-2">
+                  <div class="relative mx-2">
+                    <img class="object-cover rounded-full w-16 h-16 border-4 border-amber-200 shadow-lg" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png" alt="عبدالله الزهراني">
+                    <span class="absolute -bottom-1 -left-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-white"></span>
+                  </div>
                   <div class="mx-2">
-                    <p class="text-base mb-2 text-gray-900">wahedh qrwashi</p>
-                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                    <p class="text-lg mb-2 font-bold text-amber-800">عبدالله الزهراني</p>
+                    <div class="w-full comment__rating text-lg rtl:space-x-reverse space-x-1">
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
@@ -941,22 +952,23 @@
                     </div>
                   </div>
                 </div>
-                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
               </div>
             </div>
-            <!-- رأي 3 -->
+            <!-- رأي 7 -->
             <div class="swiper-slide">
-              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
-                <div class="relative text-gray-600 break-words mb-4">
-                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
-                    تجربة تسوق رائعة وسأكررها بالتأكيد.
-                  </p>
+              <div class="flex flex-col justify-between h-full w-full p-8 bg-white/90 rounded-3xl shadow-xl border border-amber-100 relative transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
+                <i class="fa fa-quote-right text-amber-400 text-5xl absolute -top-6 left-6 opacity-30 drop-shadow-lg group-hover:scale-110 transition-transform"></i>
+                <div class="relative text-gray-700 break-words mb-4">
+                  <p class="leading-7 text-base mb-2 mt-2.5 md:mt-4 text-amber-900 font-medium">تجربة تسوق سهلة وخدمة عملاء متجاوبة. بالتوفيق دائماً.</p>
                 </div>
-                <div class="flex items-center mt-6 -mx-2">
-                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                <div class="flex items-center mt-8 -mx-2">
+                  <div class="relative mx-2">
+                    <img class="object-cover rounded-full w-16 h-16 border-4 border-amber-200 shadow-lg" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="سارة العمري">
+                    <span class="absolute -bottom-1 -left-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-white"></span>
+                  </div>
                   <div class="mx-2">
-                    <p class="text-base mb-2 text-gray-900">wahedh qrwashi</p>
-                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                    <p class="text-lg mb-2 font-bold text-amber-800">سارة العمري</p>
+                    <div class="w-full comment__rating text-lg rtl:space-x-reverse space-x-1">
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
                       <i class="fa fa-star text-amber-400"></i>
@@ -965,14 +977,13 @@
                     </div>
                   </div>
                 </div>
-                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
               </div>
             </div>
           </div>
           <!-- أزرار التنقل -->
-          <div class="flex justify-center gap-4 mt-6">
-            <button class="testimonials-prev bg-amber-100 hover:bg-amber-300 text-amber-700 rounded-full w-10 h-10 flex items-center justify-center shadow"><i class="fa fa-chevron-right"></i></button>
-            <button class="testimonials-next bg-amber-100 hover:bg-amber-300 text-amber-700 rounded-full w-10 h-10 flex items-center justify-center shadow"><i class="fa fa-chevron-left"></i></button>
+          <div class="flex justify-center gap-4 mt-10">
+            <button class="testimonials-prev bg-amber-100 hover:bg-amber-300 text-amber-700 rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-amber-200 hover:scale-110 transition"><i class="fa fa-chevron-right text-xl"></i></button>
+            <button class="testimonials-next bg-amber-100 hover:bg-amber-300 text-amber-700 rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-amber-200 hover:scale-110 transition"><i class="fa fa-chevron-left text-xl"></i></button>
           </div>
         </div>
       </div>
@@ -1230,7 +1241,7 @@
 
   <script>
     new Swiper('.testimonials-swiper', {
-      slidesPerView: 1,
+      slidesPerView: 1.2,
       spaceBetween: 30,
       loop: true,
       autoplay: { delay: 4000 },
