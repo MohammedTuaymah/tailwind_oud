@@ -16,6 +16,10 @@
     .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(.4,0,.2,1); }
     .fade-in.visible { opacity: 1; transform: none; }
   </style>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body class="rtl text-gray-900">
   <!-- هيدر وبانر مدمج -->
@@ -786,6 +790,198 @@
 
 
 
+  <section class="s-block s-block--testimonials overflow-hidden relative py-16">
+    <div class="container mx-auto px-4">
+      <div class="home-block-title mb-8">
+        <h2 class="text-center text-2xl lg:text-3xl font-bold leading-tight">آراء العملاء</h2>
+        <span class="block w-24 h-1 bg-amber-700 rounded mx-auto mt-4"></span>
+      </div>
+      <!-- Swiper -->
+      <div dir="rtl">
+        <div class="swiper testimonials-swiper">
+          <div class="swiper-wrapper">
+            <!-- رأي 1 -->
+            <div class="swiper-slide">
+              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
+                <div class="relative text-gray-600 break-words mb-4">
+                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
+                    خدمة ممتازة وسرعة في التوصيل. أنصح الجميع بالتجربة!
+                  </p>
+                </div>
+                <div class="flex items-center mt-6 -mx-2">
+                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png" alt="عثمان البدري">
+                  <div class="mx-2">
+                    <p class="text-base mb-2 text-gray-900">عثمان البدري</p>
+                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                    </div>
+                  </div>
+                </div>
+                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
+              </div>
+            </div>
+            <!-- رأي 2 -->
+            <div class="swiper-slide">
+              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
+                <div class="relative text-gray-600 break-words mb-4">
+                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
+                    جودة المنتجات رائعة والتغليف أنيق جداً.
+                  </p>
+                </div>
+                <div class="flex items-center mt-6 -mx-2">
+                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_male.png" alt="ياسر العركي">
+                  <div class="mx-2">
+                    <p class="text-base mb-2 text-gray-900">ياسر العركي</p>
+                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                    </div>
+                  </div>
+                </div>
+                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
+              </div>
+            </div>
+            <!-- رأي 3 -->
+            <div class="swiper-slide">
+              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
+                <div class="relative text-gray-600 break-words mb-4">
+                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
+                    تجربة تسوق رائعة وسأكررها بالتأكيد.
+                  </p>
+                </div>
+                <div class="flex items-center mt-6 -mx-2">
+                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                  <div class="mx-2">
+                    <p class="text-base mb-2 text-gray-900">wahedh qrwashi</p>
+                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                    </div>
+                  </div>
+                </div>
+                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
+              </div>
+            </div>
+            <!-- رأي 3 -->
+            <div class="swiper-slide">
+              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
+                <div class="relative text-gray-600 break-words mb-4">
+                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
+                    تجربة تسوق رائعة وسأكررها بالتأكيد.
+                  </p>
+                </div>
+                <div class="flex items-center mt-6 -mx-2">
+                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                  <div class="mx-2">
+                    <p class="text-base mb-2 text-gray-900">wahedh qrwashi</p>
+                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                    </div>
+                  </div>
+                </div>
+                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
+              </div>
+            </div>
+            <!-- رأي 3 -->
+            <div class="swiper-slide">
+              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
+                <div class="relative text-gray-600 break-words mb-4">
+                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
+                    تجربة تسوق رائعة وسأكررها بالتأكيد.
+                  </p>
+                </div>
+                <div class="flex items-center mt-6 -mx-2">
+                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                  <div class="mx-2">
+                    <p class="text-base mb-2 text-gray-900">wahedh qrwashi</p>
+                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                    </div>
+                  </div>
+                </div>
+                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
+              </div>
+            </div>
+            <!-- رأي 3 -->
+            <div class="swiper-slide">
+              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
+                <div class="relative text-gray-600 break-words mb-4">
+                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
+                    تجربة تسوق رائعة وسأكررها بالتأكيد.
+                  </p>
+                </div>
+                <div class="flex items-center mt-6 -mx-2">
+                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                  <div class="mx-2">
+                    <p class="text-base mb-2 text-gray-900">wahedh qrwashi</p>
+                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                    </div>
+                  </div>
+                </div>
+                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
+              </div>
+            </div>
+            <!-- رأي 3 -->
+            <div class="swiper-slide">
+              <div class="flex flex-col justify-between h-full w-full p-6 bg-white rounded-md shadow">
+                <div class="relative text-gray-600 break-words mb-4">
+                  <p class="leading-6 text-sm mb-2 mt-2.5 md:mt-4 text-gray-900">
+                    تجربة تسوق رائعة وسأكررها بالتأكيد.
+                  </p>
+                </div>
+                <div class="flex items-center mt-6 -mx-2">
+                  <img class="object-cover mx-2 rounded-full w-14 h-14" src="https://cdn.assets.salla.network/prod/stores/themes/default/assets/images/avatar_female.png" alt="wahedh qrwashi">
+                  <div class="mx-2">
+                    <p class="text-base mb-2 text-gray-900">wahedh qrwashi</p>
+                    <div class="w-full comment__rating text-sm rtl:space-x-reverse space-x-1">
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                      <i class="fa fa-star text-amber-400"></i>
+                    </div>
+                  </div>
+                </div>
+                <i class="fa fa-quote-left absolute top-4 end-4 text-3xl opacity-10 text-gray-400"></i>
+              </div>
+            </div>
+          </div>
+          <!-- أزرار التنقل -->
+          <div class="flex justify-center gap-4 mt-6">
+            <button class="testimonials-prev bg-amber-100 hover:bg-amber-300 text-amber-700 rounded-full w-10 h-10 flex items-center justify-center shadow"><i class="fa fa-chevron-right"></i></button>
+            <button class="testimonials-next bg-amber-100 hover:bg-amber-300 text-amber-700 rounded-full w-10 h-10 flex items-center justify-center shadow"><i class="fa fa-chevron-left"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
   <!-- تواصل وفوتر -->
   <footer class="bg-black text-white pt-12 pb-4 mt-16 rtl" id="contact">
     <div class="container mx-auto px-4">
@@ -1030,5 +1226,25 @@
   </nav>
   <!-- /Bottom Navigation Bar -->
 
+
+
+  <script>
+    new Swiper('.testimonials-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: { delay: 4000 },
+      navigation: {
+        nextEl: '.testimonials-next',
+        prevEl: '.testimonials-prev',
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        1024: { slidesPerView: 2 },
+        1280: { slidesPerView: 3 }
+      },
+      rtl: true
+    });
+  </script>
 </body>
 </html>
