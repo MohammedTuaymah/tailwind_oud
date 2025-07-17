@@ -510,31 +510,32 @@
   <div class="container mx-auto relative z-10 flex flex-col items-center justify-center">
     <div class="w-full mx-auto grid grid-cols-2 grid-rows-2 gap-2.5 lg:gap-4 items-center justify-center">
       <!-- البنر الرئيسي -->
-      <div class="col-span-2 row-span-1 flex items-center justify-center relative overflow-hidden rounded-xl shadow-md min-h-[180px] sm:min-h-[300px] h-48 sm:h-[300px] lg:h-[340px]">
-        <div id="mainBannerSlider" class="relative w-full flex items-center justify-center bg-cover bg-center transition-all duration-700 min-h-[180px] sm:min-h-[300px] h-48 sm:h-[300px] lg:h-[340px]">
+      <div id="mainHeroBanner" class="col-span-2 row-span-1 w-full overflow-hidden aspect-[1920/800] rounded-[15px] shadow-[0_15px_40px_rgba(0,0,0,0.1)] bg-cover bg-center transition-all duration-700 relative flex items-center justify-center">
+        <div class="relative w-full flex items-center justify-center bg-cover bg-center transition-all duration-700 min-h-[180px] sm:min-h-[300px] h-48 sm:h-[300px] lg:h-[340px]">
           <div class="absolute inset-0 bg-black/30 z-0 rounded-xl"></div>
           <div class="relative z-10 flex flex-col items-center justify-center text-center w-full h-full p-4 sm:p-6 md:p-12">
-            <strong class="text-xs sm:text-sm font-normal mb-2 sm:mb-3 text-white">خصم إضافي بنسبة 15٪</strong>
-            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold leading-tight text-white mb-3 sm:mb-6">ديكور جديد لمساحات المعيشة الخاصة بك</h3>
-            <a href="#" class="btn btn--white mt-2 bg-white text-gray-900 font-bold rounded-full px-4 sm:px-6 py-2 shadow hover:bg-amber-700 hover:text-white transition text-sm sm:text-base">اكتشف المزيد</a>
+            <strong id="heroBannerSubtitle" class="text-xs sm:text-sm font-normal mb-2 sm:mb-3 text-white">خصم إضافي بنسبة 15٪</strong>
+            <h3 id="heroBannerTitle" class="text-lg sm:text-2xl md:text-3xl font-bold leading-tight text-white mb-3 sm:mb-6">ديكور جديد لمساحات المعيشة الخاصة بك</h3>
+            <a id="heroBannerBtn" href="#" class="btn btn--white mt-2 bg-white text-gray-900 font-bold rounded-full px-4 sm:px-6 py-2 shadow hover:bg-amber-700 hover:text-white transition text-sm sm:text-base">اكتشف المزيد</a>
           </div>
           <!-- أزرار السلايدر -->
-          <button onclick="changeBannerSlide(-1)" class="absolute top-1/2 right-2 sm:right-4 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-white text-gray-900 rounded-full p-1 sm:p-2 shadow z-20"><svg class="w-5 h-5 sm:w-6 sm:h-6 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
-          <button onclick="changeBannerSlide(1)" class="absolute top-1/2 left-2 sm:left-4 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-white text-gray-900 rounded-full p-1 sm:p-2 shadow z-20"><svg class="w-5 h-5 sm:w-6 sm:h-6 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+          <button onclick="changeHeroBanner(-1)" class="absolute top-1/2 right-2 sm:right-4 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-white text-gray-900 rounded-full p-1 sm:p-2 shadow z-20 flex items-center justify-center"><i class="fa-solid fa-chevron-right text-xl sm:text-2xl"></i></button>
+          <button onclick="changeHeroBanner(1)" class="absolute top-1/2 left-2 sm:left-4 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-white text-gray-900 rounded-full p-1 sm:p-2 shadow z-20 flex items-center justify-center"><i class="fa-solid fa-chevron-left text-xl sm:text-2xl"></i></button>
           <!-- نقاط السلايدر -->
           <div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-            <button class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-amber-700" id="bannerDot0" onclick="goToBannerSlide(0)"></button>
-            <button class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-amber-300" id="bannerDot1" onclick="goToBannerSlide(1)"></button>
+            <button class="w-3 h-3 rounded-full bg-amber-700" id="heroDot0" onclick="goToHeroBanner(0)"></button>
+            <button class="w-3 h-3 rounded-full bg-amber-300" id="heroDot1" onclick="goToHeroBanner(1)"></button>
+            <button class="w-3 h-3 rounded-full bg-amber-300" id="heroDot2" onclick="goToHeroBanner(2)"></button>
           </div>
         </div>
       </div>
       <!-- البنر الجانبي 1 -->
        <div class="h-full">
-      <a href="#" class="col-span-1 row-span-1 side-slide h-full flex flex-col justify-center items-center bg-gray-700 relative p-0 bg-cover transition-opacity hover:opacity-95 rounded-xl overflow-hidden shadow-md" style="background-image: url('./banner/2.jpg');">
+      <a href="#" class="col-span-1 row-span-1 side-slide h-full flex flex-col justify-center items-center bg-gray-700 relative p-0 bg-cover transition-opacity hover:opacity-95 rounded-xl overflow-hidden shadow-md" style="background-image: url('./banner/femaleperfumes-Photoroom.webp');">
       </a></div>
       <!-- البنر الجانبي 2 -->
       <div class="h-full">
-      <a href="#" class="col-span-1 row-span-1 side-slide h-full flex flex-col justify-center items-center bg-gray-700 relative p-0 bg-cover transition-opacity hover:opacity-95 rounded-xl overflow-hidden shadow-md" style="background-image: url('./categories/1.jpg');">
+      <a href="#" class="col-span-1 row-span-1 side-slide h-full flex flex-col justify-center items-center bg-gray-700 relative p-0 bg-cover transition-opacity hover:opacity-95 rounded-xl overflow-hidden shadow-md" style="background-image: url('./banner/luxury-Photoroom.jpg');">
       </a></div>
     </div>
   </div>
@@ -594,7 +595,7 @@
   <div class="grid grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6">
     <!-- بنر 1 -->
     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+      <img src="./categories/timeWatch-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
       <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
         <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 1</h3>
         <p class="text-sm text-gray-200">وصف مختصر للبنر الأول يوضح العرض أو الفئة.</p>
@@ -602,7 +603,7 @@
     </div>
     <!-- بنر 2 -->
     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+      <img src="./categories/sghd-Photoroom.webp" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
       <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
         <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 2</h3>
         <p class="text-sm text-gray-200">وصف مختصر للبنر الثاني يوضح العرض أو الفئة.</p>
@@ -610,7 +611,7 @@
     </div>
     <!-- بنر 3 -->
     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+      <img src="./categories/dfb-Photoroom.webp" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
       <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
         <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 3</h3>
         <p class="text-sm text-gray-200">وصف مختصر للبنر الثالث يوضح العرض أو الفئة.</p>
@@ -618,7 +619,7 @@
     </div>
     <!-- بنر 4 -->
     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+      <img src="./categories/rety-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
       <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
         <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 4</h3>
         <p class="text-sm text-gray-200">وصف مختصر للبنر الرابع يوضح العرض أو الفئة.</p>
@@ -626,7 +627,7 @@
     </div>
     <!-- بنر 5 -->
     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+      <img src="./categories/qwe-Photoroom.webp" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
       <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
         <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 5</h3>
         <p class="text-sm text-gray-200">وصف مختصر للبنر الخامس يوضح العرض أو الفئة.</p>
@@ -634,7 +635,7 @@
     </div>
     <!-- بنر 6 -->
     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+      <img src="./categories/www-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
       <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
         <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 6</h3>
         <p class="text-sm text-gray-200">وصف مختصر للبنر السادس يوضح العرض أو الفئة.</p>
@@ -1206,67 +1207,52 @@
     </script>
 
   <script>
-    // سلايدر البنر الرئيسي (يدوي)
-    const bannerImages = [
+    // سلايدر البنر الرئيسي بخلفية ونصوص متغيرة
+    const heroBannerImages = [
       './banner/1.jpg',
-      './banner/3.jpg'
+      './banner/2.jpg',
+      './banner/newperfumes-Photoroom.webp'
     ];
-    const bannerTitles = [
+    const heroBannerTitles = [
       'ديكور جديد لمساحات المعيشة الخاصة بك',
-      'تسوق تشكيلتنا الجديدة من الأزياء العصرية'
+      'تسوق تشكيلتنا الجديدة من الأزياء العصرية',
+      'اكتشف عطورنا الفاخرة الآن'
     ];
-    const bannerSubtitles = [
+    const heroBannerSubtitles = [
       'خصم إضافي بنسبة 15٪',
-      'خصم خاص لفترة محدودة'
+      'خصم خاص لفترة محدودة',
+      'جديد وحصري'
     ];
-    const bannerBtns = [
+    const heroBannerBtns = [
       'اكتشف المزيد',
-      'تسوق الآن'
+      'تسوق الآن',
+      'جرب الآن'
     ];
-    let bannerCurrent = 0;
-    function renderBannerSlider() {
-      const slider = document.getElementById('mainBannerSlider');
-      slider.style.backgroundImage = `url('./banner/1.jpg')`;
-      slider.querySelector('strong').textContent = bannerSubtitles[bannerCurrent];
-      slider.querySelector('h3').textContent = bannerTitles[bannerCurrent];
-      slider.querySelector('a').textContent = bannerBtns[bannerCurrent];
-      document.getElementById('bannerDot0').className = 'w-3 h-3 rounded-full ' + (bannerCurrent === 0 ? 'bg-amber-700' : 'bg-amber-300');
-      document.getElementById('bannerDot1').className = 'w-3 h-3 rounded-full ' + (bannerCurrent === 1 ? 'bg-amber-700' : 'bg-amber-300');
+    let heroBannerCurrent = 0;
+    function renderHeroBanner() {
+      const banner = document.getElementById('mainHeroBanner');
+      banner.style.backgroundImage = `url('${heroBannerImages[heroBannerCurrent]}')`;
+      document.getElementById('heroBannerSubtitle').textContent = heroBannerSubtitles[heroBannerCurrent];
+      document.getElementById('heroBannerTitle').textContent = heroBannerTitles[heroBannerCurrent];
+      document.getElementById('heroBannerBtn').textContent = heroBannerBtns[heroBannerCurrent];
+      for(let i=0;i<heroBannerImages.length;i++) {
+        document.getElementById('heroDot'+i).className = 'w-3 h-3 rounded-full ' + (i===heroBannerCurrent?'bg-amber-700':'bg-amber-300');
+      }
     }
-    function changeBannerSlide(dir) {
-      bannerCurrent = (bannerCurrent + dir + bannerImages.length) % bannerImages.length;
-      renderBannerSlider();
+    function changeHeroBanner(dir) {
+      heroBannerCurrent = (heroBannerCurrent + dir + heroBannerImages.length) % heroBannerImages.length;
+      renderHeroBanner();
     }
-    function goToBannerSlide(i) {
-      bannerCurrent = i;
-      renderBannerSlider();
+    function goToHeroBanner(i) {
+      heroBannerCurrent = i;
+      renderHeroBanner();
     }
     setInterval(() => {
-      bannerCurrent = (bannerCurrent + 1) % bannerImages.length;
-      renderBannerSlider();
+      heroBannerCurrent = (heroBannerCurrent + 1) % heroBannerImages.length;
+      renderHeroBanner();
     }, 7000);
-    renderBannerSlider();
-    </script>
-
-    
-
-  <script>
-    // تغيير صورة المنتج عند الضغط على المصغرات أو الألوان
-    function changeProductImg(src) {
-      document.getElementById('mainProductImg').src = src;
-      document.querySelectorAll('.thumb-img').forEach(img => {
-        img.classList.remove('border-amber-700');
-        if(img.src.includes(src)) img.classList.add('border-amber-700');
-      });
-    }
-    // تغيير الكمية
-    function changeQty(val) {
-      const qtyInput = document.getElementById('productQty');
-      let qty = parseInt(qtyInput.value) || 1;
-      qty = Math.max(1, qty + val);
-      qtyInput.value = qty;
-    }
-    </script>
+    renderHeroBanner();
+  </script>
 
   <!-- جافاسكريبت للتأثيرات والسلايدر -->
   <script>
