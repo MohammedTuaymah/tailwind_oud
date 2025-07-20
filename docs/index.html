@@ -87,7 +87,7 @@
 </head>
 <body class="rtl text-gray-900">
   <!-- هيدر وبانر مدمج -->
-  <section class="relative min-h-[90vh] flex flex-col justify-between bg-cover bg-center" style="background-image: url('./banner/1.jpg');">
+  <section class="relative min-h-[90vh] flex flex-col justify-between bg-cover bg-center transition-all duration-1000" id="bannerSlider" style="background-image: url('./banner/1.jpg');">
     <!-- شريط التنقل -->
     <nav class="top-0 right-0 left-0 z-30 bg-white/10 backdrop-blur-sm shadow-sm m-2 rounded-lg absolute md:fixed">
       <div class="container mx-auto flex items-center justify-between px-4 md:px-12 py-4">
@@ -115,6 +115,7 @@
       <a href="#" class="block py-2">تواصل معنا</a>
       <a href="#" class="block py-2">تسجيل الدخول</a>
     </div>
+    
     <!-- محتوى البانر -->
     <div class="flex-1 flex flex-col justify-center items-center text-center px-4 md:px-0 mt-24 md:mt-32">
       <h1 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-4">Elevate Your Space with<br class="hidden md:block"> Timeless Furniture</h1>
@@ -122,6 +123,29 @@
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
       </div>
     </div>
+    
+    <!-- أزرار التنقل -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+      <div class="flex gap-3">
+        <button class="w-3 h-3 rounded-full bg-white hover:bg-white transition-all duration-300 slider-dot active" data-slide="0"></button>
+        <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 slider-dot" data-slide="1"></button>
+        <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 slider-dot" data-slide="2"></button>
+        <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 slider-dot" data-slide="3"></button>
+        <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 slider-dot" data-slide="4"></button>
+      </div>
+    </div>
+    
+    <!-- أزرار السابق والتالي -->
+    <button class="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300" id="prevBtn">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button class="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300" id="nextBtn">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
     
     <script>
       // قائمة الجوال
@@ -147,6 +171,86 @@
           document.removeEventListener('mousedown', handleClickOutside);
         }
       }
+
+      // Banner Slider
+      const bannerSlider = document.getElementById('bannerSlider');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const dots = document.querySelectorAll('.slider-dot');
+      
+      const bannerImages = [
+        './banner/1.jpg',
+        './banner/2.jpg',
+        './banner/luxury-Photoroom.jpg',
+        './banner/femaleperfumes-Photoroom.webp',
+        './banner/newperfumes-Photoroom.webp'
+      ];
+      
+      let bannerCurrentSlide = 0;
+      let bannerAutoSlideInterval;
+      
+      function updateBannerSlider() {
+        // تحديث الخلفية
+        bannerSlider.style.backgroundImage = `url('${bannerImages[bannerCurrentSlide]}')`;
+        
+        // تحديث النقاط
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === bannerCurrentSlide);
+          dot.classList.toggle('bg-white', index === bannerCurrentSlide);
+          dot.classList.toggle('bg-white/50', index !== bannerCurrentSlide);
+        });
+      }
+      
+      function nextBannerSlide() {
+        bannerCurrentSlide = (bannerCurrentSlide + 1) % bannerImages.length;
+        updateBannerSlider();
+      }
+      
+      function prevBannerSlide() {
+        bannerCurrentSlide = (bannerCurrentSlide - 1 + bannerImages.length) % bannerImages.length;
+        updateBannerSlider();
+      }
+      
+      function goToBannerSlide(slideIndex) {
+        bannerCurrentSlide = slideIndex;
+        updateBannerSlider();
+      }
+      
+      function startBannerAutoSlide() {
+        bannerAutoSlideInterval = setInterval(nextBannerSlide, 5000); // تغيير كل 5 ثواني
+      }
+      
+      function stopBannerAutoSlide() {
+        clearInterval(bannerAutoSlideInterval);
+      }
+      
+      // Event Listeners
+      prevBtn.addEventListener('click', () => {
+        prevBannerSlide();
+        stopBannerAutoSlide();
+        startBannerAutoSlide();
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        nextBannerSlide();
+        stopBannerAutoSlide();
+        startBannerAutoSlide();
+      });
+      
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          goToBannerSlide(index);
+          stopBannerAutoSlide();
+          startBannerAutoSlide();
+        });
+      });
+      
+      // بدء التشغيل التلقائي
+      startBannerAutoSlide();
+      
+      // إيقاف التشغيل التلقائي عند التمرير
+      bannerSlider.addEventListener('mouseenter', stopBannerAutoSlide);
+      bannerSlider.addEventListener('mouseleave', startBannerAutoSlide);
     </script>
   </section>
 
@@ -1264,19 +1368,19 @@
       'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80',
     ];
-    let currentSlide = 0;
+    let heroCurrentSlide = 0;
     const heroSlider = document.getElementById('heroSlider');
     const sliderDots = document.getElementById('sliderDots');
     function renderSlider() {
-      heroSlider.innerHTML = `<img src="${heroImages[currentSlide]}" class='w-full h-full object-cover transition-all duration-700' alt='بنر عطور'>`;
-      sliderDots.innerHTML = heroImages.map((_, i) => `<button class='w-3 h-3 rounded-full mx-1 ${i===currentSlide?'bg-amber-700':'bg-amber-300'}' onclick='goToSlide(${i})'></button>`).join('');
+      heroSlider.innerHTML = `<img src="${heroImages[heroCurrentSlide]}" class='w-full h-full object-cover transition-all duration-700' alt='بنر عطور'>`;
+      sliderDots.innerHTML = heroImages.map((_, i) => `<button class='w-3 h-3 rounded-full mx-1 ${i===heroCurrentSlide?'bg-amber-700':'bg-amber-300'}' onclick='goToSlide(${i})'></button>`).join('');
     }
     function goToSlide(i) {
-      currentSlide = i;
+      heroCurrentSlide = i;
       renderSlider();
     }
     setInterval(() => {
-      currentSlide = (currentSlide + 1) % heroImages.length;
+      heroCurrentSlide = (heroCurrentSlide + 1) % heroImages.length;
       renderSlider();
     }, 4000);
     renderSlider();
