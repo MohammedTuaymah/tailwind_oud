@@ -95,6 +95,23 @@
     .scrolling-banner:hover .scrolling-text {
       animation-play-state: paused;
     }
+    
+    /* Banner Zoom Effect */
+    @keyframes banner-zoom {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    .animate-banner-zoom {
+      animation: banner-zoom 20s ease-in-out infinite;
+    }
   </style>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -105,7 +122,11 @@
 
   
   <!-- هيدر وبانر مدمج -->
-  <section class="relative min-h-[90vh] flex flex-col justify-between bg-cover bg-center transition-all duration-1000" id="bannerSlider" style="background-image: url('./banner/1.jpg');">
+  <section class="relative min-h-[90vh] flex flex-col justify-between transition-all duration-1000" id="bannerSlider">
+    <!-- صورة البانر مع تأثير التكبير -->
+    <div class="absolute inset-0 overflow-hidden">
+      <img src="./banner/1.jpg" alt="Banner" id="bannerImage" class="w-full h-full object-cover animate-banner-zoom">
+    </div>
     <!-- شريط التنقل -->
     <nav class="top-0 right-0 left-0 z-30 bg-white/10 backdrop-blur-sm shadow-sm m-2 rounded-lg absolute md:fixed">
       <div class="container mx-auto flex items-center justify-between px-4 md:px-12 py-4">
@@ -208,8 +229,9 @@
       let bannerAutoSlideInterval;
       
       function updateBannerSlider() {
-        // تحديث الخلفية
-        bannerSlider.style.backgroundImage = `url('${bannerImages[bannerCurrentSlide]}')`;
+        // تحديث الصورة
+        const bannerImage = document.getElementById('bannerImage');
+        bannerImage.src = bannerImages[bannerCurrentSlide];
         
         // تحديث النقاط
         dots.forEach((dot, index) => {
