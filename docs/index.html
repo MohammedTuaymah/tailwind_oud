@@ -15,14 +15,6 @@
     .rtl { direction: rtl; }
     .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(.4,0,.2,1); }
     .fade-in.visible { opacity: 1; transform: none; }
-    /* تحسينات قسم مميزات المتجر */
-    .s-block--enhanced-features__item {
-      background: linear-gradient(135deg, #faf7f5 60%, #f3f3f3 100%);
-      box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
-      transition: box-shadow 0.3s, transform 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
     .s-block--enhanced-features__item:hover {
       box-shadow: 0 8px 32px 0 rgba(0,0,0,0.10);
       transform: translateY(-6px) scale(1.03);
@@ -79,6 +71,30 @@
     .s-block--enhanced-features__item:hover:before {
       opacity: 1;
     }
+    
+    /* شريط الإعلان المتحرك */
+    .scrolling-banner {
+      background: linear-gradient(135deg, #101010, #63605f);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    
+    .scrolling-text {
+      display: inline-block;
+      animation: scroll-left 20s linear infinite;
+      color: white;
+      font-weight: bold;
+      padding: 12px 0;
+    }
+    
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    
+    .scrolling-banner:hover .scrolling-text {
+      animation-play-state: paused;
+    }
   </style>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -86,6 +102,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body class="rtl text-gray-900">
+
+  
   <!-- هيدر وبانر مدمج -->
   <section class="relative min-h-[90vh] flex flex-col justify-between bg-cover bg-center transition-all duration-1000" id="bannerSlider" style="background-image: url('./banner/1.jpg');">
     <!-- شريط التنقل -->
@@ -420,11 +438,19 @@
         </div>
 
         <!-- Pagination -->
-        <div class="categories-swiper-pagination flex justify-center mt-8 space-x-2"></div>
       </div>
       
     </div>
   </section>
+
+
+
+    <!-- شريط الإعلان المتحرك -->
+    <div class="container mx-auto scrolling-banner mb-10 mt-10 rounded-2xl">
+      <div class="scrolling-text">
+        🎉 تخفيضات رهيبة 😱 وعروض مذهلة 😬 على جميع منتجاتنا إلى غاية 01 نوفمبر المقبل 🎉 لا تخلي الفرصة تفوتك 🎉 تخفيضات رهيبة 😱 وعروض مذهلة 😬 على جميع منتجاتنا إلى غاية 01 نوفمبر المقبل 🎉 لا تخلي الفرصة تفوتك
+      </div>
+    </div>
 
   
   
@@ -750,12 +776,12 @@
       </div>
       <!-- البنر الجانبي 1 -->
       <div class="h-full w-full">
-        <a href="#" class="block w-full h-full overflow-hidden aspect-[4/3] rounded-[15px] shadow-[0_15px_40px_rgba(0,0,0,0.1)] bg-cover bg-center transition-opacity hover:opacity-95" style="background-image: url('./banner/femaleperfumes-Photoroom.webp');">
+        <a href="#" class="block w-full h-full overflow-hidden aspect-[3/2] rounded-[15px] shadow-[0_15px_40px_rgba(0,0,0,0.1)] bg-cover bg-center transition-opacity hover:opacity-95" style="background-image: url('./banner/femaleperfumes-Photoroom.webp');">
         </a>
       </div>
       <!-- البنر الجانبي 2 -->
       <div class="h-full w-full">
-        <a href="#" class="block w-full h-full overflow-hidden aspect-[4/3] rounded-[15px] shadow-[0_15px_40px_rgba(0,0,0,0.1)] bg-cover bg-center transition-opacity hover:opacity-95" style="background-image: url('./banner/luxury-Photoroom.jpg');">
+        <a href="#" class="block w-full h-full overflow-hidden aspect-[3/2] rounded-[15px] shadow-[0_15px_40px_rgba(0,0,0,0.1)] bg-cover bg-center transition-opacity hover:opacity-95" style="background-image: url('./banner/luxury-Photoroom.jpg');">
         </a>
       </div>
     </div>
@@ -907,7 +933,7 @@
       </div>
       <!-- قائمة منتجات جانبية (سلايدر أفقي أو grid) -->
       <div class="flex-1 flex flex-col gap-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-4">
           <!-- كارد منتج صغير -->
           <div class="flex bg-white rounded-xl shadow p-3 gap-3 items-center hover:shadow-lg transition">
             <div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
@@ -917,7 +943,6 @@
               <a href="#" class="block font-bold text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
               <div class="flex items-center gap-2">
                 <span class="font-bold text-base">١٤٣٫٧٥ ر.س</span>
-                <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
             <div class="flex flex-col gap-1 items-center justify-center">
@@ -938,7 +963,6 @@
               <a href="#" class="block font-bold text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
               <div class="flex items-center gap-2">
                 <span class="font-bold text-base">١٤٣٫٧٥ ر.س</span>
-                <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
             <div class="flex flex-col gap-1 items-center justify-center">
@@ -959,7 +983,6 @@
               <a href="#" class="block font-bold text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
               <div class="flex items-center gap-2">
                 <span class="font-bold text-base">١٤٣٫٧٥ ر.س</span>
-                <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
             <div class="flex flex-col gap-1 items-center justify-center">
@@ -980,7 +1003,6 @@
               <a href="#" class="block font-bold text-sm mb-1 hover:underline">رصاصي عطر Blue</a>
               <div class="flex items-center gap-2">
                 <span class="font-bold text-base">٣٤٫٥ ر.س</span>
-                <span class="line-through text-gray-400 text-xs">٥٠ ر.س</span>
               </div>
             </div>
             <div class="flex flex-col gap-1 items-center justify-center">
@@ -1034,7 +1056,7 @@
       </div>
       <!-- قائمة منتجات جانبية (سلايدر أفقي أو grid) -->
       <div class="flex-1 flex flex-col gap-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-4">
           <!-- كارد منتج صغير -->
           <div class="flex bg-white rounded-xl shadow p-3 gap-3 items-center hover:shadow-lg transition">
             <div class="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
@@ -1044,7 +1066,6 @@
               <a href="#" class="block font-bold text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
               <div class="flex items-center gap-2">
                 <span class="font-bold text-base">١٤٣٫٧٥ ر.س</span>
-                <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
             <div class="flex flex-col gap-1 items-center justify-center">
@@ -1065,7 +1086,6 @@
               <a href="#" class="block font-bold text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
               <div class="flex items-center gap-2">
                 <span class="font-bold text-base">١٤٣٫٧٥ ر.س</span>
-                <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
             <div class="flex flex-col gap-1 items-center justify-center">
@@ -1086,7 +1106,6 @@
               <a href="#" class="block font-bold text-sm mb-1 hover:underline">ماء عطر روبرتو كافالي</a>
               <div class="flex items-center gap-2">
                 <span class="font-bold text-base">١٤٣٫٧٥ ر.س</span>
-                <span class="line-through text-gray-400 text-xs">١٨٠ ر.س</span>
               </div>
             </div>
             <div class="flex flex-col gap-1 items-center justify-center">
@@ -1107,7 +1126,6 @@
               <a href="#" class="block font-bold text-sm mb-1 hover:underline">رصاصي عطر Blue</a>
               <div class="flex items-center gap-2">
                 <span class="font-bold text-base">٣٤٫٥ ر.س</span>
-                <span class="line-through text-gray-400 text-xs">٥٠ ر.س</span>
               </div>
             </div>
             <div class="flex flex-col gap-1 items-center justify-center">
