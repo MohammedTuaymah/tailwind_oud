@@ -112,6 +112,50 @@
     .animate-banner-zoom {
       animation: banner-zoom 20s ease-in-out infinite;
     }
+    
+    /* Banner Slider Custom Styles */
+    .banner-swiper .swiper-button-next,
+    .banner-swiper .swiper-button-prev {
+      color: #f59e0b;
+      background: rgba(255, 255, 255, 0.9);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      backdrop-filter: blur(4px);
+      transition: all 0.3s ease;
+    }
+    
+    .banner-swiper .swiper-button-next:hover,
+    .banner-swiper .swiper-button-prev:hover {
+      background: rgba(255, 255, 255, 1);
+      transform: scale(1.1);
+    }
+    
+    .banner-swiper .swiper-button-next::after,
+    .banner-swiper .swiper-button-prev::after {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .banner-swiper .swiper-pagination-bullet {
+      background: #d1d5db;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+    
+    .banner-swiper .swiper-pagination-bullet-active {
+      background: #f59e0b;
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    
+    .banner-swiper .swiper-slide {
+      transition: transform 0.3s ease;
+    }
+    
+    .banner-swiper .swiper-slide:hover {
+      transform: translateY(-5px);
+    }
   </style>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -1143,7 +1187,7 @@
 
 
   
-<!-- قسم بنرات طويلة (مربعات صور طويلة عمودية) -->
+<!-- قسم بنرات طويلة (مربعات صور طويلة عمودية) - النسخة الأصلية -->
 <section class="container mx-auto my-12">
   <div class="grid grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6">
     <!-- بنر 1 -->
@@ -1194,6 +1238,81 @@
         <p class="text-sm text-gray-200">وصف مختصر للبنر السادس يوضح العرض أو الفئة.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- قسم بنرات طويلة (مربعات صور طويلة عمودية) - النسخة الجديدة (سلايدر) -->
+<section class="container mx-auto my-12">
+  <div class="swiper banner-swiper">
+    <div class="swiper-wrapper">
+      <!-- بنر 1 -->
+      <div class="swiper-slide">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
+          <img src="./products/1-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
+            <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 1</h3>
+            <p class="text-sm text-gray-200">وصف مختصر للبنر الأول يوضح العرض أو الفئة.</p>
+          </div>
+        </div>
+      </div>
+      <!-- بنر 2 -->
+      <div class="swiper-slide">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
+          <img src="./products/2-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
+            <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 2</h3>
+            <p class="text-sm text-gray-200">وصف مختصر للبنر الثاني يوضح العرض أو الفئة.</p>
+          </div>
+        </div>
+      </div>
+      <!-- بنر 3 -->
+      <div class="swiper-slide">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
+          <img src="./products/6-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
+            <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 3</h3>
+            <p class="text-sm text-gray-200">وصف مختصر للبنر الثالث يوضح العرض أو الفئة.</p>
+          </div>
+        </div>
+      </div>
+      <!-- بنر 4 -->
+      <div class="swiper-slide">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
+          <img src="./products/3-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
+            <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 4</h3>
+            <p class="text-sm text-gray-200">وصف مختصر للبنر الرابع يوضح العرض أو الفئة.</p>
+          </div>
+        </div>
+      </div>
+      <!-- بنر 5 -->
+      <div class="swiper-slide">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
+          <img src="./products/4-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
+            <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 5</h3>
+            <p class="text-sm text-gray-200">وصف مختصر للبنر الخامس يوضح العرض أو الفئة.</p>
+          </div>
+        </div>
+      </div>
+      <!-- بنر 6 -->
+      <div class="swiper-slide">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
+          <img src="./products/5-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
+            <h3 class="text-lg font-bold text-white mb-1">عنوان البنر 6</h3>
+            <p class="text-sm text-gray-200">وصف مختصر للبنر السادس يوضح العرض أو الفئة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- أزرار التنقل -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    
+    <!-- نقاط التنقل -->
+    <div class="swiper-pagination"></div>
   </div>
 </section>
 
@@ -1996,6 +2115,48 @@
         1280: { 
           slidesPerView: 5,
           spaceBetween: 35
+        }
+      },
+      rtl: true,
+      effect: 'slide',
+      speed: 600,
+      grabCursor: true
+    });
+  </script>
+
+  <!-- Banner Slider Initialization -->
+  <script>
+    new Swiper('.banner-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: { 
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + ' w-3 h-3 bg-gray-300 rounded-full transition-all duration-300 hover:bg-amber-400"></span>';
+        },
+      },
+      breakpoints: {
+        640: { 
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        768: { 
+          slidesPerView: 3,
+          spaceBetween: 25
+        },
+        1024: { 
+          slidesPerView: 3,
+          spaceBetween: 30
         }
       },
       rtl: true,
