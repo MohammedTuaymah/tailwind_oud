@@ -77,19 +77,26 @@
       background: linear-gradient(135deg, #101010, #63605f);
       overflow: hidden;
       white-space: nowrap;
+      position: relative;
     }
     
     .scrolling-text {
       display: inline-block;
-      animation: scroll-left 20s linear infinite;
+      animation: scroll-left 30s linear infinite;
       color: white;
       font-weight: bold;
       padding: 12px 0;
+      min-width: 100%;
+      will-change: transform;
     }
     
     @keyframes scroll-left {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+      0% { 
+        transform: translateX(100%); 
+      }
+      100% { 
+        transform: translateX(-100%); 
+      }
     }
     
     .scrolling-banner:hover .scrolling-text {
@@ -208,7 +215,7 @@
     </div>
     
     <!-- أزرار التنقل -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+    <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
       <div class="flex gap-3">
         <button class="w-3 h-3 rounded-full bg-white hover:bg-white transition-all duration-300 slider-dot active" data-slide="0"></button>
         <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 slider-dot" data-slide="1"></button>
@@ -216,7 +223,7 @@
         <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 slider-dot" data-slide="3"></button>
         <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 slider-dot" data-slide="4"></button>
       </div>
-    </div>
+    </div> -->
     
     <!-- أزرار السابق والتالي -->
     <button class="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300" id="prevBtn">
@@ -496,7 +503,7 @@
     <!-- شريط الإعلان المتحرك -->
     <div class="container mx-auto scrolling-banner mb-10 mt-10 rounded-2xl">
       <div class="scrolling-text">
-        🎉 تخفيضات رهيبة 😱 وعروض مذهلة 😬 على جميع منتجاتنا إلى غاية 01 نوفمبر المقبل 🎉 لا تخلي الفرصة تفوتك 🎉 تخفيضات رهيبة 😱 وعروض مذهلة 😬 على جميع منتجاتنا إلى غاية 01 نوفمبر المقبل 🎉 لا تخلي الفرصة تفوتك
+        🎉 تخفيضات رهيبة 😱 وعروض مذهلة 😬 على جميع منتجاتنا إلى غاية 01 نوفمبر المقبل 🎉 لا تخلي الفرصة تفوتك 🎉 تخفيضات رهيبة 😱 وعروض مذهلة 😬 على جميع منتجاتنا إلى غاية 01 نوفمبر المقبل 🎉 لا تخلي الفرصة تفوتك 🎉 تخفيضات رهيبة 😱 وعروض مذهلة 😬 على جميع منتجاتنا إلى غاية 01 نوفمبر المقبل 🎉 لا تخلي الفرصة تفوتك
       </div>
     </div>
 
@@ -512,7 +519,7 @@
       <!-- بنر 1 -->
       <div class="swiper-slide">
         <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-          <img src="./products/1-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <img src="./products/beigeBlaWa-Photoroom.webp" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           
           <!-- أزرار التفاعل -->
           <div class="absolute top-3 right-3 flex flex-col gap-2">
@@ -549,7 +556,7 @@
       <!-- بنر 2 -->
       <div class="swiper-slide">
         <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-          <img src="./products/2-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <img src="./products/beigeWa-Photoroom.webp" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           
           <!-- أزرار التفاعل -->
           <div class="absolute top-3 right-3 flex flex-col gap-2">
@@ -586,7 +593,7 @@
       <!-- بنر 3 -->
       <div class="swiper-slide">
         <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-          <img src="./products/6-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <img src="./products/blue-Photoroom.webp" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           
           <!-- أزرار التفاعل -->
           <div class="absolute top-3 right-3 flex flex-col gap-2">
@@ -623,7 +630,7 @@
       <!-- بنر 4 -->
       <div class="swiper-slide">
         <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-          <img src="./products/3-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <img src="./products/green-Photoroom.webp" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           
           <!-- أزرار التفاعل -->
           <div class="absolute top-3 right-3 flex flex-col gap-2">
@@ -660,7 +667,7 @@
       <!-- بنر 5 -->
       <div class="swiper-slide">
         <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-          <img src="./products/4-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <img src="./products/redwa-Photoroom.webp" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           
           <!-- أزرار التفاعل -->
           <div class="absolute top-3 right-3 flex flex-col gap-2">
@@ -697,7 +704,7 @@
       <!-- بنر 6 -->
       <div class="swiper-slide">
         <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
-          <img src="./products/5-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <img src="./products/white-Photoroom.webp" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           
           <!-- أزرار التفاعل -->
           <div class="absolute top-3 right-3 flex flex-col gap-2">
@@ -2214,15 +2221,15 @@
       },
       breakpoints: {
         320: { 
-          slidesPerView: 2,
+          slidesPerView: 2.5,
           spaceBetween: 20
         },
         640: { 
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 30
         },
         768: { 
-          slidesPerView: 3,
+          slidesPerView: 4,
           spaceBetween: 40
         },
         1024: { 
