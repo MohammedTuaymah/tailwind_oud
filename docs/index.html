@@ -350,151 +350,109 @@
 
 
   <!-- قسم فئات المتجر المحسن -->
-  <section class="relative py-16 bg-gradient-to-br from-gray-50 via-white to-amber-50 overflow-hidden">
-    <!-- خلفية زخرفية -->
-    <div class="absolute inset-0 opacity-5">
-      <div class="absolute top-10 left-10 w-32 h-32 bg-amber-400 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple-400 rounded-full blur-3xl"></div>
-      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-400 rounded-full blur-3xl"></div>
-    </div>
-    
-    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <!-- العنوان المحسن -->
+  <section class="py-16 bg-gradient-to-br from-gray-50 via-white to-amber-50 overflow-hidden">
+    <div class="container mx-auto px-4">
+      <!-- العنوان -->
       <div class="text-center mb-12">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           احتفل مع من تحب
         </h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          مجمــوعــات هــــدايـــا العطور الفاخرة لجميع المناسبات
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          مجموعات هدايا العطور الفاخرة لجميع المناسبات
         </p>
         <div class="flex justify-center mt-6">
           <div class="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full"></div>
         </div>
       </div>
 
-      <!-- سلايدر الفئات الدائرية -->
-      <div class="relative">
-        <!-- Swiper Container -->
-        <div class="swiper categories-swiper">
-          <div class="swiper-wrapper">
-            <!-- فئة رجالية -->
-            <div class="swiper-slide">
-              <div class="group relative text-center px-4">
-                <div class="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-4">
-                  <div class="absolute inset-0 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                  <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
-                    <img class="w-full h-full object-cover" 
-                         src="./categories/menPrize-Photoroom.webp" alt="هدايا عطور رجالية" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
+      <!-- سلايدر الفئات -->
+      <div class="swiper categories-swiper">
+        <div class="swiper-wrapper">
+          <!-- فئة رجالية -->
+          <div class="swiper-slide">
+            <a href="#" class="group block text-center p-4 hover:bg-white rounded-xl transition-all duration-300">
+              <div class="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4">
+                <div class="w-full h-full rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                  <img class="w-full h-full object-cover" 
+                       src="./categories/menPrize-Photoroom.webp" alt="هدايا عطور رجالية">
                 </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-amber-700 transition-colors duration-300">هدايا رجالية</h3>
-                <p class="text-sm text-gray-600 mb-3">عطور فاخرة للرجال</p>
               </div>
-            </div>
+              <h3 class="text-sm sm:text-base font-bold text-gray-900 group-hover:text-amber-700 transition-colors">هدايا رجالية</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">عطور فاخرة للرجال</p>
+            </a>
+          </div>
 
-            <!-- فئة نسائية -->
-            <div class="swiper-slide">
-              <div class="group relative text-center px-4">
-                <div class="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-4">
-                  <div class="absolute inset-0 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                  <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
-                    <img class="w-full h-full object-cover" 
-                         src="./categories/womenGift-Photoroom.webp" alt="هدايا عطور نسائية" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
+          <!-- فئة نسائية -->
+          <div class="swiper-slide">
+            <a href="#" class="group block text-center p-4 hover:bg-white rounded-xl transition-all duration-300">
+              <div class="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4">
+                <div class="w-full h-full rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                  <img class="w-full h-full object-cover" 
+                       src="./categories/womenGift-Photoroom.webp" alt="هدايا عطور نسائية">
                 </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-pink-700 transition-colors duration-300">هدايا نسائية</h3>
-                <p class="text-sm text-gray-600 mb-3">عطور أنيقة للسيدات</p>
-                
               </div>
-            </div>
+              <h3 class="text-sm sm:text-base font-bold text-gray-900 group-hover:text-pink-700 transition-colors">هدايا نسائية</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">عطور أنيقة للسيدات</p>
+            </a>
+          </div>
 
-            <!-- فئة فاخرة -->
-            <div class="swiper-slide">
-              <div class="group relative text-center px-4">
-                <div class="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-4">
-                  <div class="absolute inset-0 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                  <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
-                    <img class="w-full h-full object-cover" 
-                         src="./categories/luxureGifts-Photoroom.webp" alt="مجموعات فاخرة" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
+          <!-- فئة فاخرة -->
+          <div class="swiper-slide">
+            <a href="#" class="group block text-center p-4 hover:bg-white rounded-xl transition-all duration-300">
+              <div class="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4">
+                <div class="w-full h-full rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                  <img class="w-full h-full object-cover" 
+                       src="./categories/luxureGifts-Photoroom.webp" alt="مجموعات فاخرة">
                 </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors duration-300">مجموعات فاخرة</h3>
-                <p class="text-sm text-gray-600 mb-3">عطور فاخرة حصرية</p>
-                
               </div>
-            </div>
+              <h3 class="text-sm sm:text-base font-bold text-gray-900 group-hover:text-purple-700 transition-colors">مجموعات فاخرة</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">عطور فاخرة حصرية</p>
+            </a>
+          </div>
 
-            <!-- فئة للجنسين -->
-            <div class="swiper-slide">
-              <div class="group relative text-center px-4">
-                <div class="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-4">
-                  <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                  <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
-                    <img class="w-full h-full object-cover" 
-                         src="./categories/multiPer-Photoroom.webp" alt="عطور للجنسين" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
+          <!-- فئة للجنسين -->
+          <div class="swiper-slide">
+            <a href="#" class="group block text-center p-4 hover:bg-white rounded-xl transition-all duration-300">
+              <div class="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4">
+                <div class="w-full h-full rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                  <img class="w-full h-full object-cover" 
+                       src="./categories/multiPer-Photoroom.webp" alt="عطور للجنسين">
                 </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">عطور للجنسين</h3>
-                <p class="text-sm text-gray-600 mb-3">عطور مناسبة للجميع</p>
-                
               </div>
-            </div>
+              <h3 class="text-sm sm:text-base font-bold text-gray-900 group-hover:text-blue-700 transition-colors">عطور للجنسين</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">عطور مناسبة للجميع</p>
+            </a>
+          </div>
 
-            <!-- فئة هدايا -->
-            <div class="swiper-slide">
-              <div class="group relative text-center px-4">
-                <div class="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-4">
-                  <div class="absolute inset-0 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                  <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
-                    <img class="w-full h-full object-cover" 
-                         src="./categories/collections-Photoroom.webp" alt="مجموعات هدايا" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
+          <!-- فئة هدايا -->
+          <div class="swiper-slide">
+            <a href="#" class="group block text-center p-4 hover:bg-white rounded-xl transition-all duration-300">
+              <div class="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4">
+                <div class="w-full h-full rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                  <img class="w-full h-full object-cover" 
+                       src="./categories/collections-Photoroom.webp" alt="مجموعات هدايا">
                 </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-700 transition-colors duration-300">مجموعات هدايا</h3>
-                <p class="text-sm text-gray-600 mb-3">هدايا مميزة للمناسبات</p>
-                
               </div>
-            </div>
+              <h3 class="text-sm sm:text-base font-bold text-gray-900 group-hover:text-green-700 transition-colors">مجموعات هدايا</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">هدايا مميزة للمناسبات</p>
+            </a>
+          </div>
 
-            <!-- فئة العطور الجديدة -->
-            <div class="swiper-slide">
-              <div class="group relative text-center px-4">
-                <div class="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-4">
-                  <div class="absolute inset-0 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                  <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-110">
-                    <img class="w-full h-full object-cover" 
-                         src="./categories/newone-Photoroom.webp" alt="عطور جديدة" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
+          <!-- فئة العطور الجديدة -->
+          <div class="swiper-slide">
+            <a href="#" class="group block text-center p-4 hover:bg-white rounded-xl transition-all duration-300">
+              <div class="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4">
+                <div class="w-full h-full rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                  <img class="w-full h-full object-cover" 
+                       src="./categories/newone-Photoroom.webp" alt="عطور جديدة">
                 </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-700 transition-colors duration-300">عطور جديدة</h3>
-                <p class="text-sm text-gray-600 mb-3">عطور جديدة ومميزة</p>
-                
               </div>
-            </div>
+              <h3 class="text-sm sm:text-base font-bold text-gray-900 group-hover:text-green-700 transition-colors">عطور جديدة</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">عطور جديدة ومميزة</p>
+            </a>
           </div>
         </div>
-
-        <!-- Navigation Buttons -->
-        <div class="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
-          <button class="categories-swiper-prev bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
-            <i class="fas fa-chevron-right text-lg"></i>
-          </button>
-        </div>
-        <div class="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
-          <button class="categories-swiper-next bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
-            <i class="fas fa-chevron-left text-lg"></i>
-          </button>
-        </div>
-
-        <!-- Pagination -->
       </div>
-      
     </div>
   </section>
 
@@ -2006,35 +1964,47 @@
   </footer>
 
 
+  <!-- Essential JavaScript Functions -->
   <script>
+    // قائمة الجوال
+    document.getElementById('menuBtn')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu')?.classList.toggle('hidden');
+    });
+
+    // إغلاق القائمة عند النقر خارجها
+    document.getElementById('closeMenuBtn')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu')?.classList.add('hidden');
+    });
+
+    // وظائف المنتج
     function toggleWishlist(btn) {
       btn.classList.toggle('bg-amber-700');
       btn.classList.toggle('text-white');
       btn.classList.toggle('border-amber-700');
       btn.classList.toggle('border-amber-200');
     }
-    </script>
 
-  <script>
-    // تغيير صورة المنتج عند الضغط على المصغرات أو الألوان
     function changeProductImg(src) {
-      document.getElementById('mainProductImg').src = src;
-      document.querySelectorAll('.thumb-img').forEach(img => {
-        img.classList.remove('border-amber-700');
-        if(img.src.includes(src)) img.classList.add('border-amber-700');
-      });
+      const mainImg = document.getElementById('mainProductImg');
+      if (mainImg) {
+        mainImg.src = src;
+        document.querySelectorAll('.thumb-img').forEach(img => {
+          img.classList.remove('border-amber-700');
+          if(img.src.includes(src)) img.classList.add('border-amber-700');
+        });
+      }
     }
-    // تغيير الكمية
+
     function changeQty(val) {
       const qtyInput = document.getElementById('productQty');
-      let qty = parseInt(qtyInput.value) || 1;
-      qty = Math.max(1, qty + val);
-      qtyInput.value = qty;
+      if (qtyInput) {
+        let qty = parseInt(qtyInput.value) || 1;
+        qty = Math.max(1, qty + val);
+        qtyInput.value = qty;
+      }
     }
-    </script>
 
-  <script>
-    // سلايدر البنر الرئيسي بخلفية ونصوص متغيرة
+    // سلايدر البنر الرئيسي
     const heroBannerImages = [
       './banner/1.jpg',
       './banner/2.jpg',
@@ -2055,75 +2025,49 @@
       'تسوق الآن',
       'جرب الآن'
     ];
+    
     let heroBannerCurrent = 0;
+    
     function renderHeroBanner() {
       const banner = document.getElementById('mainHeroBanner');
-      banner.style.backgroundImage = `url('${heroBannerImages[heroBannerCurrent]}')`;
-      document.getElementById('heroBannerSubtitle').textContent = heroBannerSubtitles[heroBannerCurrent];
-      document.getElementById('heroBannerTitle').textContent = heroBannerTitles[heroBannerCurrent];
-      document.getElementById('heroBannerBtn').textContent = heroBannerBtns[heroBannerCurrent];
-      for(let i=0;i<heroBannerImages.length;i++) {
-        document.getElementById('heroDot'+i).className = 'w-3 h-3 rounded-full ' + (i===heroBannerCurrent?'bg-amber-700':'bg-amber-300');
+      const subtitle = document.getElementById('heroBannerSubtitle');
+      const title = document.getElementById('heroBannerTitle');
+      const btn = document.getElementById('heroBannerBtn');
+      
+      if (banner) banner.style.backgroundImage = `url('${heroBannerImages[heroBannerCurrent]}')`;
+      if (subtitle) subtitle.textContent = heroBannerSubtitles[heroBannerCurrent];
+      if (title) title.textContent = heroBannerTitles[heroBannerCurrent];
+      if (btn) btn.textContent = heroBannerBtns[heroBannerCurrent];
+      
+      for(let i = 0; i < heroBannerImages.length; i++) {
+        const dot = document.getElementById('heroDot'+i);
+        if (dot) {
+          dot.className = 'w-3 h-3 rounded-full ' + (i === heroBannerCurrent ? 'bg-amber-700' : 'bg-amber-300');
+        }
       }
     }
+    
     function changeHeroBanner(dir) {
       heroBannerCurrent = (heroBannerCurrent + dir + heroBannerImages.length) % heroBannerImages.length;
       renderHeroBanner();
     }
+    
     function goToHeroBanner(i) {
       heroBannerCurrent = i;
       renderHeroBanner();
     }
+    
+    // تشغيل السلايدر التلقائي
     setInterval(() => {
       heroBannerCurrent = (heroBannerCurrent + 1) % heroBannerImages.length;
       renderHeroBanner();
     }, 7000);
-    renderHeroBanner();
+    
+    // تهيئة السلايدر عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', renderHeroBanner);
   </script>
 
-  <!-- جافاسكريبت للتأثيرات والسلايدر -->
-  <script>
-    // سلايدر البنر الرئيسي
-    const heroImages = [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80',
-    ];
-    let heroCurrentSlide = 0;
-    const heroSlider = document.getElementById('heroSlider');
-    const sliderDots = document.getElementById('sliderDots');
-    function renderSlider() {
-      heroSlider.innerHTML = `<img src="${heroImages[heroCurrentSlide]}" class='w-full h-full object-cover transition-all duration-700' alt='بنر عطور'>`;
-      sliderDots.innerHTML = heroImages.map((_, i) => `<button class='w-3 h-3 rounded-full mx-1 ${i===heroCurrentSlide?'bg-amber-700':'bg-amber-300'}' onclick='goToSlide(${i})'></button>`).join('');
-    }
-    function goToSlide(i) {
-      heroCurrentSlide = i;
-      renderSlider();
-    }
-    setInterval(() => {
-      heroCurrentSlide = (heroCurrentSlide + 1) % heroImages.length;
-      renderSlider();
-    }, 4000);
-    renderSlider();
-    window.goToSlide = goToSlide;
 
-    // قائمة الجوال
-    document.getElementById('menuBtn').onclick = () => {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
-    };
-
-    // تأثيرات الظهور التدريجي
-    function revealOnScroll() {
-      document.querySelectorAll('.fade-in').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add('visible');
-        }
-      });
-    }
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-  </script>
 
   <!-- Bottom Navigation Bar (Mobile & Tablet Only, Gray Theme) -->
   <nav class="fixed bottom-0 left-0 right-0 z-40 bg-gradient-to-t from-gray-100 via-white to-gray-50 shadow-2xl border-t border-gray-200 lg:hidden flex justify-around items-center h-20 px-2 backdrop-blur-lg" style="box-shadow: 0 -4px 24px 0 rgba(120, 120, 120, 0.08) inset;">
@@ -2168,168 +2112,161 @@
 
 
 
+  <!-- Swiper Initialization -->
   <script>
-    new Swiper('.testimonials-swiper', {
-      slidesPerView: 1.2,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: { delay: 4000 },
-      navigation: {
-        nextEl: '.testimonials-next',
-        prevEl: '.testimonials-prev',
-      },
-      breakpoints: {
-        640: { slidesPerView: 1 },
-        1024: { slidesPerView: 2 },
-        1280: { slidesPerView: 3 }
-      },
-      rtl: true
-    });
-  </script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Categories Swiper
+      new Swiper('.categories-swiper', {
+        slidesPerView: 2.5,
+        spaceBetween: 15,
+        loop: true,
+        loopedSlides: 8,
+        speed: 600,
+        effect: 'slide',
+        autoplay: { 
+          delay: 3500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+          waitForTransition: true
+        },
+        breakpoints: {
+          480: { slidesPerView: 3, spaceBetween: 20 },
+          768: { slidesPerView: 4, spaceBetween: 25 },
+          1024: { slidesPerView: 5, spaceBetween: 30 },
+          1280: { slidesPerView: 6, spaceBetween: 35 }
+        },
+        rtl: true,
+        grabCursor: true,
+        touchRatio: 1,
+        touchAngle: 45,
+        threshold: 10,
+        longSwipes: true,
+        longSwipesRatio: 0.5,
+        longSwipesMs: 300,
+        followFinger: true,
+        allowTouchMove: true,
+        resistance: true,
+        resistanceRatio: 0.85,
+        slideToClickedSlide: false,
+        centeredSlides: false,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        preventClicks: false,
+        preventClicksPropagation: false,
+        freeMode: false
+      });
 
-  <!-- Categories Slider Initialization -->
-  <script>
-    new Swiper('.categories-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      autoplay: { 
-        delay: 3000,
-        disableOnInteraction: false
-      },
-      navigation: {
-        nextEl: '.categories-swiper-next',
-        prevEl: '.categories-swiper-prev',
-      },
-      pagination: {
-        el: '.categories-swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + ' w-3 h-3 bg-gray-300 rounded-full transition-all duration-300 hover:bg-amber-400"></span>';
+      // Products Swiper
+      new Swiper('.products-swiper', {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        loop: true,
+        loopedSlides: 6,
+        speed: 500,
+        autoplay: { 
+          delay: 4000, 
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+          waitForTransition: true
         },
-      },
-      breakpoints: {
-        320: { 
-          slidesPerView: 2.5,
-          spaceBetween: 20
+        navigation: {
+          nextEl: '.products-swiper-next',
+          prevEl: '.products-swiper-prev',
         },
-        640: { 
-          slidesPerView: 3,
-          spaceBetween: 30
+        pagination: {
+          el: '.products-swiper-pagination',
+          clickable: true,
         },
-        768: { 
-          slidesPerView: 4,
-          spaceBetween: 40
+        breakpoints: {
+          640: { slidesPerView: 2, spaceBetween: 20 },
+          768: { slidesPerView: 3, spaceBetween: 25 },
+          1024: { slidesPerView: 4, spaceBetween: 30 },
+          1280: { slidesPerView: 5, spaceBetween: 35 }
         },
-        1024: { 
-          slidesPerView: 4,
-          spaceBetween: 50
-        },
-        1280: { 
-          slidesPerView: 5,
-          spaceBetween: 60
-        }
-      },
-      rtl: true,
-      effect: 'slide',
-      speed: 600,
-      grabCursor: true
-    });
-  </script>
+        rtl: true,
+        grabCursor: true,
+        touchRatio: 1,
+        threshold: 10,
+        longSwipes: true,
+        followFinger: true,
+        resistance: true,
+        resistanceRatio: 0.85,
+        slideToClickedSlide: false,
+        centeredSlides: false,
+        preventClicks: false,
+        freeMode: false
+      });
 
-  <!-- Products Slider Initialization -->
-  <script>
-    new Swiper('.products-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      autoplay: { 
-        delay: 4000,
-        disableOnInteraction: false
-      },
-      navigation: {
-        nextEl: '.products-swiper-next',
-        prevEl: '.products-swiper-prev',
-      },
-      pagination: {
-        el: '.products-swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + ' w-3 h-3 bg-gray-300 rounded-full transition-all duration-300 hover:bg-amber-400"></span>';
+      // Banner Swiper
+      new Swiper('.banner-swiper', {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        loop: true,
+        loopedSlides: 4,
+        speed: 700,
+        autoplay: { 
+          delay: 3500, 
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+          waitForTransition: true
         },
-      },
-      breakpoints: {
-        320: { 
-          slidesPerView: 2,
-          spaceBetween: 15
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
-        640: { 
-          slidesPerView: 2,
-          spaceBetween: 20
+        breakpoints: {
+          640: { slidesPerView: 2, spaceBetween: 20 },
+          768: { slidesPerView: 3, spaceBetween: 25 },
+          1024: { slidesPerView: 3, spaceBetween: 30 }
         },
-        768: { 
-          slidesPerView: 3,
-          spaceBetween: 25
-        },
-        1024: { 
-          slidesPerView: 4,
-          spaceBetween: 30
-        },
-        1280: { 
-          slidesPerView: 5,
-          spaceBetween: 35
-        }
-      },
-      rtl: true,
-      effect: 'slide',
-      speed: 600,
-      grabCursor: true
-    });
-  </script>
+        rtl: true,
+        grabCursor: true,
+        touchRatio: 1,
+        threshold: 10,
+        longSwipes: true,
+        followFinger: true,
+        resistance: true,
+        resistanceRatio: 0.85,
+        slideToClickedSlide: false,
+        centeredSlides: false,
+        preventClicks: false,
+        freeMode: false
+      });
 
-  <!-- Banner Slider Initialization -->
-  <script>
-    new Swiper('.banner-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      autoplay: { 
-        delay: 3000,
-        disableOnInteraction: false
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + ' w-3 h-3 bg-gray-300 rounded-full transition-all duration-300 hover:bg-amber-400"></span>';
+      // Testimonials Swiper
+      new Swiper('.testimonials-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        loopedSlides: 3,
+        speed: 800,
+        autoplay: { 
+          delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+          waitForTransition: true
         },
-      },
-      breakpoints: {
-        320: { 
-          slidesPerView: 2,
-          spaceBetween: 15
+        navigation: {
+          nextEl: '.testimonials-next',
+          prevEl: '.testimonials-prev',
         },
-        640: { 
-          slidesPerView: 2,
-          spaceBetween: 20
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
         },
-        768: { 
-          slidesPerView: 3,
-          spaceBetween: 25
-        },
-        1024: { 
-          slidesPerView: 3,
-          spaceBetween: 30
-        }
-      },
-      rtl: true,
-      effect: 'slide',
-      speed: 600,
-      grabCursor: true
+        rtl: true,
+        grabCursor: true,
+        touchRatio: 1,
+        threshold: 5,
+        longSwipes: true,
+        followFinger: true,
+        resistance: true,
+        resistanceRatio: 0.85,
+        slideToClickedSlide: false,
+        centeredSlides: false,
+        preventClicks: false,
+        freeMode: false
+      });
     });
   </script>
 </body>
