@@ -163,6 +163,31 @@
     .banner-swiper .swiper-slide:hover {
       transform: translateY(-5px);
     }
+
+    .banners-swiper .swiper-button-next,
+    .banners-swiper .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      color: #d97706;
+    }
+    
+    .banners-swiper .swiper-button-next:after,
+    .banners-swiper .swiper-button-prev:after {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .banners-swiper .swiper-pagination-bullet {
+      background: #d97706;
+      opacity: 0.3;
+    }
+    
+    .banners-swiper .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
   </style>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -516,8 +541,18 @@
 
 
 <!-- قسم بنرات طويلة (مربعات صور طويلة عمودية) - النسخة الجديدة (سلايدر) -->
-<section class="container mx-auto my-12">
-  <div class="swiper banner-swiper">
+<section class="container mx-auto my-12 px-4">
+  <!-- العنوان -->
+  <div class="text-center mb-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      مجموعة العطور المميزة ✨
+    </h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      اكتشف أجمل العطور الفاخرة والمميزة من مجموعتنا الحصرية
+    </p>
+  </div>
+
+  <div class="swiper banners-swiper relative">
     <div class="swiper-wrapper">
       <!-- بنر 1 -->
       <div class="swiper-slide">
@@ -737,18 +772,105 @@
           </div>
 
           <div class="absolute bottom-10 left-0 right-0 text-center bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
-            <h3 class="text-lg font-bold text-white mb-1">عطر يوفوريا</h3>
+            <h3 class="text-lg font-bold text-white mb-1">عطر يوفوريا الأبيض</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- بنر إضافي 1 -->
+      <div class="swiper-slide">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
+          <img src="./categories/dfb-Photoroom.webp" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          
+          <!-- أزرار التفاعل -->
+          <div class="absolute top-3 right-3 flex flex-col gap-2">
+            <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all duration-300 group/btn">
+              <svg class="w-5 h-5 text-gray-700 group-hover/btn:text-red-500 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- السعر -->
+          <div class="absolute top-3 left-3">
+            <div class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+              899 ريال
+            </div>
+          </div>
+
+          <!-- زر إضافة للسلة -->
+          <div class="absolute bottom-3 left-3 right-3">
+            <button class="w-full bg-white text-black py-2 px-4 rounded-lg font-bold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"></path>
+              </svg>
+              إضافة للسلة
+            </button>
+          </div>
+
+          <div class="absolute bottom-10 left-0 right-0 text-center bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
+            <h3 class="text-lg font-bold text-white mb-1">عطر فاخر مميز</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- بنر إضافي 2 -->
+      <div class="swiper-slide">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-[2/3] group transition-all duration-300">
+          <img src="./categories/timeWatch-Photoroom.jpg" alt="بنر طويل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          
+          <!-- أزرار التفاعل -->
+          <div class="absolute top-3 right-3 flex flex-col gap-2">
+            <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all duration-300 group/btn">
+              <svg class="w-5 h-5 text-gray-700 group-hover/btn:text-red-500 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- السعر -->
+          <div class="absolute top-3 left-3">
+            <div class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+              1299 ريال
+            </div>
+          </div>
+
+          <!-- زر إضافة للسلة -->
+          <div class="absolute bottom-3 left-3 right-3">
+            <button class="w-full bg-white text-black py-2 px-4 rounded-lg font-bold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"></path>
+              </svg>
+              إضافة للسلة
+            </button>
+          </div>
+
+          <div class="absolute bottom-10 left-0 right-0 text-center bg-gradient-to-t from-black/70 via-black/30 to-transparent px-4 py-3">
+            <h3 class="text-lg font-bold text-white mb-1">مجموعة الساعات والعطور</h3>
           </div>
         </div>
       </div>
     </div>
     
     <!-- أزرار التنقل -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next banners-next"></div>
+    <div class="swiper-button-prev banners-prev"></div>
     
+    <!-- مؤشرات النقاط -->
+    <div class="swiper-pagination banners-pagination mt-6"></div>
     
+    <!-- زر عرض المزيد -->
+    <div class="text-center mt-8">
+      <button class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg font-bold transition-colors duration-300">
+        عرض جميع المنتجات
+      </button>
+    </div>
   </div>
+
+  <!-- تنسيق أزرار Swiper -->
+  <style>
+
+  </style>
 </section>
 
   
@@ -2242,40 +2364,44 @@
         freeMode: false
       });
 
-      // Banner Swiper
-      new Swiper('.banner-swiper', {
-        slidesPerView: 2,
+      // Banners Swiper (البنرات الطويلة) - مبسط
+      new Swiper('.banners-swiper', {
+        slidesPerView: 1.2,
         spaceBetween: 15,
         loop: true,
-        loopedSlides: 4,
-        speed: 700,
+        speed: 500,
         autoplay: { 
-          delay: 3500, 
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-          waitForTransition: true
+          delay: 3000,
+          disableOnInteraction: false
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.banners-next',
+          prevEl: '.banners-prev',
+        },
+        pagination: {
+          el: '.banners-pagination',
+          clickable: true
         },
         breakpoints: {
-          640: { slidesPerView: 2, spaceBetween: 20 },
-          768: { slidesPerView: 3, spaceBetween: 25 },
-          1024: { slidesPerView: 3, spaceBetween: 30 }
+          640: { 
+            slidesPerView: 2,
+            spaceBetween: 20 
+          },
+          768: { 
+            slidesPerView: 2.5,
+            spaceBetween: 25 
+          },
+          1024: { 
+            slidesPerView: 4,
+            spaceBetween: 30 
+          }
         },
-        rtl: true,
         grabCursor: true,
+        allowTouchMove: true,
+        simulateTouch: true,
         touchRatio: 1,
-        threshold: 10,
-        longSwipes: true,
-        followFinger: true,
-        resistance: true,
-        resistanceRatio: 0.85,
-        slideToClickedSlide: false,
-        centeredSlides: false,
-        preventClicks: false,
-        freeMode: false
+        shortSwipes: true,
+        longSwipes: true
       });
 
       // Testimonials Swiper
