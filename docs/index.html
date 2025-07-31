@@ -188,6 +188,51 @@
     .banners-swiper .swiper-pagination-bullet-active {
       opacity: 1;
     }
+
+    /* تنسيق Products Swiper - مبسط مثل البنرات */
+    .products-swiper {
+      padding: 20px 0 60px 0;
+    }
+
+    .products-swiper .swiper-slide {
+      height: auto;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .products-swiper .swiper-button-next,
+    .products-swiper .swiper-button-prev {
+      color: #d97706;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      margin-top: -22px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .products-swiper .swiper-button-next:hover,
+    .products-swiper .swiper-button-prev:hover {
+      background: #d97706;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .products-swiper .swiper-button-next::after,
+    .products-swiper .swiper-button-prev::after {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .products-swiper .swiper-pagination-bullet {
+      background: #d97706;
+      opacity: 0.3;
+    }
+
+    .products-swiper .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
   </style>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -1345,20 +1390,12 @@
         </div>
       </div>
 
-      <!-- Navigation Buttons -->
-      <div class="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
-        <button class="products-swiper-prev bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
-          <i class="fas fa-chevron-right text-lg"></i>
-        </button>
-      </div>
-      <div class="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
-        <button class="products-swiper-next bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
-          <i class="fas fa-chevron-left text-lg"></i>
-        </button>
-      </div>
-
-      <!-- Pagination -->
-      <div class="products-swiper-pagination flex justify-center mt-6"></div>
+      <!-- أزرار التنقل -->
+      <div class="swiper-button-next products-swiper-next"></div>
+      <div class="swiper-button-prev products-swiper-prev"></div>
+      
+      <!-- مؤشرات النقاط -->
+      <div class="swiper-pagination products-swiper-pagination mt-6"></div>
     </div>
   </section>
 
@@ -2323,18 +2360,15 @@
         freeMode: false
       });
 
-      // Products Swiper
+      // Products Swiper - قسم المنتجات المميزة (مطابق للبنرات الطويلة)
       new Swiper('.products-swiper', {
-        slidesPerView: 2,
+        slidesPerView: 1.2,
         spaceBetween: 15,
         loop: true,
-        loopedSlides: 6,
         speed: 500,
         autoplay: { 
-          delay: 4000, 
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-          waitForTransition: true
+          delay: 3000,
+          disableOnInteraction: false
         },
         navigation: {
           nextEl: '.products-swiper-next',
@@ -2342,26 +2376,29 @@
         },
         pagination: {
           el: '.products-swiper-pagination',
-          clickable: true,
+          clickable: true
         },
         breakpoints: {
-          640: { slidesPerView: 2, spaceBetween: 20 },
-          768: { slidesPerView: 3, spaceBetween: 25 },
-          1024: { slidesPerView: 4, spaceBetween: 30 },
-          1280: { slidesPerView: 5, spaceBetween: 35 }
+          640: { 
+            slidesPerView: 2,
+            spaceBetween: 20 
+          },
+          768: { 
+            slidesPerView: 2.5,
+            spaceBetween: 25 
+          },
+          1024: { 
+            slidesPerView: 4,
+            spaceBetween: 30 
+          }
         },
         rtl: true,
         grabCursor: true,
+        allowTouchMove: true,
+        simulateTouch: true,
         touchRatio: 1,
-        threshold: 10,
-        longSwipes: true,
-        followFinger: true,
-        resistance: true,
-        resistanceRatio: 0.85,
-        slideToClickedSlide: false,
-        centeredSlides: false,
-        preventClicks: false,
-        freeMode: false
+        shortSwipes: true,
+        longSwipes: true
       });
 
       // Banners Swiper (البنرات الطويلة) - مبسط
