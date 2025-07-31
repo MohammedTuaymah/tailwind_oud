@@ -267,9 +267,9 @@
           </a> -->
           
           <!-- أيقونة المستخدم -->
-          <a href="#" onclick="toggleUserMenu(); return false;" class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:text-amber-300 transition-all duration-300 group">
+          <button onclick="console.log('User icon clicked'); toggleUserMenu();" class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:text-amber-300 transition-all duration-300 group cursor-pointer">
             <i class="fas fa-user text-lg group-hover:scale-110 transition-transform"></i>
-          </a>
+          </button>
 
           <!-- السلة-->
           <a href="#" onclick="toggleCart(); return false;" class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:text-amber-300 transition-all duration-300 group">
@@ -966,7 +966,7 @@
           
           <!-- أزرار التفاعل -->
           <div class="absolute flex flex-col gap-2" style="bottom: 0.5rem; right: 50%; transform: translateX(50%);">
-            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
+            <button onclick="openProductModal('عود الأمسيات', './perfumes/1.jpg', '159', '499', '200 مل', 'عطر فاخر برائحة المسك والعود، مثالي للأمسيات الرومانسية والمناسبات الخاصة.')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
               <i class="fas fa-eye text-black text-sm drop-shadow-sm" style="font-size: 1.2rem;"></i>
             </button>
           </div>
@@ -1002,7 +1002,7 @@
           
           <!-- أزرار التفاعل -->
           <div class="absolute flex flex-col gap-2" style="bottom: 0.5rem; right: 50%; transform: translateX(50%);">
-            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
+            <button onclick="openProductModal('مسك الغيم', './perfumes/2.jpg', '149', '199', '100 مل', 'عطر ناعم برائحة المسك الأبيض، مثالي للاستخدام اليومي والمناسبات العادية.')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
               <i class="fas fa-eye text-black text-sm drop-shadow-sm" style="font-size: 1.2rem;"></i>
             </button>
           </div>
@@ -1038,7 +1038,7 @@
           
           <!-- أزرار التفاعل -->
           <div class="absolute flex flex-col gap-2" style="bottom: 0.5rem; right: 50%; transform: translateX(50%);">
-            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
+            <button onclick="openProductModal('ليالي باريس', './perfumes/3.jpg', '129', '499', '200 مل', 'عطر رومانسي برائحة الورد والياسمين، يحمل عبق باريس في كل رشّة.')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
               <i class="fas fa-eye text-black text-sm drop-shadow-sm" style="font-size: 1.2rem;"></i>
             </button>
           </div>
@@ -1074,7 +1074,7 @@
           
           <!-- أزرار التفاعل -->
           <div class="absolute flex flex-col gap-2" style="bottom: 0.5rem; right: 50%; transform: translateX(50%);">
-            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
+            <button onclick="openProductModal('سحر الشرق', './perfumes/4.jpg', '149', '499', '200 مل', 'عطر شرقي فاخر يجمع بين العود والمسك والورد، يحمل أسرار الشرق في كل رشّة.')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
               <i class="fas fa-eye text-black text-sm drop-shadow-sm" style="font-size: 1.2rem;"></i>
             </button>
           </div>
@@ -1112,7 +1112,7 @@
           
           <!-- أزرار التفاعل -->
           <div class="absolute flex flex-col gap-2" style="bottom: 0.5rem; right: 50%; transform: translateX(50%);">
-            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
+            <button onclick="openProductModal('قريس اريك', './perfumes/5.jpg', '129', '275', '200 مل', 'عطر فاخر برائحة العود الأسود والمسك، مثالي للرجال الأنيقين.')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
               <i class="fas fa-eye text-black text-sm drop-shadow-sm" style="font-size: 1.2rem;"></i>
             </button>
           </div>
@@ -1147,7 +1147,7 @@
           <img src="./perfumes/6.jpg" alt="فرانكل" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
           <!-- أزرار التفاعل -->
           <div class="absolute flex flex-col gap-2" style="bottom: 0.5rem; right: 50%; transform: translateX(50%);">
-            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
+            <button onclick="openProductModal('فرانكل', './perfumes/6.jpg', '129', '249', '200 مل', 'عطر عصري برائحة الحمضيات والزهور البيضاء، مثالي للنساء العصرية.')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
               <i class="fas fa-eye text-black text-sm drop-shadow-sm" style="font-size: 1.2rem;"></i>
             </button>
           </div>
@@ -1177,7 +1177,7 @@
           <img src="./perfumes/7.jpg" alt="فرانكل افنتوس" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
           <!-- أزرار التفاعل -->
           <div class="absolute flex flex-col gap-2" style="bottom: 0.5rem; right: 50%; transform: translateX(50%);">
-            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
+            <button onclick="openProductModal('فرانكل افنتوس', './perfumes/7.jpg', '129', '275', '200 مل', 'عطر فاخر برائحة العود والمسك، يجمع بين الأناقة والجاذبية.')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
               <i class="fas fa-eye text-black text-sm drop-shadow-sm" style="font-size: 1.2rem;"></i>
             </button>
           </div>
@@ -1207,7 +1207,7 @@
           <img src="./perfumes/8.jpg" alt="وايلد كولت" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
           <!-- أزرار التفاعل -->
           <div class="absolute flex flex-col gap-2" style="bottom: 0.5rem; right: 50%; transform: translateX(50%);">
-            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
+            <button onclick="openProductModal('وايلد كولت', './perfumes/8.jpg', '127', '275', '200 مل', 'عطر بري جذاب برائحة الخشب والتوابل، مثالي للرجال الواثقين.')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg border-2 border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:from-amber-600 hover:to-orange-600 active:scale-95" title="عرض سريع">
               <i class="fas fa-eye text-black text-sm drop-shadow-sm" style="font-size: 1.2rem;"></i>
             </button>
           </div>
@@ -2774,7 +2774,7 @@
   <div id="cart-overlay" class="fixed inset-0 bg-gradient-to-br from-black/60 via-gray-900/40 to-black/60 backdrop-blur-sm z-40 hidden transition-all duration-500" onclick="toggleCart()"></div>
 
   <!-- User Sidebar -->
-  <div id="user-sidebar" class="fixed left-0 top-0 h-full w-[90%] sm:w-[400px] bg-gradient-to-br from-white via-gray-50 to-white shadow-2xl transform translate-x-[-100%] transition-all duration-500 ease-out z-50 backdrop-blur-xl border-r border-gray-200">
+  <div id="user-sidebar" class="fixed left-0 top-0 h-full w-[90%] sm:w-[400px] bg-gradient-to-br from-white via-gray-50 to-white shadow-2xl transform translate-x-[-100%] transition-all duration-500 ease-out z-[70] backdrop-blur-xl border-r border-gray-200" style="transform: translateX(-100%); display: block; visibility: visible;">
     <div class="h-full flex flex-col relative overflow-hidden">
       <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-5">
@@ -2869,7 +2869,7 @@
   </div>
 
   <!-- User Overlay -->
-  <div id="user-overlay" class="fixed inset-0 bg-gradient-to-br from-black/60 via-gray-900/40 to-black/60 backdrop-blur-sm z-40 hidden transition-all duration-500" onclick="toggleUserMenu()"></div>
+  <div id="user-overlay" class="fixed inset-0 bg-gradient-to-br from-black/60 via-gray-900/40 to-black/60 backdrop-blur-sm z-[65] hidden transition-all duration-500" onclick="console.log('Overlay clicked'); toggleUserMenu()"></div>
 
   <!-- Cart JavaScript -->
   <script>
@@ -3000,11 +3000,20 @@
     let isUserMenuOpen = false;
 
     function toggleUserMenu() {
+      console.log('toggleUserMenu called');
       const userSidebar = document.getElementById('user-sidebar');
       const userOverlay = document.getElementById('user-overlay');
       
+      if (!userSidebar || !userOverlay) {
+        console.error('User sidebar or overlay not found');
+        return;
+      }
+      
+      console.log('Current state:', isUserMenuOpen);
+      
       if (isUserMenuOpen) {
         // إغلاق قائمة المستخدم مع تأثيرات سلسة
+        console.log('Closing user menu');
         userSidebar.style.transform = 'translateX(-100%)';
         userSidebar.style.opacity = '0';
         userOverlay.classList.add('hidden');
@@ -3017,7 +3026,12 @@
         isUserMenuOpen = false;
       } else {
         // فتح قائمة المستخدم مع تأثيرات سلسة
+        console.log('Opening user menu');
         userOverlay.classList.remove('hidden');
+        
+        // التأكد من أن الـ sidebar مرئي
+        userSidebar.style.display = 'block';
+        userSidebar.style.visibility = 'visible';
         
         setTimeout(() => {
           userSidebar.style.transform = 'translateX(0px)';
@@ -3051,9 +3065,230 @@
 
     // تأثيرات إضافية عند تحميل الصفحة
     document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM loaded');
       const userSidebar = document.getElementById('user-sidebar');
-      userSidebar.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+      const userOverlay = document.getElementById('user-overlay');
+      
+      console.log('User sidebar found:', !!userSidebar);
+      console.log('User overlay found:', !!userOverlay);
+      
+      if (userSidebar) {
+        userSidebar.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        // التأكد من أن الـ sidebar يبدأ مخفياً
+        userSidebar.style.transform = 'translateX(-100%)';
+        userSidebar.style.opacity = '1';
+        console.log('User sidebar initialized');
+      }
+      
+      if (userOverlay) {
+        userOverlay.classList.add('hidden');
+        console.log('User overlay hidden');
+      }
+      
+      // إعادة تعيين حالة القائمة
+      isUserMenuOpen = false;
+      console.log('User menu state reset to false');
+    });
+
+    // Product Modal Functions
+    function openProductModal(name, image, price, originalPrice, size, description) {
+      const modal = document.getElementById('product-modal');
+      const modalContent = document.getElementById('modal-content');
+      
+      // تحديث محتوى الـ modal
+      modalContent.innerHTML = `
+        <div class="relative bg-white rounded-3xl overflow-hidden shadow-2xl max-w-4xl w-full mx-4">
+          <!-- زر الإغلاق -->
+          <button onclick="closeProductModal()" class="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 transition-all duration-300 hover:bg-white hover:scale-110">
+            <i class="fas fa-times text-gray-600"></i>
+          </button>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            <!-- صورة المنتج -->
+            <div class="relative h-96 lg:h-full bg-gradient-to-br from-amber-50 to-orange-50">
+              <img src="${image}" alt="${name}" class="w-full h-full object-cover">
+              <div class="absolute top-4 left-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                الأكثر مبيعاً
+              </div>
+            </div>
+            
+            <!-- تفاصيل المنتج -->
+            <div class="p-8 flex flex-col justify-between">
+              <div class="space-y-6">
+                <div>
+                  <h2 class="text-3xl font-bold text-gray-800 mb-2">${name}</h2>
+                  <p class="text-gray-600 text-lg leading-relaxed">${description}</p>
+                </div>
+                
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <span class="text-gray-600">الحجم:</span>
+                    <span class="bg-gray-100 px-3 py-1 rounded-full text-gray-800 font-medium">${size}</span>
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <span class="text-gray-600">الرائحة:</span>
+                    <span class="text-gray-800 font-medium">مسك وعود</span>
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <span class="text-gray-600">مدة الثبات:</span>
+                    <span class="text-gray-800 font-medium">8-12 ساعة</span>
+                  </div>
+                </div>
+                
+                <div class="border-t pt-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="text-2xl font-bold text-gray-900">${price} ر.س</span>
+                    <span class="text-gray-400 line-through text-lg">${originalPrice} ر.س</span>
+                  </div>
+                  
+                  <div class="flex items-center gap-2 mb-6">
+                    <div class="flex text-yellow-400">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-gray-600">(4.8/5)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- أزرار الإجراءات -->
+              <div class="space-y-3">
+                <button onclick="addToCart('${name}', '${price}', '${image}', '${size}'); closeProductModal();" class="w-full py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-xl transition-all duration-300 hover:from-amber-600 hover:to-orange-600 hover:scale-105 active:scale-95">
+                  <i class="fas fa-shopping-cart ml-2"></i>
+                  إضافة للسلة
+                </button>
+                
+                <button onclick="buyNow('${name}', '${price}', '${image}', '${size}'); closeProductModal();" class="w-full py-4 bg-black text-white font-bold rounded-xl transition-all duration-300 hover:bg-gray-800 hover:scale-105 active:scale-95">
+                  <i class="fas fa-bolt ml-2"></i>
+                  اشترِ الآن
+                </button>
+                
+                <div class="flex gap-3">
+                  <button class="flex-1 py-3 border-2 border-gray-200 text-gray-700 font-bold rounded-xl transition-all duration-300 hover:border-amber-500 hover:text-amber-600">
+                    <i class="fas fa-heart ml-2"></i>
+                    المفضلة
+                  </button>
+                  <button class="flex-1 py-3 border-2 border-gray-200 text-gray-700 font-bold rounded-xl transition-all duration-300 hover:border-amber-500 hover:text-amber-600">
+                    <i class="fas fa-share ml-2"></i>
+                    مشاركة
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      // إظهار الـ modal مع تأثيرات
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      
+      // تأثير ظهور تدريجي
+      setTimeout(() => {
+        modal.classList.add('opacity-100');
+        modal.querySelector('.bg-white').style.transform = 'scale(1)';
+      }, 10);
+      
+      // منع التمرير في الخلفية
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProductModal() {
+      const modal = document.getElementById('product-modal');
+      
+      // تأثير إغلاق تدريجي
+      modal.classList.remove('opacity-100');
+      modal.querySelector('.bg-white').style.transform = 'scale(0.9)';
+      
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }, 300);
+    }
+
+    // إغلاق الـ modal عند الضغط على الخلفية
+    document.addEventListener('click', function(e) {
+      const modal = document.getElementById('product-modal');
+      if (e.target === modal) {
+        closeProductModal();
+      }
+    });
+
+    // دالة الشراء المباشر
+    function buyNow(productName, productPrice, productImage, productSize) {
+      // إضافة المنتج للسلة أولاً
+      addToCart(productName, productPrice, productImage, productSize);
+      
+      // إظهار رسالة تأكيد
+      showNotification('تم إضافة المنتج للسلة بنجاح!', 'success');
+      
+      // يمكن إضافة منطق إضافي هنا مثل:
+      // - الانتقال لصفحة الدفع
+      // - فتح نموذج الدفع
+      // - إظهار تفاصيل الطلب
+      
+      console.log(`شراء مباشر: ${productName} بسعر ${productPrice} ريال`);
+      
+      // مثال: الانتقال لصفحة الدفع (يمكن تخصيصه)
+      setTimeout(() => {
+        // window.location.href = '/checkout';
+        alert('سيتم توجيهك لصفحة الدفع قريباً...');
+      }, 1000);
+    }
+
+    // دالة إظهار الإشعارات
+    function showNotification(message, type = 'info') {
+      // إنشاء عنصر الإشعار
+      const notification = document.createElement('div');
+      notification.className = `fixed top-4 right-4 z-50 px-6 py-3 rounded-lg text-white font-bold transition-all duration-300 transform translate-x-full`;
+      
+      if (type === 'success') {
+        notification.className += ' bg-green-500';
+      } else if (type === 'error') {
+        notification.className += ' bg-red-500';
+      } else {
+        notification.className += ' bg-blue-500';
+      }
+      
+      notification.textContent = message;
+      document.body.appendChild(notification);
+      
+      // إظهار الإشعار
+      setTimeout(() => {
+        notification.classList.remove('translate-x-full');
+      }, 100);
+      
+      // إخفاء الإشعار بعد 3 ثوانٍ
+      setTimeout(() => {
+        notification.classList.add('translate-x-full');
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 300);
+      }, 3000);
+    }
+
+    // إغلاق الـ modal عند الضغط على Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('product-modal');
+        if (!modal.classList.contains('hidden')) {
+          closeProductModal();
+        }
+      }
     });
   </script>
+
+  <!-- Product Modal -->
+  <div id="product-modal" class="fixed inset-0 z-40 hidden items-center justify-center bg-black/50 backdrop-blur-sm transition-all duration-300 opacity-0">
+    <div id="modal-content" class="transform scale-90 transition-all duration-300">
+      <!-- المحتوى سيتم إضافته ديناميكياً -->
+    </div>
+  </div>
 </body>
 </html>
