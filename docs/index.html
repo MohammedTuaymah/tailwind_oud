@@ -1013,10 +1013,6 @@
     </div>
   </div>
 
-  <!-- تنسيق أزرار Swiper -->
-  <style>
-
-  </style>
 </section>
 
   
@@ -1029,7 +1025,7 @@
         <span class="block w-24 h-1 bg-amber-900 rounded mx-auto mt-4"></span>
       </div>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
       <!-- كرت منتج (كرر مع التعديلات) -->
       <div class="relative bg-white rounded-2xl group hover:shadow-2xl transition h-full p-4">
         <!-- صورة المنتج -->
@@ -1611,8 +1607,8 @@
     </div>
     
     <!-- Swiper Navigation -->
-    <div class="swiper-button-next best-sellers-next"></div>
-    <div class="swiper-button-prev best-sellers-prev"></div>
+    <!-- <div class="swiper-button-next best-sellers-next"></div>
+    <div class="swiper-button-prev best-sellers-prev"></div> -->
     
     <!-- Swiper Pagination -->
     <div class="swiper-pagination best-sellers-pagination mt-6"></div>
@@ -2701,7 +2697,7 @@
 
       // Best Sellers Swiper
       new Swiper('.best-sellers-swiper', {
-        slidesPerView: 2,
+        slidesPerView: 1.7,
         spaceBetween: 15,
         loop: true,
         loopedSlides: 8,
@@ -2722,9 +2718,9 @@
           clickable: true
         },
         breakpoints: {
-          480: { slidesPerView: 2.5, spaceBetween: 20 },
-          640: { slidesPerView: 3, spaceBetween: 20 },
-          768: { slidesPerView: 4, spaceBetween: 25 },
+          480: { slidesPerView: 1, spaceBetween: 20 },
+          640: { slidesPerView: 1, spaceBetween: 20 },
+          768: { slidesPerView: 3, spaceBetween: 25 },
           1024: { slidesPerView: 4, spaceBetween: 30 },
           1280: { slidesPerView: 4, spaceBetween: 35 }
         },
