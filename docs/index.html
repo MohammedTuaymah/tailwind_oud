@@ -278,6 +278,18 @@
     .best-sellers-swiper .swiper-pagination-bullet-active {
       opacity: 1;
     }
+
+    .AdsBanner{
+      width: 70%;
+      border-radius: 20px 0px 0px 20px;
+    }
+    @media (max-width: 768px) {
+      .AdsBanner{
+        width: 100%;
+        height: 70% !important;
+        border-radius: 0px;
+      }
+    }
   </style>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -1618,9 +1630,9 @@
 
 
 
-  <!-- بنر سفلي -->
+  <!-- بنر اعلاني -->
   <section class="relative overflow-hidden my-16 fade-in visible">
-    <div class="absolute inset-0 w-full h-full bg-gradient-to-l from-amber-100 via-white to-amber-200 opacity-80 z-0"></div>
+    <div class="absolute inset-0 h-full opacity-80 z-0 bg-amber-100 AdsBanner"></div>
     <div class="container mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 py-12 px-4 md:px-12">
       <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-right">
         <div class="flex items-center gap-3 mb-4 animate-bounce">
