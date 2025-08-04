@@ -3507,7 +3507,7 @@
         slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
-        loopedSlides: 3,
+        loopedSlides: 1,
         speed: 800,
         autoplay: { 
           delay: 5000,
@@ -3537,54 +3537,42 @@
         freeMode: false
       });
 
-      // Best Sellers Swiper
+      // Best Sellers Swiper - إعدادات بسيطة وسلسة
       new Swiper('.best-sellers-swiper', {
-        slidesPerView: 1.7,
-        spaceBetween: 15,
+        // إعدادات أساسية بسيطة
+        slidesPerView: 1,
+        spaceBetween: 20,
         loop: true,
-        loopedSlides: 8,
-        speed: 600,
+        loopedSlides: 1,
+        speed: 800,
         effect: 'slide',
+        
+        // تشغيل تلقائي بسيط
         autoplay: { 
-          delay: 4000,
+          delay: 5000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
           waitForTransition: true
         },
-        navigation: {
-          nextEl: '.best-sellers-next',
-          prevEl: '.best-sellers-prev',
-        },
-        pagination: {
-          el: '.best-sellers-pagination',
-          clickable: true
-        },
+        
+        // التجاوب مع الشاشات
         breakpoints: {
-          480: { slidesPerView: 1, spaceBetween: 20 },
-          640: { slidesPerView: 1, spaceBetween: 20 },
-          768: { slidesPerView: 3, spaceBetween: 25 },
-          1024: { slidesPerView: 4, spaceBetween: 30 },
-          1280: { slidesPerView: 4, spaceBetween: 35 }
+          640: { slidesPerView: 2, spaceBetween: 20, loopedSlides: 4 },
+          768: { slidesPerView: 3, spaceBetween: 25, loopedSlides: 6 },
+          1024: { slidesPerView: 4, spaceBetween: 30, loopedSlides: 8 },
         },
-        rtl: true,
+        
+        // إعدادات بسيطة للتفاعل
         grabCursor: true,
-        touchRatio: 1,
-        touchAngle: 45,
-        threshold: 10,
-        longSwipes: true,
-        longSwipesRatio: 0.5,
-        longSwipesMs: 300,
-        followFinger: true,
         allowTouchMove: true,
-        resistance: true,
-        resistanceRatio: 0.85,
-        slideToClickedSlide: false,
-        centeredSlides: false,
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
-        preventClicks: false,
-        preventClicksPropagation: false,
-        freeMode: false
+        watchOverflow: false,
+        
+        // تأثيرات إضافية
+        on: {
+          init: function() {
+            console.log('Best Sellers Swiper initialized');
+          }
+        }
       });
     });
   </script>
@@ -4174,113 +4162,7 @@
       }
     });
 
-    // Product Modal Functions
-    function openProductModal(name, image, price, originalPrice, size, description) {
-      const modal = document.getElementById('product-modal');
-      const modalContent = document.getElementById('modal-content');
       
-      // تحديث محتوى الـ modal
-      modalContent.innerHTML = `
-        <div class="relative bg-white rounded-3xl overflow-hidden shadow-2xl max-w-4xl w-full mx-4">
-          <!-- زر الإغلاق -->
-          <button onclick="closeProductModal()" class="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 transition-all duration-300 hover:bg-white hover:scale-110">
-            <i class="fas fa-times text-gray-600"></i>
-          </button>
-          
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            <!-- صورة المنتج -->
-            <div class="relative h-96 lg:h-full bg-gradient-to-br from-amber-50 to-orange-50">
-              <img src="${image}" alt="${name}" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                الأكثر مبيعاً
-              </div>
-            </div>
-            
-            <!-- تفاصيل المنتج -->
-            <div class="p-8 flex flex-col justify-between">
-              <div class="space-y-6">
-                <div>
-                  <h2 class="text-3xl font-bold text-gray-800 mb-2">${name}</h2>
-                  <p class="text-gray-600 text-lg leading-relaxed">${description}</p>
-                </div>
-                
-                <div class="space-y-4">
-                  <div class="flex items-center justify-between">
-                    <span class="text-gray-600">الحجم:</span>
-                    <span class="bg-gray-100 px-3 py-1 rounded-full text-gray-800 font-medium">${size}</span>
-                  </div>
-                  
-                  <div class="flex items-center justify-between">
-                    <span class="text-gray-600">الرائحة:</span>
-                    <span class="text-gray-800 font-medium">مسك وعود</span>
-                  </div>
-                  
-                  <div class="flex items-center justify-between">
-                    <span class="text-gray-600">مدة الثبات:</span>
-                    <span class="text-gray-800 font-medium">8-12 ساعة</span>
-                  </div>
-                </div>
-                
-                <div class="border-t pt-6">
-                  <div class="flex items-center justify-between mb-4">
-                    <span class="text-2xl font-bold text-gray-900">${price} ر.س</span>
-                    <span class="text-gray-400 line-through text-lg">${originalPrice} ر.س</span>
-                  </div>
-                  
-                  <div class="flex items-center gap-2 mb-6">
-                    <div class="flex text-yellow-400">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <span class="text-gray-600">(4.8/5)</span>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- أزرار الإجراءات -->
-              <div class="space-y-3">
-                <button onclick="addToCart('${name}', '${price}', '${image}', '${size}'); closeProductModal();" class="w-full py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-xl transition-all duration-300 hover:from-amber-600 hover:to-orange-600 hover:scale-105 active:scale-95">
-                  <i class="fas fa-shopping-cart ml-2"></i>
-                  إضافة للسلة
-                </button>
-                
-                <button onclick="buyNow('${name}', '${price}', '${image}', '${size}'); closeProductModal();" class="w-full py-4 bg-black text-white font-bold rounded-xl transition-all duration-300 hover:bg-gray-800 hover:scale-105 active:scale-95">
-                  <i class="fas fa-bolt ml-2"></i>
-                  اشترِ الآن
-                </button>
-                
-                <div class="flex gap-3">
-                  <button class="flex-1 py-3 border-2 border-gray-200 text-gray-700 font-bold rounded-xl transition-all duration-300 hover:border-amber-500 hover:text-amber-600">
-                    <i class="fas fa-heart ml-2"></i>
-                    المفضلة
-                  </button>
-                  <button class="flex-1 py-3 border-2 border-gray-200 text-gray-700 font-bold rounded-xl transition-all duration-300 hover:border-amber-500 hover:text-amber-600">
-                    <i class="fas fa-share ml-2"></i>
-                    مشاركة
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
-      
-      // إظهار الـ modal مع تأثيرات
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      
-      // تأثير ظهور تدريجي
-      setTimeout(() => {
-        modal.classList.add('opacity-100');
-        modal.querySelector('.bg-white').style.transform = 'scale(1)';
-      }, 10);
-      
-      // منع التمرير في الخلفية
-      document.body.style.overflow = 'hidden';
-    }
 
     function closeProductModal() {
       const modal = document.getElementById('product-modal');
