@@ -188,15 +188,21 @@
       opacity: 1;
     }
 
-    /* تنسيق Products Swiper - مبسط مثل البنرات */
+    /* تنسيق Products Swiper - محسن للـ loop بدون فراغات */
     .products-swiper {
       padding: 20px 0 60px 0;
+      overflow: hidden;
+    }
+
+    .products-swiper .swiper-wrapper {
+      align-items: stretch;
     }
 
     .products-swiper .swiper-slide {
       height: auto;
       display: flex;
       align-items: stretch;
+      transition: transform 0.3s ease;
     }
 
     .products-swiper .swiper-button-next,
@@ -230,6 +236,16 @@
 
     .products-swiper .swiper-pagination-bullet-active {
       opacity: 1;
+    }
+
+    /* تحسينات إضافية للـ loop */
+    .products-swiper .swiper-slide-active {
+      transform: scale(1.02);
+    }
+
+    .products-swiper .swiper-slide-prev,
+    .products-swiper .swiper-slide-next {
+      opacity: 0.8;
     }
 
     /* تنسيق Best Sellers Swiper */
@@ -1478,9 +1494,6 @@
                 <button class="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-2xl hover:from-amber-600 hover:to-orange-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                   تسوق الآن
                 </button>
-                <button class="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-2xl border-2 border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105">
-                  اكتشف المزيد
-                </button>
               </div>
             </div>
           </div>
@@ -1500,16 +1513,20 @@
                 <button class="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-2xl hover:from-amber-600 hover:to-orange-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                   تسوق الآن
                 </button>
-                <button class="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-2xl border-2 border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105">
-                  اكتشف المزيد
-                </button>
               </div>
             </div>
           </div>
         </div>
         <!-- شريحة 3 -->
         <div class="swiper-slide relative w-full h-full">
-          <img src="./banner/newperfumes-Photoroom.webp" alt="بانر 3" class="w-full h-full object-cover"/>
+          <img src="./banner/femaleperfumes-Photoroom.webp" alt="بانر 3" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0 flex items-center justify-start p-8 md:p-12">
+            <div class="max-w-md space-y-6">
+              <h2 class="text-3xl md:text-5xl font-black text-white leading-tight drop-shadow-2xl">
+                عطور نسائية <span class="block text-amber-400">لحظات مميزة</span>
+              </h2>
+            </div>
+          </div>
         </div>
         
       </div>
@@ -1716,7 +1733,7 @@
          </div>
        </div>
        
-       <div class="swiper products-swiper">
+       <div class="swiper products-swiper" data-loop="true">
          <div class="swiper-wrapper">
           
                    <!-- منتج 1 -->
@@ -3466,15 +3483,18 @@
         freeMode: false
       });
 
-      // Products Swiper - قسم المنتجات المميزة (مطابق للبنرات الطويلة)
+      // Products Swiper - قسم المنتجات المميزة مع loop محسن
       new Swiper('.products-swiper', {
-        slidesPerView: 2,
-        spaceBetween: 15,
+        slidesPerView: 1,
+        spaceBetween: 20,
         loop: true,
-        speed: 500,
+        loopedSlides: 4, // عدد الشرائح المكررة للـ loop
+        speed: 800,
         autoplay: { 
           delay: 3000,
-          disableOnInteraction: false
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+          waitForTransition: true
         },
         navigation: {
           nextEl: '.products-swiper-next',
@@ -3482,29 +3502,36 @@
         },
         pagination: {
           el: '.products-swiper-pagination',
-          clickable: true
+          clickable: true,
+          dynamicBullets: true
         },
         breakpoints: {
+          480: { slidesPerView: 2, spaceBetween: 15 },
           640: { 
             slidesPerView: 2,
-            spaceBetween: 20 
+            spaceBetween: 20,
+            loop: true
           },
           768: { 
-            slidesPerView: 2.5,
-            spaceBetween: 25 
+            slidesPerView: 3,
+            spaceBetween: 25,
+            loop: true
           },
           1024: { 
             slidesPerView: 4,
-            spaceBetween: 30 
+            spaceBetween: 30,
+            loop: true
           }
         },
         rtl: true,
         grabCursor: true,
         allowTouchMove: true,
-        simulateTouch: true,
-        touchRatio: 1,
-        shortSwipes: true,
-        longSwipes: true
+        watchOverflow: false, // مهم للـ loop
+        on: {
+          init: function() {
+            console.log('Products Swiper initialized with infinite loop');
+          }
+        }
       });
 
       // Banners Swiper (البنرات الطويلة) - مبسط
@@ -4547,78 +4574,7 @@
       }
     });
 
-    // تفعيل Swiper للمنتجات المميزة
-    const productsSwiper = new Swiper('.products-swiper', {
-      // إعدادات loop لانهائي مثل قسم البنرات
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      loopedSlides: 4, // عدد الشرائح المكررة للـ loop
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-        waitForTransition: true,
-      },
-      speed: 1500,
-      effect: 'slide',
-      
-      // التجاوب مع الشاشات المختلفة
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-          loop: true,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 25,
-          loop: true,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-          loop: true,
-        },
-      },
-      
-      // أزرار التنقل
-      navigation: {
-        nextEl: '.products-next',
-        prevEl: '.products-prev',
-      },
-      
-      // مؤشرات النقاط
-      pagination: {
-        el: '.products-pagination',
-        clickable: true,
-        dynamicBullets: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '"></span>';
-        },
-      },
-      
-      // تحسين الأداء للـ loop
-      watchOverflow: false, // مهم للـ loop
-      grabCursor: true,
-      allowTouchMove: true,
-      
-      // تأثيرات إضافية
-      on: {
-        init: function() {
-          console.log('Products Swiper initialized with infinite loop');
-        },
-        slideChange: function() {
-          // يمكن إضافة منطق إضافي هنا
-        },
-        beforeLoopFix: function() {
-          // تحسين الانتقال في الـ loop
-        },
-        loopFix: function() {
-          // إصلاح الـ loop
-        }
-      }
-    });
+    // تم تفعيل Swiper للمنتجات المميزة مع loop في الأعلى
   </script>
 
   <!-- Product Modal - Modern Design -->
