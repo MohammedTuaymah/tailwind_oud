@@ -1965,8 +1965,8 @@
       </div>
       
       <!-- أزرار التنقل -->
-      <div class="swiper-button-next products-next"></div>
-      <div class="swiper-button-prev products-prev"></div>
+      <!-- <div class="swiper-button-next products-next"></div>
+      <div class="swiper-button-prev products-prev"></div> -->
       
       <!-- مؤشرات النقاط -->
       <div class="swiper-pagination products-pagination mt-6"></div>
@@ -2282,7 +2282,7 @@
     <div class="swiper-button-prev best-sellers-prev"></div> -->
     
     <!-- Swiper Pagination -->
-    <!-- <div class="swiper-pagination best-sellers-pagination mt-6"></div> -->
+    <div class="swiper-pagination best-sellers-pagination mt-6"></div>
   </div>
   </section>
 
@@ -3537,40 +3537,75 @@
         freeMode: false
       });
 
-      // Best Sellers Swiper - إعدادات بسيطة وسلسة
-      new Swiper('.best-sellers-swiper', {
-        // إعدادات أساسية بسيطة
-        slidesPerView: 1,
+      // Best Sellers Swiper - إعدادات loop لانهائي مثل قسم المنتجات المتحركة
+      const bestSellersSwiper = new Swiper('.best-sellers-swiper', {
+        // إعدادات loop لانهائي مثل قسم البنرات
+        slidesPerView: 2,
         spaceBetween: 20,
         loop: true,
-        loopedSlides: 1,
-        speed: 800,
-        effect: 'slide',
-        
-        // تشغيل تلقائي بسيط
-        autoplay: { 
-          delay: 5000,
+        loopedSlides: 4, // عدد الشرائح المكررة للـ loop
+        autoplay: {
+          delay: 3000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
-          waitForTransition: true
+          waitForTransition: true,
         },
+        speed: 1500,
+        effect: 'slide',
         
-        // التجاوب مع الشاشات
+        // التجاوب مع الشاشات المختلفة
         breakpoints: {
-          640: { slidesPerView: 2, spaceBetween: 20, loopedSlides: 4 },
-          768: { slidesPerView: 3, spaceBetween: 25, loopedSlides: 6 },
-          1024: { slidesPerView: 4, spaceBetween: 30, loopedSlides: 8 },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+            loop: true,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+          },
         },
         
-        // إعدادات بسيطة للتفاعل
+        // أزرار التنقل
+        // navigation: {
+        //   nextEl: '.best-sellers-next',
+        //   prevEl: '.best-sellers-prev',
+        // },
+        
+        // مؤشرات النقاط
+        // pagination: {
+        //   el: '.best-sellers-pagination',
+        //   clickable: true,
+        //   dynamicBullets: true,
+        //   renderBullet: function (index, className) {
+        //     return '<span class="' + className + '"></span>';
+        //   },
+        // },
+        
+        // تحسين الأداء للـ loop
+        watchOverflow: false, // مهم للـ loop
         grabCursor: true,
         allowTouchMove: true,
-        watchOverflow: false,
         
         // تأثيرات إضافية
         on: {
           init: function() {
-            console.log('Best Sellers Swiper initialized');
+            console.log('Best Sellers Swiper initialized with infinite loop');
+          },
+          slideChange: function() {
+            // يمكن إضافة منطق إضافي هنا
+          },
+          beforeLoopFix: function() {
+            // تحسين الانتقال في الـ loop
+          },
+          loopFix: function() {
+            // إصلاح الـ loop
           }
         }
       });
