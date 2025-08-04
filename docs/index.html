@@ -1435,6 +1435,74 @@
 
 
 
+
+<!-- قسم البانر المتحرك -->
+<section class="container mx-auto my-16 px-4">
+  <div class="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl">
+    <div class="swiper banner-swiper h-full">
+      <div class="swiper-wrapper">
+        <!-- شريحة 1 -->
+        <div class="swiper-slide relative w-full h-full">
+          <img src="./banner/luxury-Photoroom.jpg" alt="بانر 1" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0 flex items-center justify-start p-8 md:p-12">
+            <div class="max-w-md space-y-6">
+              <h2 class="text-3xl md:text-5xl font-black text-white leading-tight drop-shadow-2xl">
+                عطور فاخرة <span class="block text-amber-400">لحظات مميزة</span>
+              </h2>
+              <p class="text-white/90 text-lg md:text-xl leading-relaxed drop-shadow-lg">
+                اكتشف مجموعتنا المميزة من العطور الفاخرة التي تجمع بين الأناقة والجاذبية
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <button class="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-2xl hover:from-amber-600 hover:to-orange-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                  تسوق الآن
+                </button>
+                <button class="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-2xl border-2 border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105">
+                  اكتشف المزيد
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- شريحة 2 -->
+        <div class="swiper-slide relative w-full h-full">
+          <img src="./banner/newperfumes-Photoroom.webp" alt="بانر 2" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0 flex items-center justify-start p-8 md:p-12">
+            <div class="max-w-md space-y-6">
+              <h2 class="text-3xl md:text-5xl font-black text-white leading-tight drop-shadow-2xl">
+                عطور جديدة <span class="block text-amber-400">تجربة لا تُنسى</span>
+              </h2>
+              <p class="text-white/90 text-lg md:text-xl leading-relaxed drop-shadow-lg">
+                جرب أحدث إصداراتنا من العطور الفاخرة لهذا الموسم
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <button class="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-2xl hover:from-amber-600 hover:to-orange-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                  تسوق الآن
+                </button>
+                <button class="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-2xl border-2 border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105">
+                  اكتشف المزيد
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- شريحة 3 -->
+        <div class="swiper-slide relative w-full h-full">
+          <img src="./banner/newperfumes-Photoroom.webp" alt="بانر 3" class="w-full h-full object-cover"/>
+        </div>
+        
+      </div>
+      <!-- مؤشرات النقاط -->
+      <div class="swiper-pagination banner-swiper-pagination"></div>
+      <!-- أزرار التنقل -->
+      <div class="swiper-button-next banner-swiper-next"></div>
+      <div class="swiper-button-prev banner-swiper-prev"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
   
   <!-- متحرك الأكثر مبيعاً -->
   <section class="container mx-auto">
@@ -2603,6 +2671,10 @@
 
 
 
+
+
+
+
   <!-- تواصل وفوتر -->
   <footer class="bg-black text-white pt-12 pb-4 mt-16 rtl" id="contact">
     <div class="container mx-auto px-4">
@@ -2670,6 +2742,20 @@
     </div>
   </footer>
 
+
+
+
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const bannerSwiper = new Swiper('.banner-swiper', {
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '.banner-swiper-pagination', clickable: true },
+    navigation: { nextEl: '.banner-swiper-next', prevEl: '.banner-swiper-prev' },
+    effect: 'fade',
+  });
+</script>
 
   <!-- Essential JavaScript Functions -->
   <script>
