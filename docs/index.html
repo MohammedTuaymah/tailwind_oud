@@ -3840,7 +3840,33 @@
       }
     }
 
-    // إضافة منتج إلى السلة
+    // إضافة منتج إلى السلة (للـ modal)
+    function addToCart(productName, productPrice, productImage, productSize) {
+      const productId = Date.now().toString(); // إنشاء ID فريد
+      
+      // البحث عن المنتج في السلة
+      const existingItem = cartItems.find(item => item.name === productName);
+      
+      if (existingItem) {
+        // زيادة الكمية إذا كان المنتج موجود
+        existingItem.quantity += 1;
+      } else {
+        // إضافة منتج جديد
+        cartItems.push({
+          id: productId,
+          name: productName,
+          price: parseInt(productPrice),
+          image: productImage,
+          size: productSize,
+          quantity: 1
+        });
+      }
+      
+      updateCartDisplay();
+      showNotification('تم إضافة المنتج للسلة بنجاح!', 'success');
+    }
+
+    // إضافة منتج إلى السلة (النسخة الأصلية)
     function addToCart(product) {
       // البحث عن المنتج في السلة
       const existingItem = cartItems.find(item => item.id === product.id);
@@ -4243,13 +4269,145 @@
     });
 
       
+    // دالة فتح modal المنتج
+    function openProductModal(productName, productImage, currentPrice, originalPrice, productSize, productDescription) {
+      const modal = document.getElementById('product-modal');
+      const modalContent = document.getElementById('modal-content');
+      
+      // إنشاء محتوى الـ modal
+      const modalHTML = `
+        <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full mx-4 overflow-hidden">
+          <!-- Header -->
+          <div class="bg-gradient-to-r from-amber-500 to-orange-500 p-6 text-white relative">
+            <button onclick="closeProductModal()" class="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300">
+              <i class="fas fa-times text-white"></i>
+            </button>
+            <h2 class="text-2xl font-bold text-center">${productName}</h2>
+          </div>
+          
+          <!-- Content -->
+          <div class="flex flex-col md:flex-row">
+            <!-- Product Image -->
+            <div class="w-full md:w-1/2 p-6">
+              <div class="relative group">
+                <img src="${productImage}" alt="${productName}" class="w-full h-80 object-cover rounded-2xl shadow-lg group-hover:scale-105 transition-all duration-300">
+                <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  خصم ${Math.round(((originalPrice - currentPrice) / originalPrice) * 100)}%
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product Details -->
+            <div class="w-full md:w-1/2 p-6 space-y-6">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">${productName}</h3>
+                <p class="text-gray-600 leading-relaxed">${productDescription}</p>
+              </div>
+              
+              <!-- Size -->
+              <div class="flex items-center gap-2">
+                <span class="text-gray-700 font-medium">الحجم:</span>
+                <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">${productSize}</span>
+              </div>
+              
+              <!-- Price -->
+              <div class="space-y-2">
+                <div class="flex items-center gap-3">
+                  <span class="text-3xl font-bold text-gray-900">${currentPrice} ر.س</span>
+                  <span class="text-lg text-gray-400 line-through">${originalPrice} ر.س</span>
+                </div>
+                <p class="text-green-600 text-sm font-medium">وفر ${originalPrice - currentPrice} ر.س</p>
+              </div>
+              
+              <!-- Quantity -->
+              <div class="flex items-center gap-4">
+                <span class="text-gray-700 font-medium">الكمية:</span>
+                <div class="flex items-center gap-2">
+                  <button onclick="changeQuantity(-1)" class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-all duration-300">
+                    <i class="fas fa-minus text-sm"></i>
+                  </button>
+                  <span id="quantity" class="text-xl font-bold text-gray-800 w-12 text-center">1</span>
+                  <button onclick="changeQuantity(1)" class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-all duration-300">
+                    <i class="fas fa-plus text-sm"></i>
+                  </button>
+                </div>
+              </div>
+              
+              <!-- Actions -->
+              <div class="flex flex-col gap-3">
+                <button onclick="addToCart('${productName}', '${currentPrice}', '${productImage}', '${productSize}')" class="w-full bg-amber-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-amber-600 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2">
+                  <i class="fas fa-shopping-cart"></i>
+                  أضف للسلة
+                </button>
+                <button onclick="buyNow('${productName}', '${currentPrice}', '${productImage}', '${productSize}')" class="w-full bg-gray-900 text-white py-4 rounded-xl font-bold text-lg hover:bg-gray-800 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2">
+                  <i class="fas fa-bolt"></i>
+                  اشترِ الآن
+                </button>
+              </div>
+              
+              <!-- Features -->
+              <div class="grid grid-cols-2 gap-4 pt-4 border-t">
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <i class="fas fa-shipping-fast text-amber-500"></i>
+                  <span>شحن مجاني</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <i class="fas fa-shield-alt text-amber-500"></i>
+                  <span>ضمان الجودة</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <i class="fas fa-undo text-amber-500"></i>
+                  <span>إرجاع مجاني</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                  <i class="fas fa-headset text-amber-500"></i>
+                  <span>دعم 24/7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      // إضافة المحتوى للـ modal
+      modalContent.innerHTML = modalHTML;
+      
+      // إظهار الـ modal
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden';
+      
+      // تأثير ظهور تدريجي
+      setTimeout(() => {
+        modalContent.style.transform = 'scale(1)';
+      }, 100);
+    }
+
+    // دالة تغيير الكمية
+    function changeQuantity(change) {
+      const quantityElement = document.getElementById('quantity');
+      let currentQuantity = parseInt(quantityElement.textContent);
+      
+      currentQuantity += change;
+      
+      // التأكد من أن الكمية لا تقل عن 1
+      if (currentQuantity < 1) {
+        currentQuantity = 1;
+      }
+      
+      quantityElement.textContent = currentQuantity;
+    }
 
     function closeProductModal() {
       const modal = document.getElementById('product-modal');
+      const modalContent = document.getElementById('modal-content');
       
       // تأثير إغلاق تدريجي
       modal.classList.remove('opacity-100');
-      modal.querySelector('.bg-white').style.transform = 'scale(0.9)';
+      if (modalContent) {
+        modalContent.style.transform = 'scale(0.9)';
+      }
       
       setTimeout(() => {
         modal.classList.add('hidden');
