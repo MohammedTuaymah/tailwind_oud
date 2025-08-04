@@ -135,7 +135,6 @@
     .banner-swiper .swiper-button-next:hover,
     .banner-swiper .swiper-button-prev:hover {
       background: rgba(255, 255, 255, 1);
-      transform: scale(1.1);
     }
     
     .banner-swiper .swiper-button-next::after,
@@ -216,7 +215,6 @@
     .products-swiper .swiper-button-prev:hover {
       background: #d97706;
       color: white;
-      transform: scale(1.1);
     }
 
     .products-swiper .swiper-button-next::after,
@@ -237,6 +235,8 @@
     /* تنسيق Best Sellers Swiper */
     .best-sellers-swiper {
       padding: 20px 0 60px 0;
+      position: relative;
+      overflow: hidden;
     }
 
     .best-sellers-swiper .swiper-slide {
@@ -255,6 +255,18 @@
       margin-top: -22px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
+      position: absolute;
+      top: 50%;
+      /* transform: translateY(-50%); */
+      z-index: 10;
+    }
+    
+    .best-sellers-swiper .swiper-button-next {
+      right: 10px;
+    }
+    
+    .best-sellers-swiper .swiper-button-prev {
+      left: 10px;
     }
 
     .best-sellers-swiper .swiper-button-next:hover,
@@ -270,13 +282,25 @@
       font-weight: bold;
     }
 
+    .best-sellers-swiper .swiper-pagination {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
     .best-sellers-swiper .swiper-pagination-bullet {
       background: #d97706;
       opacity: 0.3;
+      margin: 0 4px;
+      width: 8px;
+      height: 8px;
     }
 
     .best-sellers-swiper .swiper-pagination-bullet-active {
       opacity: 1;
+      background: #d97706;
     }
 
     .AdsBanner{
@@ -288,6 +312,26 @@
         width: 100%;
         height: 70% !important;
         border-radius: 0px;
+      }
+      
+      .best-sellers-swiper .swiper-button-next,
+      .best-sellers-swiper .swiper-button-prev {
+        width: 36px;
+        height: 36px;
+        margin-top: -18px;
+      }
+      
+      .best-sellers-swiper .swiper-button-next {
+        right: 5px;
+      }
+      
+      .best-sellers-swiper .swiper-button-prev {
+        left: 5px;
+      }
+      
+      .best-sellers-swiper .swiper-button-next::after,
+      .best-sellers-swiper .swiper-button-prev::after {
+        font-size: 14px;
       }
     }
 
@@ -2277,13 +2321,14 @@
       </div>
     </div>
     
-    <!-- Swiper Navigation -->
-    <!-- <div class="swiper-button-next best-sellers-next"></div>
-    <div class="swiper-button-prev best-sellers-prev"></div> -->
-    
-    <!-- Swiper Pagination -->
-    <div class="swiper-pagination best-sellers-pagination mt-6"></div>
   </div>
+
+  <!-- Swiper Navigation -->
+  <div class="swiper-button-next best-sellers-next"></div>
+  <div class="swiper-button-prev best-sellers-prev"></div>
+
+    <!-- Swiper Pagination -->
+    <div class="swiper-pagination best-sellers-pagination"></div>
   </section>
 
 
@@ -3572,21 +3617,21 @@
           },
         },
         
-        // أزرار التنقل
-        // navigation: {
-        //   nextEl: '.best-sellers-next',
-        //   prevEl: '.best-sellers-prev',
-        // },
-        
-        // مؤشرات النقاط
-        // pagination: {
-        //   el: '.best-sellers-pagination',
-        //   clickable: true,
-        //   dynamicBullets: true,
-        //   renderBullet: function (index, className) {
-        //     return '<span class="' + className + '"></span>';
-        //   },
-        // },
+                  // أزرار التنقل
+          navigation: {
+            nextEl: '.best-sellers-next',
+            prevEl: '.best-sellers-prev',
+          },
+          
+          // مؤشرات النقاط
+          pagination: {
+            el: '.best-sellers-pagination',
+            clickable: true,
+            dynamicBullets: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '"></span>';
+            },
+          },
         
         // تحسين الأداء للـ loop
         watchOverflow: false, // مهم للـ loop
